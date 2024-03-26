@@ -29,7 +29,10 @@ layout:
       <th></th><th data-hidden data-type="content-ref"></th>
     </tr>
   </thead>
-  <tbody><tr><td><h2>Reading Research Papers as an Undergraduate</h2></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>My thoughts on why reading research papers (as someone whose job is not research) is beneficial, my advice on getting started, and a list of my personal favorites</p></td><td><a href="https://app.gitbook.com/s/s4QQPMntQ25hmJToKSOu/2024/why-you-should-read-research-papers">Why You Should Read Research Papers</a></td></tr><tr><td><h2>My Favorite Cybersecurity Resources</h2></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A list of my favorite beginner-friendly labs, study materials, podcasts, and more</p></td><td><a href="../thoughts/2024/my-favorite-free-cybersecurity-resources.md">My Favorite Free Cybersecurity Resources</a></td></tr>
+  <tbody>
+    <tr>
+      <td><h2>My Favorite Cybersecurity Resources</h2></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A list of my favorite beginner-friendly labs, study materials, podcasts, and more</p></td><td><a href="https://app.gitbook.com/s/s4QQPMntQ25hmJToKSOu/2024/my-favorite-free-cybersecurity-resources">My Favorite Free Cybersecurity Resources</a></td>
+    </tr>
   </tbody>
 </table>
 

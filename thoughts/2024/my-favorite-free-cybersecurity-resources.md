@@ -34,6 +34,19 @@ Once you have a basic understanding of cybersecurity, I recommend using labs to 
 * [Hack The Box Lab](https://hackthebox.com/) 
 * [TryHackMe Practice Rooms](https://tryhackme.com/r/hacktivities/practice)
 
+## Research and Reports
+
+TODO. TODO that are simply not accessible TODO. Dr. Srinivasan Keshav's [How To Read a Research Paper](http://svr-sk818-web.cl.cam.ac.uk/keshav/papers/07/paper-reading.pdf) includes great advice on how to read a research paper.
+
+Most of the research and reports that I read are TODO.
+
+If you've never read a research paper, here are some of my recommendations. These papers are approachable, speak to both computing and society. Reading these will help familiarize you with how papers in computing tend to be structured.
+
+* ["A Stalker’s Paradise": How Intimate Partner Abusers Exploit Technology](https://rist.tech.cornell.edu/papers/stalkers-paradise-intimate.pdf) by Diana Freed, Jackeline Palmer, Diana Minchala, Karen Levy, Thomas Ristenpart, and Nicola Dell (2018)
+* [Investigating Large Scale HTTPS Interception in Kazakhstan](https://ensa.fi/papers/HTTPSKaz.pdf) by Ram Sundara Raman, Leonid Evdokimov, Eric Wurstrow, J. Alex Halderman, and Roya Ensafi (2020)
+* [Throttling Twitter: An Emerging Censorship Technique in Russia](https://ensa.fi/papers/throttling-imc-paper.pdf) by by Diwen Xue, Reethika Ramesh, ValdikSS, Leonid Evdokimov, Andrey Viktorov, Arham Jain, Eric Wustrow, Simone Basso, and Roya Ensafi (2021)
+* [The Antrim County 2020 Election Incident: An Independent Forensic Investigation](https://www.usenix.org/system/files/sec22-halderman.pdf) by J. Alex Halderman (8/2022)
+
 ## Events
 
 SANS Cybersecurity Summits are free to attend online. They are a great way to get connected to the cybersecurity community.

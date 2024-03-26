@@ -18,39 +18,39 @@ When first started learning cybersecurity, I felt overwhelmed by the sheer numbe
 
 ## Informational
 
-Building a basic understanding of how computers work as well as what common security terminology and concepts are TODO. These resources TODO.
+Building a basic understanding of how computers work as well and learning common security terminology and concepts is crucial for diving deeper into security. I've found these resources helpful for building a strong foundation.
 
 * [Hack The Box Academy](https://academy.hackthebox.com/) teaches beginners cybersecurity topics with a focus on penetration testing.
-* TryHackMe Guided Rooms
+* [TryHackMe Guided Rooms](https://tryhackme.com/r/hacktivities) guide beginners through various areas of cybersecurity.
 * [Professor Messer's Security+ Videos](https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/) explain a wide variety of fundamental cybersecurity concepts. These videos are geared toward the CompTIA Security+ Certification.
 
 ## CTFs and Labs
 
-Once you have a basic understanding, TODO.
+Once you have a basic understanding of cybersecurity, I recommend using labs to get hands-on experience.
 
-* [Digital Forensics Lab](https://github.com/frankwxu/digital-forensics-lab) teaches users the fundamentals of digital forensics through labs and case studies
-* SEED Labs 2.0
-* OWASP Bricks
-* Hack The Box Lab
-* TryHackMe Practice Rooms
+* [Digital Forensics Lab](https://github.com/frankwxu/digital-forensics-lab) teaches users the fundamentals of digital forensics through labs and case studies.
+* [SEED Labs 2.0](https://seedsecuritylabs.org/Labs_20.04/)
+* [OWASP Bricks](https://sechow.com/bricks/index.html) 
+* [Hack The Box Lab](https://hackthebox.com/) 
+* [TryHackMe Practice Rooms](https://tryhackme.com/r/hacktivities/practice)
 
 ## Events
 
-SANS Cybersecurity Summits TODO.
+SANS Cybersecurity Summits are free to attend online. They are a great way to get connected to the cybersecurity community.
 
-If you are interested in digital forensics like me, Magnet Forensics holds a yearly virtual summit that is free to attend. You can also view TODO.
+If you are interested in digital forensics like me, Magnet Forensics holds a yearly virtual summit that is free to attend. [Replays of the talks](https://www.magnetforensics.com/magnet-virtual-summit-2024-replays/) for 2024 are now available online.
 
 ## Podcasts
 
-Podcasts are a TODO.
+Podcasts are a useful for integrating cybersecurity into your daily routine.
 
-* [DFIRL](https://www.magnetforensics.com/resources/introduction-to-digital-forensics-in-real-life-dfirl-podcast/): discusses real-life cases in which digital evidence (uncovered by digital forensics) has played a pivotal role
-* [Technology Pill](https://privacyinternational.org/learning-resources/technology-pill-podcast): discusses the changing role of technology in society and the way it impacts people around the world (including you!)
-* [Malicious Life](https://malicious.life/): shares the stories of some of the wildest hacks in history
+* [DFIRL](https://www.magnetforensics.com/resources/introduction-to-digital-forensics-in-real-life-dfirl-podcast/) discusses real-life cases in which digital evidence (uncovered by digital forensics) has played a pivotal role.
+* [Technology Pill](https://privacyinternational.org/learning-resources/technology-pill-podcast) discusses the changing role of technology in society and the way it impacts people around the world.
+* [Malicious Life](https://malicious.life/) shares the stories of some of the wildest hacks in history.
 
 ## More Resources
 
-SANS list and also github repo. SANS also has a TODO of the most common tools used in different cybersecurity areas.
+SANS has compiled a [list of free tools](https://www.sans.org/img/free-faculty-tools.pdf) used in nearly every area of cybersecurity. You can also find an extensive list of cybersecurity resources (tools and learning material) on Hack-with-Github's [Awesome Hacking](https://github.com/Hack-with-Github/Awesome-Hacking) repository. 
 
 ***
 

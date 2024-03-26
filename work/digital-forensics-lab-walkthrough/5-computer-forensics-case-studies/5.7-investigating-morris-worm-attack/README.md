@@ -14,7 +14,7 @@ layout:
 
 # 5.7 Investigating Morris Worm Attack
 
-[Digital Forensics Lab Walkthrough](../../) ⋅ [5 Computer Forensics Case Studies](../) ⋅ 5.7 Investigating Morris Work Attack&#x20;
+[Digital Forensics Lab Walkthrough](../../) ⋅ [5 Computer Forensics Case Studies](../) ⋅ 5.7 Investigating Morris Work Attack
 
 ***
 

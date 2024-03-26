@@ -12,13 +12,17 @@ layout:
     visible: false
 ---
 
-# Why You Should Read Research Papers
+# Reading Research Papers as an Undergraduate
 
 ## The Benefits of Reading a Research Paper
 
 ## Reading a Research Paper
 
+Dr. Srinivasan Keshav's [How To Read a Research Paper](http://svr-sk818-web.cl.cam.ac.uk/keshav/papers/07/paper-reading.pdf) TODO. Instead, TODO.
+
 ## Finding Interesting Papers
+
+I personally like to also TODOO.
 
 ## Beginner-Friendly Papers
 

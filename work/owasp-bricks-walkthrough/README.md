@@ -27,15 +27,15 @@ layout:
   </thead>
   <tbody>
     <tr>
-      <td><h3>1 Login Pages</h3></td>
+      <td><h2>1 Login Pages</h2></td>
       <td><a href="1-login-pages.md">1-login-pages.md</a></td>
     </tr>
     <tr>
-      <td><h3>2 File Upload Pages</h3></td>
+      <td><h2>2 File Upload Pages</h2></td>
       <td><a href="2-file-upload-pages.md">2-file-upload-pages.md</a></td>
     </tr>
     <tr>
-      <td><h3>3 Content Pages</h3></td>
+      <td><h2>3 Content Pages</h2></td>
       <td><a href="3-content-pages.md">3-content-pages.md</a></td>
     </tr>
   </tbody>

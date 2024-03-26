@@ -31,27 +31,27 @@ layout:
       <td><a href="software-security.md">software-security.md</a></td>
     </tr>
     <tr>
-      <td><h3>Network Security</h3></td>
+      <td><h2>Network Security</h2></td>
       <td><a href="network-security.md">network-security.md</a></td>
     </tr>
     <tr>
-      <td><h3>Web Security</h3></td>
+      <td><h2>Web Security</h2></td>
       <td><a href="web-security.md">web-security.md</a></td>
     </tr>
     <tr>
-      <td><h3>System Security</h3></td>
+      <td><h2>System Security</h2></td>
       <td><a href="system-security.md">system-security.md</a></td>
     </tr>
     <tr>
-      <td><h3>Cryptogrpahy</h3></td>
+      <td><h2>Cryptogrpahy</h2></td>
       <td><a href="cryptography.md">cryptography.md</a></td>
     </tr>
     <tr>
-      <td><h3>Blockchain</h3></td>
+      <td><h2>Blockchain</h2></td>
       <td><a href="blockchain.md">blockchain.md</a></td>
     </tr>
     <tr>
-      <td><h3>Mobile Security</h3></td>
+      <td><h2>Mobile Security</h2></td>
       <td><a href="mobile-security.md">mobile-security.md</a></td>
     </tr>
   </tbody>

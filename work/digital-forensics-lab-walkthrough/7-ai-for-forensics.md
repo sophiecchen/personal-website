@@ -1,5 +1,4 @@
 ---
-description: Digital Forensics Lab
 layout:
   title:
     visible: true

@@ -36,7 +36,7 @@ Once you have a basic understanding, TODO.
 
 ## Events
 
-SANS Cybersecurity Summits TODO.&#x20;
+SANS Cybersecurity Summits TODO.
 
 If you are interested in digital forensics like me, Magnet Forensics holds a yearly virtual summit that is free to attend. You can also view TODO.
 

@@ -27,7 +27,7 @@ layout:
   </thead>
   <tbody>
     <tr>
-      <td><h3>Software Security</h3></td>
+      <td><h2>Software Security</h2></td>
       <td><a href="software-security.md">software-security.md</a></td>
     </tr>
     <tr>

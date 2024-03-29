@@ -29,10 +29,10 @@ Building a basic understanding of how computers work as well and learning common
 Once you have a basic understanding of cybersecurity, I recommend using labs to get hands-on experience.
 
 * [Digital Forensics Lab](https://github.com/frankwxu/digital-forensics-lab) teaches users the fundamentals of digital forensics through labs and case studies.
-* [SEED Labs 2.0](https://seedsecuritylabs.org/Labs_20.04/)
-* [OWASP Bricks](https://sechow.com/bricks/index.html) 
-* [Hack The Box Lab](https://hackthebox.com/) 
-* [TryHackMe Practice Rooms](https://tryhackme.com/r/hacktivities/practice)
+* [SEED Labs 2.0](https://seedsecuritylabs.org/Labs_20.04/) introduces users to various cybersecurity concepts and vulnerabilities through guided labs.
+* [OWASP Bricks](https://sechow.com/bricks/index.html) introduces users to common application vulnerabilities through an insecure web application.
+* [Hack The Box Lab](https://hackthebox.com/) provides CTF-style machines for all levels to hack into.
+* [TryHackMe Practice Rooms](https://tryhackme.com/r/hacktivities/practice) allows users to practice skills in a CTF-style room.
 
 ## Events
 

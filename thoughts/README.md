@@ -14,7 +14,7 @@ layout:
 
 # Beginner-Friendly Cybersecurity Resources
 
-When first started learning cybersecurity, I felt overwhelmed by the sheer number of resources online, so I've compiled a small list of resources, geared toward beginners for your reference.
+When first started learning cybersecurity, I felt overwhelmed by the sheer number of resources online, so I've compiled a small list of resources, geared toward beginners, for your reference.
 
 ## Informational
 

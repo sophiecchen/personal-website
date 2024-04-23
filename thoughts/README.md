@@ -12,9 +12,9 @@ layout:
     visible: false
 ---
 
-# My Favorite Free Cybersecurity Resources
+# Beginner-Friendly Cybersecurity Resources
 
-When first started learning cybersecurity, I felt overwhelmed by the sheer number of resources online. In the hopes that this will help you be less overwhelmed, I've compiled a small list of resources, geared toward beginners, that I've ended up using and have found helpful.
+When first started learning cybersecurity, I felt overwhelmed by the sheer number of resources online, so I've compiled a small list of resources, geared toward beginners for your reference.
 
 ## Informational
 
@@ -33,6 +33,7 @@ Once you have a basic understanding of cybersecurity, I recommend using labs to 
 * [OWASP Bricks](https://sechow.com/bricks/index.html) introduces users to common application vulnerabilities through an insecure web application.
 * [Hack The Box Lab](https://hackthebox.com/) provides CTF-style machines for all levels to hack into.
 * [TryHackMe Practice Rooms](https://tryhackme.com/r/hacktivities/practice) allows users to practice skills in a CTF-style room.
+* [Malware Unicorn](https://malwareunicorn.org/) provides reverse-engineering workshops.
 
 ## Events
 

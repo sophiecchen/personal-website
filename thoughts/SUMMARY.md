@@ -2,4 +2,4 @@
 
 ## 2024
 
-* [My Favorite Free Cybersecurity Resources](README.md)
+* [Beginner-Friendly Cybersecurity Resources](README.md)

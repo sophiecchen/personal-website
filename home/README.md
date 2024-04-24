@@ -22,7 +22,7 @@ layout:
 
 ## Thoughts
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-type="content-ref"></th></tr></thead><tbody><tr><td><h2>My Favorite Cybersecurity Resources</h2></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A list of my favorite beginner-friendly labs, study materials, podcasts, and more</p></td><td><a href="https://app.gitbook.com/s/s4QQPMntQ25hmJToKSOu/2024/readme">My Favorite Free Cybersecurity Resources</a></td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-type="content-ref"></th></tr></thead><tbody><tr><td><h2>My Favorite Cybersecurity Resources</h2></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A list of my favorite beginner-friendly labs, study materials, podcasts, and more</p></td><td><a href="https://app.gitbook.com/s/s4QQPMntQ25hmJToKSOu/2024/readme">Beginner-Friendly Cybersecurity Resources</a></td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
 
 ***
 

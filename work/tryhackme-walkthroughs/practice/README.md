@@ -12,9 +12,9 @@ layout:
     visible: false
 ---
 
-# Practice
+# Challenge
 
-[TryHackMe Walkthroughs](../) ⋅ Practice
+[TryHackMe Walkthroughs](../) ⋅ Challenge
 
 ***
 

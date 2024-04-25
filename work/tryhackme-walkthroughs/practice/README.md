@@ -14,7 +14,7 @@ layout:
 
 # Practice
 
-[TryHackMe Walkthroughs](./) ⋅ Practice
+[TryHackMe Walkthroughs](../) ⋅ Practice
 
 ***
 

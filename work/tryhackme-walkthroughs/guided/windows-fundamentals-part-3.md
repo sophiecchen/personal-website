@@ -21,21 +21,14 @@ layout:
 ## Task 2: Windows Updates
 
 <details>
-
-<summary>There were two definition updates installed in the attached VM. On what date were these updates installed?</summary>
-
-
-
+  <summary>There were two definition updates installed in the attached VM. On what date were these updates installed?</summary>
 </details>
 
 ## Task 3: Windows Security
 
 <details>
-
-<summary>In the above image, which area needs immediate attention?</summary>
-
-Virus & threat protection
-
+  <summary>In the above image, which area needs immediate attention?</summary>
+  Virus & threat protection
 </details>
 
 ## Task 4: Virus & threat protection

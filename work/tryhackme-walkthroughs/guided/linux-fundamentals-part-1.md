@@ -20,7 +20,7 @@ layout:
 
 This room is part 1 in a 3-part series going over the fundamentals of Linux, a family of open-source Unix-like operating systems.
 
-### Task 2: A Bit of Background on Linux
+## Task 2: A Bit of Background on Linux
 
 <details>
 
@@ -32,7 +32,7 @@ The original Linux kernel was released on September 17, 1991.
 
 </details>
 
-### Task 4: Running Your First few Commands
+## Task 4: Running Your First few Commands
 
 <details>
 
@@ -54,7 +54,7 @@ Use the command `whoami` to see your username.
 
 </details>
 
-### Task 5: Interacting With the Filesystem!
+## Task 5: Interacting With the Filesystem!
 
 <details>
 
@@ -94,7 +94,7 @@ Use `cat <file_name>` to view file contents.
 
 </details>
 
-### Task 6: Searching for Files
+## Task 6: Searching for Files
 
 <details>
 
@@ -106,7 +106,7 @@ Use `grep THM* access.log` to search for prefixes of "THM".
 
 </details>
 
-### Task 7: An Introduction to Shell Operators
+## Task 7: An Introduction to Shell Operators
 
 <details>
 

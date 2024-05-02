@@ -20,12 +20,12 @@ layout:
 
 This room is part 1 in a 3-part series going over the fundamentals of Linux, a family of open-source Unix-like operating systems.
 
+## Task 1
+
 ## Task 2: A Bit of Background on Linux
 
 <details>
-
 <summary>Research: What year was the first release of a Linux operating system?</summary>
-
 1991
 
 The original Linux kernel was released on September 17, 1991.
@@ -35,7 +35,6 @@ The original Linux kernel was released on September 17, 1991.
 ## Task 4: Running Your First few Commands
 
 <details>
-
 <summary>If we wanted to output the text "TryHackMe", what would our command be?</summary>
 
 echo TryHackMe
@@ -45,7 +44,6 @@ The `echo` command outputs text. No quotation marks are needed.
 </details>
 
 <details>
-
 <summary>What is the username of who you're logged in as on your deployed Linux machine?</summary>
 
 tryhackme

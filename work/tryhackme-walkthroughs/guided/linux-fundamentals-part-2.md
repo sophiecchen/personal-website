@@ -18,6 +18,10 @@ layout:
 
 ***
 
+## Task 1:
+
+## Task 2:
+
 ## Task 3: Introduction to Flags and Switches
 
 <details>

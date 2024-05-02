@@ -1,4 +1,22 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Intro to Digital Forensics
+
+[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Intro to Digital Forensics
+
+***
 
 ## Task 1: Introduction to Digital Forensics
 
@@ -51,3 +69,7 @@ Canon EOS R6
 Use the command `exiftool letter-image.jpg` to view camera information.
 
 </details>
+
+***
+
+[Home](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/036xtfEIzcEdGegONXWM/) ⋅ [Work](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/WaFS755Q4sf02CxLcghQ/) ⋅ [Thoughts](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/s4QQPMntQ25hmJToKSOu/)

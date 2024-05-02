@@ -21,7 +21,6 @@ layout:
 ## Task 3: UrlScan.io
 
 <details>
-
 <summary>What was TryHackMe's Cisco Umbrella Rank based on the screenshot?</summary>
 
 345612
@@ -31,7 +30,6 @@ This information is listed in the first section of the Summary.
 </details>
 
 <details>
-
 <summary>How many domains did UrlScan.io identify on the screenshot?</summary>
 
 13

@@ -21,11 +21,8 @@ layout:
 ## Task 1: What is HTTP(S)?
 
 <details>
-
-<summary>What does HTTP stand for?</summary>
-
-HyperText Transfer Protocol
-
+  <summary>What does HTTP stand for?</summary>
+  HyperText Transfer Protocol
 </details>
 
 <details>

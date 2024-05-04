@@ -18,6 +18,8 @@ layout:
 
 ### Introduction to Windows
 
+This section TODO
+
 <details>
 
 <summary>What is the Build Number of the target workstation?</summary>

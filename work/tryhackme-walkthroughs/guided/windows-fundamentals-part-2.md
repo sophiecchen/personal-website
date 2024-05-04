@@ -18,6 +18,10 @@ layout:
 
 ***
 
+This room is part 2 in a 3-part series going over the fundamentals of the Windows operating system.
+
+## Task 1:
+
 ## Task 2: System Configuration
 
 <details>

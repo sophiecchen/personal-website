@@ -17,6 +17,7 @@ layout:
 [TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Threat Intelligence Tools
 
 ***
+## Task 1:
 
 ## Task 3: UrlScan.io
 

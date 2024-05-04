@@ -18,7 +18,9 @@ layout:
 
 ***
 
-## Task 1:
+This room is part 2 in a 3-part series going over the fundamentals of Linux, a family of open-source Unix-like operating systems.
+
+# Task 1:
 
 ## Task 2:
 

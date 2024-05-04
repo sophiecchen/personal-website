@@ -18,6 +18,10 @@ layout:
 
 ***
 
+This room is part 3 in a 3-part series going over the fundamentals of the Windows operating system.
+
+## Task 1:
+
 ## Task 2: Windows Updates
 
 <details>

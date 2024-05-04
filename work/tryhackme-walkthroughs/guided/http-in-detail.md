@@ -20,6 +20,8 @@ layout:
 
 ## Task 1: What is HTTP(S)?
 
+Task 1
+
 <details>
   <summary>What does HTTP stand for?</summary>
   HyperText Transfer Protocol

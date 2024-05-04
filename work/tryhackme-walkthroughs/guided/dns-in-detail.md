@@ -20,6 +20,8 @@ layout:
 
 ## Task 1: What is DNS?
 
+Task 1
+
 <details>
 
 <summary>What does DNS stand for?</summary>

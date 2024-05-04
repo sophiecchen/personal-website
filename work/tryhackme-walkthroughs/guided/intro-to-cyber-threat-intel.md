@@ -1,4 +1,20 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
 # Intro to Cyber Threat Intel
+
+[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Intro to Cyber Threat Intel
 
 ## Task 2:
 

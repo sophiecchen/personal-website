@@ -17,7 +17,7 @@ layout:
 [TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Introductory Networking
 
 ***
-
+## Task 1:
 ## Task 2: The OSI Model: An Overview
 
 <details>

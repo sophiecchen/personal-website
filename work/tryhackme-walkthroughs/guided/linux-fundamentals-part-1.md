@@ -24,15 +24,16 @@ This room is part 1 in a 3-part series going over the fundamentals of Linux, a f
 
 Task 1 welcomes you to the module and explains what you will learn.
 
-
 ## Task 2: A Bit of Background on Linux
 
 Task 2 explains where Linux is commonly used: websites, control panels, critical infrastructure, etc. The task also explains that Linux is an umbrella for a group of similar Unix-like operating systems.
 
 <details>
-  <summary>Research: What year was the first release of a Linux operating system?</summary>
-  1991
-  This information can be found with a quick Google search. The original Linux kernel was released on September 17, 1991.
+
+<summary>Research: What year was the first release of a Linux operating system?</summary>
+
+1991 This information can be found with a quick Google search. The original Linux kernel was released on September 17, 1991.
+
 </details>
 
 ## Task 3: Interacting With Your First Linux Machine (In-Browser)
@@ -41,11 +42,15 @@ Task 3 explains how to interact with a Linux machine in TryHackMe.
 
 ## Task 4: Running Your First few Commands
 
-Task 4 introduces two commands:
-- `echo`:	Output any text that we provide
-- `whoami`:	Find out what user you're currently logged in as
+Task 4 introduces two basic commands.
+
+| Command  | Function                                         |
+| -------- | ------------------------------------------------ |
+| `echo`   | Output any text that we provide                  |
+| `whoami` | Find out what user you're currently logged in as |
 
 <details>
+
 <summary>If we wanted to output the text "TryHackMe", what would our command be?</summary>
 
 echo TryHackMe
@@ -55,6 +60,7 @@ The `echo` command outputs text. No quotation marks are needed.
 </details>
 
 <details>
+
 <summary>What is the username of who you're logged in as on your deployed Linux machine?</summary>
 
 tryhackme
@@ -66,10 +72,11 @@ Use the command `whoami` to see your username.
 ## Task 5: Interacting With the Filesystem!
 
 Task 5 introduces basic commands used to interact with the filesystem:
-- `ls`: list
-- `cd`: change directory
-- `cat`: concatenate (can be used to output contents of a single file)
-- `pwd`: print working directory
+
+* `ls`: list
+* `cd`: change directory
+* `cat`: concatenate (can be used to output contents of a single file)
+* `pwd`: print working directory
 
 <details>
 
@@ -112,8 +119,9 @@ Use `cat <file_name>` to view file contents.
 ## Task 6: Searching for Files
 
 Task 6 introduces commands used to search the filesystem:
-- `find`: can be used to search for files in the filesystem
-- `grep`: can be used to search the contents of files for specific values 
+
+* `find`: can be used to search for files in the filesystem
+* `grep`: can be used to search the contents of files for specific values
 
 <details>
 
@@ -128,10 +136,11 @@ Use `grep THM* access.log` to search for prefixes of "THM".
 ## Task 7: An Introduction to Shell Operators
 
 Task 7 introduces shell operators:
-- `&`: allows you to run commands in the background of your terminal.
-- `&&`: allows you to combine multiple commands together in one line of your terminal.
-- `>`	This operator is a redirector - meaning that we can take the output from a command (such as using cat to output a file) and direct it elsewhere.
-- `>>`: This operator does the same function of the > operator but appends the output rather than replacing (meaning nothing is overwritten).
+
+* `&`: allows you to run commands in the background of your terminal.
+* `&&`: allows you to combine multiple commands together in one line of your terminal.
+* `>` This operator is a redirector - meaning that we can take the output from a command (such as using cat to output a file) and direct it elsewhere.
+* `>>`: This operator does the same function of the > operator but appends the output rather than replacing (meaning nothing is overwritten).
 
 <details>
 
@@ -161,11 +170,11 @@ echo tryhackme >> passwords
 
 </details>
 
-# Task 8: Conclusions & Summaries
+## Task 8
 
-# Task 9: Linux Fundamentals Part 2
+## Task 9: Linux Fundamentals Part 2
 
-Task 9 
+Task 9
 
 ***
 

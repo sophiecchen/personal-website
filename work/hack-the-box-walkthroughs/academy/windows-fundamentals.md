@@ -14,6 +14,10 @@ layout:
 
 # Windows Fundamentals
 
+[Hack The Box Walkthroughs](./) ⋅ [Academy](../) ⋅ Windows Fundamentals
+
+***
+
 ## Introduction
 
 ### Introduction to Windows
@@ -205,3 +209,7 @@ S-1-5-21-2614195641-1726409526-3792725429-1007
 Create HR using Computer Management's Local Users and Groups tab. Then, use the `get-localgroup | Select name,sid` command in PowerShell.
 
 </details>
+
+***
+
+[Home](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/036xtfEIzcEdGegONXWM/) ⋅ [Work](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/WaFS755Q4sf02CxLcghQ/) ⋅ [Thoughts](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/s4QQPMntQ25hmJToKSOu/)

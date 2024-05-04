@@ -46,8 +46,8 @@ Task 4 introduces two basic commands.
 
 | Command  | Function                                         |
 | -------- | ------------------------------------------------ |
-| `echo`   | Output any text that we provide                  |
-| `whoami` | Find out what user you're currently logged in as |
+| `echo`   | Output text we provide                           |
+| `whoami` | Output the username you are logged in as         |
 
 <details>
 
@@ -72,11 +72,12 @@ Use the command `whoami` to see your username.
 ## Task 5: Interacting With the Filesystem!
 
 Task 5 introduces basic commands used to interact with the filesystem:
-
-* `ls`: list
-* `cd`: change directory
-* `cat`: concatenate (can be used to output contents of a single file)
-* `pwd`: print working directory
+| Command  | Function                                         |
+| -------- | ------------------------------------------------ |
+| `ls`     | Output text we provide                           |
+| `cd`     | Output the username you are logged in as         |
+| `cat`    | Output the username you are logged in as         |
+| `pwd`    | Output the username you are logged in as         |
 
 <details>
 

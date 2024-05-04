@@ -14,6 +14,10 @@ layout:
 
 # Linux Fundamentals
 
+[Hack The Box Walkthroughs](./) ⋅ [Academy](../) ⋅ Linux Fundamentals
+
+***
+
 ## The Shell
 
 ### System Information
@@ -285,3 +289,7 @@ php -S 127.0.0.1:8080
 Use `sudo fdisk -l` to see all of the partitions.
 
 </details>
+
+***
+
+[Home](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/036xtfEIzcEdGegONXWM/) ⋅ [Work](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/WaFS755Q4sf02CxLcghQ/) ⋅ [Thoughts](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/s4QQPMntQ25hmJToKSOu/)

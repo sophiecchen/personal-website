@@ -18,7 +18,7 @@ layout:
 
 ***
 
-## Task 1: Introduction&#x20;
+## Task 1: Introduction
 
 ## Task 2: Case B4DM755: Details of the Crime
 

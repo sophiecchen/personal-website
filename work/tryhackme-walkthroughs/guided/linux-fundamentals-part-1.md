@@ -18,15 +18,16 @@ layout:
 
 ***
 
-This room is part 1 in a 3-part series going over the fundamentals of Linux, a family of open-source Unix-like operating systems.
-
 ## Task 1: Introduction
 
-Task 1 welcomes you to the module and explains what you will learn.
+This module will have you:
+* Running your very first commands in an interactive Linux machine in your browser
+* Teaching you some essential commands used to interact with the file system
+* Introduce you to how users and groups work on Linux (and what this means for us as penetration testers) 
 
 ## Task 2: A Bit of Background on Linux
 
-Task 2 explains where Linux is commonly used: websites, control panels, critical infrastructure, etc. The task also explains that Linux is an umbrella for a group of similar Unix-like operating systems.
+Linux is commonly used for websites, control panels, critical infrastructure, and more. Linux is actually an umbrella term for a group of operating systems all based on Unix. We refer to these operating systems as "flavors" of Linux.
 
 <details>
 
@@ -38,16 +39,11 @@ Task 2 explains where Linux is commonly used: websites, control panels, critical
 
 ## Task 3: Interacting With Your First Linux Machine (In-Browser)
 
-Task 3 explains how to interact with a Linux machine in TryHackMe.
+You can interact with a Linux machine in TryHackMe by pressing the "Start Machine" button on the top-right of each task.
 
 ## Task 4: Running Your First few Commands
 
-Task 4 introduces two basic commands.
-
-| Command  | Function                                         |
-| -------- | ------------------------------------------------ |
-| `echo`   | Output text we provide                           |
-| `whoami` | Output the username you are logged in as         |
+Two basic commands that can be run in the Linux command line are `echo` and `whoami`. `echo` outputs the text you provide to it. `whoami` outputs the username you are logged in as.
 
 <details>
 
@@ -71,13 +67,7 @@ Use the command `whoami` to see your username.
 
 ## Task 5: Interacting With the Filesystem!
 
-Task 5 introduces basic commands used to interact with the filesystem:
-| Command  | Function                                         |
-| -------- | ------------------------------------------------ |
-| `ls`     | Output text we provide                           |
-| `cd`     | Output the username you are logged in as         |
-| `cat`    | Output the username you are logged in as         |
-| `pwd`    | Output the username you are logged in as         |
+The Linux command line allows you to interact with the filesystem. `cd` allows you to change directories and `ls` lists the files in the current directory. `pwd` prints which directory you are currently in. `cat` stands for concatenate and outputs multiple files concatenated together. However, it is most commonly used to print the contents of a single file.
 
 <details>
 
@@ -115,14 +105,13 @@ Use `cat <file_name>` to view file contents.
 
 /home/tryhackme/folder4
 
+Use `pwd` to print the directory you are currently in.
+
 </details>
 
 ## Task 6: Searching for Files
 
-Task 6 introduces commands used to search the filesystem:
-
-* `find`: can be used to search for files in the filesystem
-* `grep`: can be used to search the contents of files for specific values
+You can search the filesystem for files by name or other attributes with `find`. `grep` can be used to search the contents of files for specific values.
 
 <details>
 
@@ -136,18 +125,15 @@ Use `grep THM* access.log` to search for prefixes of "THM".
 
 ## Task 7: An Introduction to Shell Operators
 
-Task 7 introduces shell operators:
-
-* `&`: allows you to run commands in the background of your terminal.
-* `&&`: allows you to combine multiple commands together in one line of your terminal.
-* `>` This operator is a redirector - meaning that we can take the output from a command (such as using cat to output a file) and direct it elsewhere.
-* `>>`: This operator does the same function of the > operator but appends the output rather than replacing (meaning nothing is overwritten).
+Various operators in the Linux command line allow you to use commands with more flexibility. `&` allows you to run commands in the background of your terminal. `&&` looks similar but is unrelated to `&`. Rather, `&&` allows you to combine multiple commands together in one line of your terminal. The`>` operator is a redirector, meaning that we can take the output from a command (such as using cat to output a file) and direct it elsewhere. `>>` has the same functionality as the `>` operator but appends the output rather than replacing (meaning nothing is overwritten).
 
 <details>
 
 <summary>If we wanted to run a command in the background, what operator would we want to use?</summary>
 
 &
+
+Running a command in the background is done with `<command> &`.
 
 </details>
 
@@ -171,11 +157,18 @@ echo tryhackme >> passwords
 
 </details>
 
-## Task 8
+## Task 8: Conclusions & Summaries
+
+In conclusion, this module covered the following:
+* Understanding why Linux is so commonplace today
+* Interacting with your first-ever Linux machine!
+* Ran some of the most fundamental commands
+* Had an introduction to navigating around the filesystem & how we can use commands like find and grep to make finding data even more efficient!
+* Power up your commands by learning about some of the important shell operators.
 
 ## Task 9: Linux Fundamentals Part 2
 
-Task 9
+The walkthrough for the next room in this Linux introductory series can be found [here](linux-fundamentals-part-2.md).
 
 ***
 

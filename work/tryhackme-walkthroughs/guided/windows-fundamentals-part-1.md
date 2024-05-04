@@ -18,8 +18,6 @@ layout:
 
 ***
 
-This room is part 1 in a 3-part series going over the fundamentals of the Windows operating system.
-
 ## Task 1: 
 
 ## Task 2: Windows Editions

@@ -20,15 +20,28 @@ layout:
 
 ## Task 1: Introduction
 
-## Task 2:
+This room will have you:
+* Unlocking the potential of your first few commands by introducing you to using flags and arguments
+* Advancing your knowledge of the filesystem to perform some more useful commands such as copying and moving files
+* Discovering how access to files and folders is managed and how we can determine our access.
+* Running your first few scripts and executables!
+
+
+## Task 2: Accessing Your Linux Machine Using SSH (Deploy)
+
+Secure Shell or SSH simply is a protocol between devices in an encrypted form. You can SSH into the machine for this room using the command `ssh tryhackme@<machine_ip>`. The machine IP is listed at the top of the page after you start the machine for the room.
 
 ## Task 3: Introduction to Flags and Switches
+
+Commands in Linux have a default behavior. For example, `ls` lists the contents of the working directory. We can add flags to commands to extend the behaviour of commands. `man <command>` can be used to view the associated flags for each command.
 
 <details>
 
 <summary>What directional arrow key would we use to navigate down the manual page?</summary>
 
 down
+
+Pressing the down key scrolls the manual page down, and pressing the up key scrolls up.
 
 </details>
 
@@ -38,9 +51,13 @@ down
 
 \-h
 
+Use the command `man ls` to view the flags for `ls`. Then, press the down key to find the flag that results in "human-readable" output.
+
 </details>
 
 ## Task 4: Filesystem Interaction Continued
+
+The command line can also be used to manipulate files. `touch` creates a new file and `mkdir` creates a new folder. Files and folders can be copied with `cp`, moved with `mv`, and removed with `rm`. `file` can be used to output the file type.
 
 <details>
 
@@ -57,6 +74,8 @@ The `touch` command is used to create a new file.
 <summary>On the deployable machine, what is the file type of "unknown1" in "tryhackme's" home directory?</summary>
 
 ASCII text
+
+Use the `file` command to view the file's type.
 
 </details>
 
@@ -75,6 +94,8 @@ The `mv` command is used to move or rename a file.
 <summary>What are the contents of this file?</summary>
 
 THM{FILESYSTEM}
+
+Use `cat myfile` to output the contents of the file to the command line.
 
 </details>
 
@@ -106,6 +127,11 @@ THM{SU\_USER2}
 
 ## Task 6: Common Directories
 
+The Linux filesystem is organized into directories that hold important files for the operating system. The `/etc` directory holds TODO.
+`/var`
+`/root`
+`/tmp`
+
 <details>
 
 <summary>What is the directory path that would we expect logs to be stored in?</summary>
@@ -129,6 +155,18 @@ THM{SU\_USER2}
 /root
 
 </details>
+
+## Task 7: Conclusions and Summaries
+
+In conclusion, this room covered the following:
+* Using terminal text editors
+* General utilities such as downloading and serving contents using a python webserver
+* A look into processes
+* Maintaining & automating your system by the use of crontabs, package management, and reviewing logs
+
+## Task 8: Linux Fundamentals Part 3
+
+The walkthrough for the next room in this Linux introductory series can be found [here](linux-fundamentals-part-3.md).
 
 ***
 

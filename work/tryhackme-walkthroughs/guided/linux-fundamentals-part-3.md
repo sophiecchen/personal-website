@@ -18,9 +18,13 @@ layout:
 
 ***
 
-## Task 1:
+## Task 1: Introduction
 
-## Task 2:
+In this room, you will learn about automation, package management, and service/application logging.
+
+## Task 2: Deploy Your Linux Machine
+
+To complete this room, you first need to deploy and log into the associated machine.
 
 ## Task 3: Terminal Text Editors
 
@@ -102,6 +106,8 @@ fg
 
 </details>
 
+## Task 7:
+
 ## Task 8: Maintaining Your System: Logs
 
 <details>
@@ -119,6 +125,8 @@ fg
 catsanddogs.jpg
 
 </details>
+
+## Task 9: Conclusions & Summaries
 
 ***
 

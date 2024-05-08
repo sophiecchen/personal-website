@@ -20,7 +20,11 @@ layout:
 
 ## Task 1: Introduction to Digital Forensics
 
-Task 1 
+Forensics applies science to investigate crimes. Digital forensics, focusing on digital evidence, stands at the intersection between cybersecurity and forensics.
+
+There are two types of investigations where digital forensics is applicable:
+1. Public-sector investigations: carried out by government and law enforcement
+2. Private-sector investigations: carried out by corporations
 
 <details>
 
@@ -28,9 +32,13 @@ Task 1
 
 Laptop
 
+Laptops often contain a wealth of evidence recoverable using digital forensics. 
+
 </details>
 
 ## Task 2: Digital Forensics Processes
+
+After 
 
 <details>
 

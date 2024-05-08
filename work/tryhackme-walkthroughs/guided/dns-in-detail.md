@@ -20,8 +20,6 @@ layout:
 
 ## Task 1: What is DNS?
 
-Task 1
-
 <details>
 
 <summary>What does DNS stand for?</summary>
@@ -85,6 +83,13 @@ AAAA
 </details>
 
 ## Task 4: Making A Request
+
+When you make a DNS request, the following steps occur:
+1. 
+2. 
+3. 
+4.
+5.
 
 <details>
 

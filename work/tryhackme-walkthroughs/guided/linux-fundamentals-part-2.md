@@ -20,16 +20,16 @@ layout:
 
 ## Task 1: Introduction
 
-This room will have you:
+This room will have us:
 * Unlocking the potential of your first few commands by introducing you to using flags and arguments
 * Advancing your knowledge of the filesystem to perform some more useful commands such as copying and moving files
-* Discovering how access to files and folders is managed and how we can determine our access.
-* Running your first few scripts and executables!
+* Discovering how access to files and folders is managed and how we can determine our access
+* Running your first few scripts and executables
 
 
 ## Task 2: Accessing Your Linux Machine Using SSH (Deploy)
 
-Secure Shell or SSH simply is a protocol between devices in an encrypted form. You can SSH into the machine for this room using the command `ssh tryhackme@<machine_ip>`. The machine IP is listed at the top of the page after you start the machine for the room.
+Secure Shell (SSH) is a protocol between devices in an encrypted form. We can SSH into the machine for this room using the command `ssh tryhackme@<machine_ip>`. The machine IP is listed at the top of the page after we start the machine for the room.
 
 ## Task 3: Introduction to Flags and Switches
 
@@ -57,7 +57,7 @@ Use the command `man ls` to view the flags for `ls`. Then, press the down key to
 
 ## Task 4: Filesystem Interaction Continued
 
-The command line can also be used to manipulate files. `touch` creates a new file and `mkdir` creates a new folder. Files and folders can be copied with `cp`, moved with `mv`, and removed with `rm`. `file` can be used to output the file type.
+The command line can also be used to manipulate files. `touch <file>` creates a new file and `mkdir <directory>` creates a new folder. Files and folders can be copied with `cp <file> <destination>`, moved with `mv <file> <destination>`, and removed with `rm <file>`. `file <file>` can be used to output the file type.
 
 <details>
 
@@ -101,11 +101,19 @@ Use `cat myfile` to output the contents of the file to the command line.
 
 ## Task 5: Permissions 101
 
+In Linux, a file's characteristics determines what actions can be performed on that file and by whom. The three basic actions we have in Linux are read, write and execute.
+
+A file's permissions can be viewed by using the `-l` flag on the `ls` command. 
+
+We can switch users using `su <user>`.
+
 <details>
 
 <summary>On the deployable machine, who is the owner of "important"?</summary>
 
 user2
+
+Use `ls -l` to view the owner of "important".
 
 </details>
 
@@ -115,6 +123,8 @@ user2
 
 su user2
 
+The `su` command is used to switch users.
+
 </details>
 
 <details>
@@ -123,20 +133,21 @@ su user2
 
 THM{SU\_USER2}
 
+Once you switch to user2 using `su`, we can `cat` to view the output of "important".
+
 </details>
 
 ## Task 6: Common Directories
 
-The Linux filesystem is organized into directories that hold important files for the operating system. The `/etc` directory holds TODO.
-`/var`
-`/root`
-`/tmp`
+The Linux filesystem is organized into directories that hold important files for the operating system. The `/etc` directory holds system files that are used by the operating system. `/var` holds variable data such as logs. `/root` is the home directory for the root user, and `/tmp` holds temporary information and is wiped after the computer is restarted.
 
 <details>
 
 <summary>What is the directory path that would we expect logs to be stored in?</summary>
 
 /var/log
+
+Logs are stored in the `log` directory of `/var`.
 
 </details>
 
@@ -146,6 +157,8 @@ The Linux filesystem is organized into directories that hold important files for
 
 /tmp
 
+RAM on a computer is wiped after the computer is restarted, similar to `tmp`.
+
 </details>
 
 <details>
@@ -153,6 +166,8 @@ The Linux filesystem is organized into directories that hold important files for
 <summary>Name the home directory of the root user</summary>
 
 /root
+
+The root user's home directory is simply `root`.
 
 </details>
 
@@ -166,7 +181,7 @@ In conclusion, this room covered the following:
 
 ## Task 8: Linux Fundamentals Part 3
 
-The walkthrough for the next room in this Linux introductory series can be found [here](linux-fundamentals-part-3.md).
+My walkthrough for the next room in this Linux introductory series can be found [here](linux-fundamentals-part-3.md).
 
 ***
 

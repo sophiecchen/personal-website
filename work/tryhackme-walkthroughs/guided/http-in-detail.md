@@ -20,7 +20,7 @@ layout:
 
 ## Task 1: What is HTTP(S)?
 
-Task 1
+HTTP (HyperText Transfer Protocol) is a protocol, or set of rules, used to communicate with web servers and transmit webpage data. HTTPS, the S standing for secure, is the encrypted version of HTTP.
 
 <details>
   <summary>What does HTTP stand for?</summary>
@@ -40,6 +40,8 @@ Secure
 <summary>On the mock webpage on the right there is an issue, once you've found it, click on it. What is the challenge flag?</summary>
 
 THM{INVALID\_HTTP\_CERT}
+
+Notice the lock with the red slash on the left of the URL. This means that your connection is insecure.
 
 </details>
 

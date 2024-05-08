@@ -22,8 +22,6 @@ layout:
 
 ### System Information
 
-This section TODO
-
 <details>
 
 <summary>Find out the machine hardware name and submit it as the answer.</summary>

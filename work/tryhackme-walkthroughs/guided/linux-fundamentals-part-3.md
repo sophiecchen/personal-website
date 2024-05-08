@@ -20,19 +20,27 @@ layout:
 
 ## Task 1: Introduction
 
-In this room, you will learn about automation, package management, and service/application logging.
+In this room, we will learn about automation, package management, and service/application logging.
 
 ## Task 2: Deploy Your Linux Machine
 
-To complete this room, you first need to deploy and log into the associated machine.
+To complete this room, we first need to deploy and log into the associated machine.
 
 ## Task 3: Terminal Text Editors
+
+We can edit files with terminal text editors like Nano and Vim.
+
+`nano <filename>` can be used to open or create a file in the text editor. Pressing `CTRL+X` will allow us to exit nano.
+
+Vim is a much more advanced text editor. Its learning curve is higher but also includes advanced features and customizability.
 
 <details>
 
 <summary>Edit "task3" located in "tryhackme"'s home directory using Nano. What is the flag?</summary>
 
 THM{TEXT\_EDITORS}
+
+Navigate to "tryhackme"'s home directory and run `nano task3` to edit the file.
 
 </details>
 
@@ -106,7 +114,7 @@ fg
 
 </details>
 
-## Task 7:
+## Task 7: Maintaining Your System: Package Management
 
 ## Task 8: Maintaining Your System: Logs
 
@@ -127,6 +135,12 @@ catsanddogs.jpg
 </details>
 
 ## Task 9: Conclusions & Summaries
+
+In conclusion, this room covered the following:
+* Using terminal text editors
+* General utilities such as downloading and serving contents using a python webserver
+* A look into processes
+* Maintaining & automating your system by the use of crontabs, package management, and reviewing logs
 
 ***
 

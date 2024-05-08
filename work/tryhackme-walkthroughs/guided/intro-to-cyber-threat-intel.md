@@ -16,7 +16,18 @@ layout:
 
 [TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Intro to Cyber Threat Intel
 
-## Task 2:
+## Task 1: Introduction
+
+In this room, we will learn:
+* The basics of CTI and its various classifications
+* The lifecycle followed to deploy and use intelligence during threat investigations
+* Frameworks and standards used in distributing intelligence
+
+## Task 2: Cyber Threat Intelligence
+
+Cyber Threat Intelligence (CTI) is TODO. 
+
+Intelligence differs from data and information. 
 
 <details>
 
@@ -34,7 +45,7 @@ Technical Intel
 
 </details>
 
-## Task 3:
+## Task 3: CTI Lifecycle
 
 <details>
 
@@ -52,7 +63,9 @@ Direction
 
 </details>
 
-## Task 4:
+## Task 4: CTI Standards & Formulas
+
+Standards and frameworks in CTI allow TODO.
 
 <details>
 
@@ -70,7 +83,7 @@ Actions on Objectives
 
 </details>
 
-## Task 5:
+## Task 5: Practical Analysis
 
 <details>
 

@@ -81,6 +81,37 @@ A search warrant authorizes law enforcement officers to investigate the subject 
 
 ## Task 3: Practical Application of the Digital Forensics Process
 
+DFIR first responders typically follow these steps for computer systems at the scene of a crime:
+1. Take an image of RAM
+2. Check for drive encryption
+3. Take an image of the drive(s)
+
+DFIR first responders should establish a chain of custody while following thee best practices:
+* Ensure proper documentation of seized materials
+* Hash and copy obtained files
+* Do **not** shutdown devices as this can alter data. Pull the power plug instead.
+* Bag, seal, and tag the obtained artifacts.
+
+<details>
+
+<summary>Before imaging drives, what must we check them for?</summary>
+
+</details>
+
+
+<details>
+
+<summary>What should be done to ensure and maintain the integrity of original files in the Chain of Custody?</summary>
+
+</details>
+
+
+<details>
+
+<summary>What must be done before sending obtained artefacts to the Forensics Laboratory?</summary>
+
+</details>
+
 ## Task 4: Case B4DM755: At the Scene of Crime
 
 ## Task 5: Introduction to FTK Imager

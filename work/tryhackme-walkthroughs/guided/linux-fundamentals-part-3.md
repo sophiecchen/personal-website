@@ -46,11 +46,17 @@ Navigate to "tryhackme"'s home directory and run `nano task3` to edit the file.
 
 ## Task 4: General/Useful Utilities
 
+We can download files from the web via HTTP using `wget <address>`. We can copy files and folders between our local system and a remote system using secure copy. `scp <local_file> <remote_user>@<remote_destination>:<remote_file>` copies from our system to the remote system where `remote_file` specifies the name that we wish to store the file as on the remote system. `scp <remote_user>@<remote_destination>:<remote_file> <local_file>` copies from the remote system to our system where `local_file` specifies the name that we wish to store the file as on our local system.
+
+Python3's "HTTPServer" allows us to serve files on the web and can be run with the command `python3 -m  http.server`.
+
 <details>
 
 <summary>Download the file http://MACHINE_IP:8000/.flag.txt onto the TryHackMe AttackBox. Remember, you will need to do this in a new terminal.</summary>
 
 THM{WGET\_WEBSERVER}
+
+First start a web server in the home directory of "tryhackme" with `python3 -m http.server`. Then, use `wget http://<machine_ip>:8000/.flag.txt` to download the file. Make sure to replace `<machine_ip>` with the IP of the machine. 
 
 </details>
 
@@ -117,6 +123,8 @@ fg
 ## Task 7: Maintaining Your System: Package Management
 
 ## Task 8: Maintaining Your System: Logs
+
+As noted in [Linux Fundamentals Part 1](linux-fundamentals-part-1.md), logs are located in the `/var/log` folder in Linux. TODO.
 
 <details>
 

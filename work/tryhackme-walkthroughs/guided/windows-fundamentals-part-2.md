@@ -18,7 +18,7 @@ layout:
 
 ***
 
-## Task 1:
+## Task 1: Introduction
 
 ## Task 2: System Configuration
 
@@ -181,6 +181,8 @@ regedt32.exe
 Click on Registry Editor in the Tools tab of System Configuration.
 
 </details>
+
+## Task 9: Conclusion
 
 ***
 

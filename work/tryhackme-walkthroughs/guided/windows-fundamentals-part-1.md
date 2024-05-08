@@ -18,7 +18,7 @@ layout:
 
 ***
 
-## Task 1: 
+## Task 1: Introduction to Windows
 
 ## Task 2: Windows Editions
 
@@ -141,6 +141,10 @@ Windows Defender Firewall
 Ctrl+Shift+Esc
 
 </details>
+
+## Task 10: Conclusion
+
+This room gave a general overview of the Windows OS.
 
 ***
 

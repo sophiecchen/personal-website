@@ -18,7 +18,7 @@ layout:
 
 ***
 
-## Task 1:
+## Task 1: Introduction
 
 ## Task 2: Windows Updates
 
@@ -53,6 +53,8 @@ Public network
 
 </details>
 
+## Task 6: App & browser control
+
 ## Task 7: Device security
 
 <details>
@@ -84,6 +86,8 @@ This information can be found in [Microsoft's Bitlocker documentation](https://l
 Volume Shadow Copy Service
 
 </details>
+
+## Task 10: Conclusion
 
 ***
 

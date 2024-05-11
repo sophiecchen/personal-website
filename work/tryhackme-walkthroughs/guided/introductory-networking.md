@@ -17,7 +17,14 @@ layout:
 [TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Introductory Networking
 
 ***
-## Task 1:
+## Task 1: Introduction
+
+This room will cover the following:
+* The OSI Model
+* The TCP/IP Model
+* How these models look in practice
+* An introduction to basic networking tools
+
 ## Task 2: The OSI Model: An Overview
 
 <details>
@@ -405,6 +412,10 @@ Hosts File
 86400
 
 </details>
+
+## Task 9: Further Reading
+
+[CISCO Self Study Guide](https://www.amazon.co.uk/Interconnecting-Cisco-Network-Devices-ICND1/dp/1587054620/ref=sr_1_1?keywords=Interconnecting+Cisco+Network+Devices%2C+Part+1&qid=1583683766&sr=8-1) by Steve McQuerry is a great resource to learn more about networking theory.
 
 ***
 

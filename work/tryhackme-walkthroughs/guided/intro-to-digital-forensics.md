@@ -38,7 +38,21 @@ Laptops often contain a wealth of evidence recoverable using digital forensics.
 
 ## Task 2: Digital Forensics Processes
 
-After 
+Before acquiring evidence, we should have proper search authorization.
+
+At the scene, we should do the following:
+1. Acquire the evidence
+2. Establish a chain of custody so that we know who has the evidence at any time
+3. Place the evidence in a secure container
+4. Transport the evidence to the lab
+
+Upon arrival at the lab, we should do the following:
+1. Retrieve the evidence from the secure container
+2. Create a forensic copy of the evidence using validated tools
+3. Return the evidence to the secure container
+4. Begin analysis on the forensic copy
+
+Following proper procedures is crucial in digital forensics because our findings must be repeatable.
 
 <details>
 
@@ -50,6 +64,8 @@ Chain of Custody
 
 ## Task 3: Practical Example of Digital Forensics
 
+Files in a computer have associated data, called metadata. This metadata includes information about the file, such as creation date and last modification date. We can view the metadata of a PDF file by downloading `pdfinfo` using `sudo apt install poppler-utils`. The tool can be run as follows: `pdfinfo <file>`.
+
 <details>
 
 <summary>Using <code>pdfinfo</code>, find out the author of the attached PDF file.</summary>
@@ -59,6 +75,8 @@ Ann Gree Shepherd
 Use the command `pdfinfo ransom-letter.pdf` to view author information.
 
 </details>
+
+Images also have metadata. The standard format for saving image metadata is the Exchangeable Image File Format (EXIF), and EXIF metadata can be viewed with `exiftool`. To download this too, first run `sudo apt install libimage-exiftool-perl`. Then, EXIF metadata can be viewed with the command `exiftool <image>`.
 
 <details>
 

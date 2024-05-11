@@ -98,6 +98,9 @@ DFIR first responders should establish a chain of custody while following thee b
 
 </details>
 
+drive encryption
+
+TODO.
 
 <details>
 
@@ -105,10 +108,17 @@ DFIR first responders should establish a chain of custody while following thee b
 
 </details>
 
+hash and copy
+
+Hashing and copying allows us to make sure that TODO.
 
 <details>
 
 <summary>What must be done before sending obtained artefacts to the Forensics Laboratory?</summary>
+
+bag, seal, and tag the obtained artefacts
+
+TODO.
 
 </details>
 

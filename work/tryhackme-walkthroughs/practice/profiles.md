@@ -12,11 +12,13 @@ layout:
     visible: false
 ---
 
-# PrintNightmare, thrice!
+# Profiles
 
-[TryHackMe Walkthroughs](./) ⋅ [Practice](../) ⋅ PrintNightmare, thrice!
+[TryHackMe Walkthroughs](./) ⋅ [Practice](../) ⋅ Profiles
 
 ***
+
+## Task 1: The Incident
 
 ***
 

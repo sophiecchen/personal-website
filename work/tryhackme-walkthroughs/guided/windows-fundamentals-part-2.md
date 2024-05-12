@@ -20,6 +20,8 @@ layout:
 
 ## Task 1: Introduction
 
+This room will build on [Windows Fundamentals Part 1](windows-fundamentals-part-1.md) by introducing additional utilities and different methods of accessing these utilities.
+
 ## Task 2: System Configuration
 
 <details>

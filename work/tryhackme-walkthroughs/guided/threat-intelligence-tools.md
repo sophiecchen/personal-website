@@ -36,6 +36,8 @@ Threat intelligence analyzes data to understand how to defend risks associated w
 
 ## Task 3: UrlScan.io
 
+[UrlScan.io](https://urlscan.io/) is a free application that assists in scanning and analyzes websites. The service includes information such as HTTP connections, redirects, links, behaviors, etc.
+
 <details>
 <summary>What was TryHackMe's Cisco Umbrella Rank based on the screenshot?</summary>
 
@@ -76,6 +78,13 @@ This information is listed in the first section of the Summary.
 
 ## Task 4: Abuse.ch
 
+[Abuse.ch](https://abuse.ch/) is a research project hosted at Bern University of Applied Sciences. The project identifies and tracks malware and botnets through various platforms.
+* [**Malware Bazaar**](https://bazaar.abuse.ch/): An all-in-one malware collection and analysis database
+* [**Feodo Tracker**](https://feodotracker.abuse.ch/): A resource that tracks botnet command and control (C2) infrastructure linked with Emotet, Dridex and TrickBot
+* [**SSL Blacklist**](https://sslbl.abuse.ch/): A tool that identifies and detects malicious SSL connections, identified by certificates and JA3/JA3s fingerprints
+* [**URL Haus**](https://urlhaus.abuse.ch/): A tool that shares malicious URLs used for malware distribution
+* [**Threat Fox**](https://threatfox.abuse.ch/): A resource for searching and sharing indicators of compromise (IOCs) associated with malware
+
 <details>
 
 <summary>The IOC 212.192.246.30:5555 is identified under which malware alias name on ThreatFox?</summary>
@@ -111,6 +120,8 @@ Georgia
 </details>
 
 ## Task 5: PhishTool
+
+PhishTool performs email analysis, heuristic intelligence, and classification and reporting to help analysts uncover and prevent breaches arising from phishing.
 
 The email to be analyzed is located in the folder called "Emails" located on the Desktop. Double click on the email. For this exercise, you can setup Thunderbird arbitrarily.
 
@@ -188,6 +199,8 @@ Use the command `whois <ip_address>` to find this information.
 
 ## Task 7: Scenario 1
 
+Analyze Email2.eml on the attacked VM to answer the following questions.
+
 <details>
 
 <summary>According to Email2.eml, what is the recipient's email address?</summary>
@@ -210,6 +223,8 @@ I downloaded this file and ran the command `sha256sum <file>` to get the SHA256 
 
 ## Task 8: Scenario 2
 
+Analyze Email3.eml on the attacked VM to answer the following questions.
+
 <details>
 
 <summary>What is the name of the attachment on Email3.eml?</summary>
@@ -231,6 +246,8 @@ I downloaded this file and ran the command `sha256sum <file>` to get the SHA256 
 </details>
 
 ## Task 9: Conclusion
+
+We have covered the tip of the iceberg for open-source threat intelligence tools in this room.
 
 ***
 

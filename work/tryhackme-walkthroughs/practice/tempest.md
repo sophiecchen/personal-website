@@ -24,17 +24,161 @@ layout:
 
 ## Task 3: Preparation - Tools and Artifacts
 
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
 ## Task 4: Initial Access - Malicious Document
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
 
 ## Task 5: Initial Access - Stage 2 execution
 
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
 ## Task 6: Initial Access - Malicious Document Traffic
 
-## Task 7: Discovery - Internal Reconnaissance 
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+## Task 7: Discovery - Internal Reconnaissance
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
 
 ## Task 8: Privilege Escalation - Exploiting Privileges
 
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
 ## Task 9: Actions on Objective - Fully-owned Machine
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
 
 ***
 

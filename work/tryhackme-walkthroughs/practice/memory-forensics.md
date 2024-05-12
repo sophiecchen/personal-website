@@ -22,9 +22,25 @@ layout:
 
 ## Task 2: Login
 
+<details>
+<summary></summary>
+</details>
+
 ## Task 3: Analysis
 
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
 ## Task 4: TrueCrypt
+
+<details>
+<summary></summary>
+</details>
 
 ***
 

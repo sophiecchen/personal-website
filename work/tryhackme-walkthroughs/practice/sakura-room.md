@@ -24,13 +24,69 @@ This room will have us practicing a wide variety of passive OSINT techniques thr
 
 ## Task 2: TIP-OFF
 
+<details>
+<summary></summary>
+</details>
+
 ## Task 3: RECONNAISSANCE
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
 
 ## Task 4: UNVEIL
 
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
 ## Task 5: TAUNT
 
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
 ## Task 6: HOMEBOUND
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
 
 ***
 

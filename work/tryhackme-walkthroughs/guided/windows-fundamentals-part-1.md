@@ -20,6 +20,8 @@ layout:
 
 ## Task 1: Introduction to Windows
 
+The Windows operating system is a complex and widespread operating system with many system files, utilities, settings, and features. This room is designed to increase our familiarity with Windows.
+
 ## Task 2: Windows Editions
 
 <details>

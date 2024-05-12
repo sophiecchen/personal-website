@@ -20,9 +20,57 @@ layout:
 
 ## Task 1: Volatility forensics 
 
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
 ## Task 2: Digging a little more
 
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
 ## Task 3: IOC SAGA
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary></summary>
+</details>
 
 ***
 

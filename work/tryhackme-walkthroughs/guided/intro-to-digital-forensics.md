@@ -60,6 +60,8 @@ Following proper procedures is crucial in digital forensics because our findings
 
 Chain of Custody
 
+The chain of custody keep track of who is handling evidence at any point in time so that the evidence is verifiably not tampered with.
+
 </details>
 
 ## Task 3: Practical Example of Digital Forensics

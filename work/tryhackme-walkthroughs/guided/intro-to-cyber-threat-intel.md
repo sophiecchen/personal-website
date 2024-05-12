@@ -25,15 +25,23 @@ In this room, we will learn:
 
 ## Task 2: Cyber Threat Intelligence
 
-Cyber Threat Intelligence (CTI) is TODO. 
+Cyber Threat Intelligence (CTI) is evidence-based knowledge about adversaries, including their indicators, tactics, motivations, and actionable advice against them. 
 
-Intelligence differs from data and information. 
+Intelligence differs from data and information and is the correlation of data and information to extract patterns of actions based on contextual analysis. Threat intelligence can be gathered from TODO, from TODO, or from TODO.
+
+There are a few different types of intelligence:
+* **Strategic Intel**: Looks into the organization's threat landscape and maps out risk areas
+* **Technical Intel**: Looks into evidence and artifacts of an attack performed by an adversary
+* **Tactical Intel**: Assesses adversaries' tactics, techniques, and procedures (TTPs)
+* **Operational Intel**: Looks into the adversary's motives and intent to attack
 
 <details>
 
 <summary>What does CTI stand for?</summary>
 
 Cyber Threat Intelligence
+
+CTI is short for cyber threat intellgence, a subfield of cybersecurity that focuses on intelligence about adversaries. 
 
 </details>
 
@@ -43,15 +51,27 @@ Cyber Threat Intelligence
 
 Technical Intel
 
+Technical intelligence includes specific artifacts and evidence on system, such as IP addresses and hashes.
+
 </details>
 
 ## Task 3: CTI Lifecycle
+
+Cyber threat intelligence follows six steps that repeat, forming a feedback process loop.
+1. **Planning & Direction**: Define objectives and goals and identify crucial parameters such as information assets, tools, sources of intel, etc.
+2. **Collection**: Gather the required data to address bojectives
+3. **Processing**: Extract, sort, organize, and correlate data to present it in a usable and understandable format
+4. **Analysis**: Derive insights from the data and potentially investigate a threat or strengthen security controls
+5. **Dissemination**: Disseminate intelligence to stakeholders
+6. **Feedback**: Seek feedback from stakeholders
 
 <details>
 
 <summary>At which phase of the CTI lifecycle is data converted into usable formats through sorting, organizing, correlation and presentation?</summary>
 
 Processing
+
+Processing is the phase where raw data is converted into understandable insights.
 
 </details>
 
@@ -61,17 +81,26 @@ Processing
 
 Direction
 
+Defining questions to investigate incidents should happen at the first phase (direction), of the CTI lifecycle.
+
 </details>
 
-## Task 4: CTI Standards & Formulas
+## Task 4: CTI Standards & Frameworks
 
-Standards and frameworks in CTI allow TODO.
+Standards and frameworks in CTI allow for common terminology and the distribution of threat intelligence across the industry. Common frameworks include:
+* **MITRE ATT&CK**: A knowledge base of adversary behavior, focusing on indicators and tactics
+* **TAXII**: Defines two models, collection and channel, for exchanging threat intelligence 
+* **STIX**: Provides relationships between threat information such as attack campaigns, indicators, etc.
+* **Cyber Kill Chain**: Breaks down adversary into 7 steps: (1) reconnaissance, (2) weaponization, (3) delivery, (4) exploitation, (5) installation, (6) command and control, and (7) actions on objectives 
+* **The Diamond Model**: Looks at intrusion analsis and tracking attack groups over time using four key areas: (1) adversary, (2) victim, (3) infrastructure, and (4) capabilities
 
 <details>
 
 <summary>What sharing models are supported by TAXII?</summary>
 
 Collection and Channel
+
+The collection model makes threat intel available upon request by users while the channel model pushes threat intel to users from a central server.
 
 </details>
 
@@ -81,15 +110,21 @@ Collection and Channel
 
 Actions on Objectives
 
+After obtaining access and extracting data, the adversary has already established control over the system. Thus, they are on the last phase of the kill chain: actions on objectives.
+
 </details>
 
 ## Task 5: Practical Analysis
+
+Open the site associated with the task to answer the questions.
 
 <details>
 
 <summary>What was the source email address?</summary>
 
 vipivillain@badbank.com
+
+Notice the alert described as "Email received by John Doe from vipivillain@badbank.com".
 
 </details>
 
@@ -99,6 +134,8 @@ vipivillain@badbank.com
 
 flbpfuh.exe
 
+Notice the alert described as "File download initiated by John Doe. File name: flbpfuh.exe"
+
 </details>
 
 <details>
@@ -106,5 +143,7 @@ flbpfuh.exe
 <summary>After building the threat profile, what message do you receive?</summary>
 
 THM{NOW\_I\_CAN\_CTI}
+
+Scroll down and click on each question in a white box. After answering all questions, the flag pops up.
 
 </details>

@@ -17,9 +17,22 @@ layout:
 [TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Threat Intelligence Tools
 
 ***
-## Task 1:
+## Task 1: Room Outline
 
-## Task 2:
+In this room, we will:
+* Understand the basics of threat intelligence & its classifications
+* Use UrlScan.io to scan for malicious URLs
+* Use Abuse.ch to track malware and botnet indicators
+* Investigate phishing emails using PhishTool
+* Use Cisco's Talos Intelligence platform for intel gathering
+
+## Task 2: Threat Intelligence
+
+Threat intelligence analyzes data to understand how to defend risks associated with existing or emerging threats targeting organizations, industries, or governments. There are a few different types of intelligence:
+* **Strategic Intel**: Looks into the organization's threat landscape and maps out risk areas
+* **Technical Intel**: Looks into evidence and artifacts of an attack performed by an adversary
+* **Tactical Intel**: Assesses adversaries' tactics, techniques, and procedures (TTPs)
+* **Operational Intel**: Looks into the adversary's motives and intent to attack
 
 ## Task 3: UrlScan.io
 
@@ -216,6 +229,8 @@ Dridex
 I downloaded this file and ran the command `sha256sum <file>` to get the SHA256 hash. I put this hash into Talos Intelligence.
 
 </details>
+
+## Task 9: Conclusion
 
 ***
 

@@ -27,7 +27,7 @@ In this room, we will learn:
 
 Cyber Threat Intelligence (CTI) is evidence-based knowledge about adversaries, including their indicators, tactics, motivations, and actionable advice against them. 
 
-Intelligence differs from data and information and is the correlation of data and information to extract patterns of actions based on contextual analysis. Threat intelligence can be gathered from TODO, from TODO, or from TODO.
+Intelligence differs from data and information and is the correlation of data and information to extract patterns of actions based on contextual analysis. Threat intelligence can be gathered internally, from the community and forums, or from external sources such as public sources and threat intelligence feeds.
 
 There are a few different types of intelligence:
 * **Strategic Intel**: Looks into the organization's threat landscape and maps out risk areas
@@ -58,7 +58,7 @@ Technical intelligence includes specific artifacts and evidence on system, such 
 ## Task 3: CTI Lifecycle
 
 Cyber threat intelligence follows six steps that repeat, forming a feedback process loop.
-1. **Planning & Direction**: Define objectives and goals and identify crucial parameters such as information assets, tools, sources of intel, etc.
+1. **Planning & Direction**: Define objectives and goals and identify crucial parameters such as information assets, tools, sources of intelligence, etc.
 2. **Collection**: Gather the required data to address bojectives
 3. **Processing**: Extract, sort, organize, and correlate data to present it in a usable and understandable format
 4. **Analysis**: Derive insights from the data and potentially investigate a threat or strengthen security controls
@@ -100,7 +100,7 @@ Standards and frameworks in CTI allow for common terminology and the distributio
 
 Collection and Channel
 
-The collection model makes threat intel available upon request by users while the channel model pushes threat intel to users from a central server.
+The collection model makes threat intelligence available upon request by users while the channel model pushes threat intelligence to users from a central server.
 
 </details>
 

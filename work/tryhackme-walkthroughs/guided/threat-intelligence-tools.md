@@ -24,7 +24,7 @@ In this room, we will:
 * Use UrlScan.io to scan for malicious URLs
 * Use Abuse.ch to track malware and botnet indicators
 * Investigate phishing emails using PhishTool
-* Use Cisco's Talos Intelligence platform for intel gathering
+* Use Cisco's Talos Intelligence platform for intelligence gathering
 
 ## Task 2: Threat Intelligence
 
@@ -101,6 +101,8 @@ Search ioc:212.192.246.30:5555 in the ThreatFox database.
 
 Dridex
 
+Go to JA3 Fingerprints in SSL Blacklist and search 51c64c77e60f3980eea90869b68c58a8.
+
 </details>
 
 <details>
@@ -109,6 +111,8 @@ Dridex
 
 DIGITALOCEAN-ASN
 
+Go to the statistics page on URLHaus and scroll down to "Top Malware Hosting Networks".
+
 </details>
 
 <details>
@@ -116,6 +120,8 @@ DIGITALOCEAN-ASN
 <summary>Which country is the botnet IP address 178.134.47.166 associated with according to FeodoTracker?</summary>
 
 Georgia
+
+Go to the browse tab on FeodoTracker and type 178.134.47.166 in the search bar.
 
 </details>
 
@@ -177,13 +183,15 @@ Click more (on the upper-right side of the email), and then click view source. T
 
 ## Task 6: Cisco Talos Intelligence
 
+Cisco Talos Intelligence provides actionable intelligence, visibility on indicators, and protection against emerging threats through data collected from Cisco products. The Cisco Talos team is comprised of six subteams: (1) Threat Intelligence & Interdiction, (2) Detection Research, (3) Engineering and Development, (4) Vulnerability Research and Discovery, (5) Communities, and (6) Global Outreach.
+
 <details>
 
 <summary>What is the listed domain of the IP address from the previous task?</summary>
 
 scnet.net
 
-Enter the IP address into [Talos Intelligence's Reputation Center](threat-intelligence-tools.md#what-is-the-listed-domain-of-the-ip-address-from-the-previous-task).
+Enter the IP address into Talos Intelligence's Reputation Center.
 
 </details>
 

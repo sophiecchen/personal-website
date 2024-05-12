@@ -100,7 +100,7 @@ DFIR first responders should establish a chain of custody while following thee b
 
 drive encryption
 
-TODO.
+Whether the drive is encrypted or not needs to be known before trying to imaging the drive.
 
 <details>
 
@@ -110,7 +110,7 @@ TODO.
 
 hash and copy
 
-Hashing and copying allows us to make sure that TODO.
+Hashing and copying allows us to ensure that the original files have not been modified in any way.
 
 <details>
 
@@ -118,19 +118,158 @@ Hashing and copying allows us to make sure that TODO.
 
 bag, seal, and tag the obtained artefacts
 
-TODO.
+Artifacts need to be secured and labeled before being sent to a different location.
 
 </details>
 
 ## Task 4: Case B4DM755: At the Scene of Crime
 
+Law enforcement arrived at the suspect's residence after the transaction supposedly happened. There were indications of attempts to eradicate evidence.
+
+Law enforcement officers searched the suspect's residence and discovered a flash drive with an attached key chain. The key chain had the initials WSM and is believed to belong to the suspect.
+
+<details>
+<summary>What is the only possible artefact found in the suspect's residence?</summary>
+
+</details>
+
+<details>
+<summary>Based on the scenario and the previous task, what should be done with that acquired suspect artefact?</summary>
+
+</details>
+
+<details>
+<summary>What is the crucial aspect of the Chain of Custody that ensures individual accountability and guarantees a transparent and untainted transfer of artefacts and evidence?</summary>
+
+</details>
+
 ## Task 5: Introduction to FTK Imager
+
+<details>
+<summary>What device will prevent tampering when acquiring a forensic disk image?</summary>
+
+</details>
+
+<details>
+<summary>What is the UI element of FTK Imager which displays a hierarchical view of the added evidence sources?</summary>
+
+</details>
+
+<details>
+<summary>Is the attached flash drive encrypted? (Y/N)</summary>
+
+</details>
+
+<details>
+<summary>What is the UI element of FTK Imager which displays a list of files and folders?</summary>
+
+</details>
 
 ## Task 6: Using FTK Imager to Acquire Digital Artifacts and Evidence
 
+<details>
+<summary>What is the UI element of FTK Imager which displays the content of selected files?</summary>
+
+</details>
+
+<details>
+<summary>What is the SHA1 hash of the physical drive and forensic image?</summary>
+
+</details>
+
+<details>
+<summary>Including hidden files, how many files are currently stored on the flash drive?</summary>
+
+</details>
+
+<details>
+<summary>How many files were deleted in total?</summary>
+
+</details>
+
+<details>
+<summary>How many recovered files are corrupted (e.g., 0 file size)?</summary>
+
+</details>
+
 ## Task 7: Case B4DM755: At the Forensics Laboratory
 
+<details>
+<summary>Aside from FTK Imager, what is the directory name of the other tool located in the tools directory under Desktop?</summary>
+
+</details>
+
+<details>
+<summary>What is the visible extension of the "hideout" file?</summary>
+
+</details>
+
+<details>
+<summary>View the metadata of the "hideout" file. What is its actual extension?</summary>
+
+</details>
+
+<details>
+<summary>A phone was used to photograph the "hideout". What is the phone's model?</summary>
+
+</details>
+
+<details>
+<summary>A phone was used to photograph the "warehouse". What is the phone's model?</summary>
+
+</details>
+
+<details>
+<summary>Are there any indications that the suspect is involved in other illegal activity? (Y/N)</summary>
+
+</details>
+
+<details>
+<summary>Who was the point of contact of Mr William S. McClean in 2022?</summary>
+
+</details>
+
+<details>
+<summary>A meetup occurred in 2022. What are the GPS coordinates during that time?</summary>
+
+</details>
+
+<details>
+<summary>What is the password to extract the contents of pandorasbox.zip?</summary>
+
+</details>
+
+<details>
+<summary>From which company did the source code in the pandorasbox directory originate?</summary>
+
+</details>
+
+<details>
+<summary>In one of the documents that the suspect has yet to sign, who was listed as the beneficiary?</summary>
+
+</details>
+
+<details>
+<summary>What is the hidden flag?</summary>
+
+</details>
+
 ## Task 8: Post-Analysis of Evidence to Court Proceedings
+
+<details>
+<summary>In which phase is a warrant obtained for search, seizure, and examination of the suspect's computer data due to violations of domestic and international laws?</summary>
+
+</details>
+
+<details>
+<summary>In which phase is a forensic analysis performed on the acquired digital evidence requested from various sources?</summary>
+
+</details>
+
+<details>
+<summary>Which phase involves presenting forensic artefacts and evidence with proper documentation in a court of law?</summary>
+
+</details>
 
 ***
 

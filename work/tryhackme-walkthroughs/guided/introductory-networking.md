@@ -27,6 +27,15 @@ This room will cover the following:
 
 ## Task 2: The OSI Model: An Overview
 
+The Open Systems Interconnection (OSI) Model is a standard model used in computer networking theory that breaks down computer networks into 7 layers. In practice, networking is more compact.
+1. **Physical**: This layer 
+2. **Data Link**: This layer
+3. **Network**: This layer
+4. **Transport**: This layer
+5. **Session**: This layer
+6. **Presentation**: This layer
+7. **Application**: This layer
+
 <details>
 
 <summary>Which layer would choose to send data over TCP or UDP?</summary>

@@ -108,7 +108,11 @@ I looked through the Task Manger's Services tab to find the name of the service.
 
 </details>
 
+### Service Permissions
+
 ## Interacting with Windows
+
+### Windows Sessions
 
 ### Interacting with the Windows Operating System
 
@@ -140,7 +144,15 @@ Use the `Get-WmiObject -Class Win32_OperatingSystem | select SerialNumber | ft` 
 
 </details>
 
+## Further Windows Usage
+
+### Microsoft Management Console (MMC)
+
+### Windows Subsystem for Linux (WSL)
+
 ## Diving Deeper & Close Out
+
+### Desktop Experience vs. Server Core
 
 ### Windows Security
 

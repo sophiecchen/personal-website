@@ -18,7 +18,19 @@ layout:
 
 ***
 
+## Introduction
+
+### Linux Structure
+
+### Linux Distributions
+
+### Introduction to Shell
+
 ## The Shell
+
+### Prompt Description
+
+### Getting Help
 
 ### System Information
 
@@ -152,6 +164,8 @@ Type `find / -name *.bak -type f 2>/dev/null | wc -l`.  This searches for files 
 
 </details>
 
+### Editing Files
+
 ### File Descriptors and Redirections
 
 <details>
@@ -200,6 +214,10 @@ proftpd
 
 </details>
 
+### Regular Expressions
+
+### Permission Management
+
 ## System Management
 
 ### User Management
@@ -234,6 +252,8 @@ Use `man su` to see options for this command.
 
 </details>
 
+### Package Management
+
 ### Service and Process Management
 
 <details>
@@ -258,6 +278,8 @@ See detailed information about a service with the `systemctl show syslog.service
 
 </details>
 
+### Network Services
+
 ### Working with Web Services
 
 <details>
@@ -276,6 +298,8 @@ php -S 127.0.0.1:8080
 
 </details>
 
+### Backup and Restore
+
 ### File System Management
 
 <details>
@@ -287,6 +311,30 @@ php -S 127.0.0.1:8080
 Use `sudo fdisk -l` to see all of the partitions.
 
 </details>
+
+### Containerization
+
+## Linux Networking
+
+### Network Configuration
+
+### Remote Desktop Protocols in Linux
+
+## Linux Hardening
+
+### Linux Security
+
+### Firewall Setup
+
+### System Logs and Monitoring
+
+## Linux Distributions vs Solaris
+
+### Solaris
+
+## Tips and Tricks
+
+### Shortcuts
 
 ***
 

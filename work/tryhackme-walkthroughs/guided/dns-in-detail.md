@@ -34,7 +34,7 @@ The Domain Name System the protocol that allows us to use easy-to-remember names
 
 ## Task 2: Domain Hierarchy
 
-A domain can be split into different levels. Consider the domain https://feodotracker.abuse.ch.
+A domain can be split into different levels. Consider the domain `https://feodotracker.abuse.ch`.
 * **.ch**: This is the top-level domain (TLD). TLDs can be generic TLDs (gTLD) or country code TLDs (ccTLD).
 * **abuse**: This is a second-level domain. When registering a domain name, the second-level domain is limited to 63 characters and can only use the characters a-z, 0-9, and hyphens.
 * **feodotracker**: This is a subdomain, which is separated from the second-level domain by a period. It has the same restrictions as a second-level domain. There can be multiple subdomains as long as the entire domain name is 253 characters or less.

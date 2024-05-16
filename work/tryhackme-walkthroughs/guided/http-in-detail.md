@@ -47,13 +47,48 @@ Notice the lock with the red slash on the left of the URL. This means that your 
 ## Task 2: Requests And Responses
 
 A uniform resource locator (URL) is an instruction on how to access a resource on the Internet. Consider the url `http://user:password@tryhackme.com:80/view-room?id=1#task3`.
-* 
-* 
-* 
-* 
-* 
-* 
-* 
+* **http**: This is the scheme, which instructs what protocol to use for accessing the resource
+* **user:password**: This is the user since logging in may be necessary to access the resource 
+* **tryhackme.com**: This is the host, the domain name or IP address of the resource
+* **80**: This is the port to connect to
+* **view-room**: This is the path, the file name or location of the resource
+* **?id=1**: This is the query string, which includes extra bits of information that can be sent to the requested path
+* **#task3**: This is the fragment, a reference to a location on the actual page that is only viewable to the client
+
+HTTP uses a series of requests and responses to transmit data.
+
+Consider this request:
+
+```HTTP
+GET / HTTP/1.1
+Host: tryhackme.com
+User-Agent: Mozilla/5.0 Firefox/87.0
+Referer: https://tryhackme.com/
+
+```
+
+Line 1 says that we are making a GET request using HTTP/1.1 to the home page with /. Lines 2-4 are optional. Host indicates that we want `tryhackme.com`. User-agent indicates that we are using Firefox version 87 Browser, and referer indicates that we came from `tryhackme.com`. HTTP requests end with a blank line, meaning the request has finished.
+
+Consider this response:
+
+```HTTP
+HTTP/1.1 200 OK
+Server: nginx/1.15.8
+Date: Fri, 09 Apr 2021 13:34:03 GMT
+Content-Type: text/html
+Content-Length: 98
+
+<html>
+<head>
+    <title>TryHackMe</title>
+</head>
+<body>
+    Welcome To TryHackMe.com
+</body>
+</html>
+```
+
+Line 1 indicates that the protocol used was HTTP 1.1 and that the request was successfully completed. Lines 2-5 indicate information about the server software, server date and time, the content type, and the length of the content. Following these lines is a blank line signalling the end of the HTTP response and the content sent by the server.
 
 <details>
 <summary>What HTTP protocol is being used in the above example?</summary>
@@ -177,16 +212,25 @@ Common HTTP status codes include, 200-OK, 400-Bad Request, 403-Forbidden, 404-Pa
 Headers can be used to send additional information when making a HTTP request.
 
 Common request headers include:
-*
+* **Host**: Specifies which website on the server is wanted
+* **User-Agent**: Specifies the client browser and version number
+* **Content-Length**: Speciifes the length of the content sent to the server
+* **Accept-Encoding**:  Specifies what data compression methods the browser supports
+* **Cookie**: Specifies a piece of data remembered by the browser and used by the server to remember client information
 
 Common response headers include:
-*
+* **Set-Cookie**: Specifies a piece of data sent by the server that the browser will remember for later requests
+* **Cache-Control**: Specifies how long to store the content of the response in the browser's cache
+* **Content-Type**: Specifies what type of content is being returned so that the browser can properly process the data
+* **Content-Encoding**: Specifies what method was used to compress the data
 
 <details>
 
 <summary>What header tells the web server what browser is being used?</summary>
 
 User-Agent
+
+User-Agent specifies browser and verison number.
 
 </details>
 
@@ -196,6 +240,8 @@ User-Agent
 
 Content-Type
 
+Content-Type, as per its name, specifies the type of content returned by the web server.
+
 </details>
 
 <details>
@@ -204,9 +250,13 @@ Content-Type
 
 Host
 
+Host is used to specify which website on a web server is wanted. This header is especially important if a web server hosts multiple websites.
+
 </details>
 
 ## Task 6: Cookies
+
+HTTP is a stateless protocol, meaning it does not keep track of previous requests. Thus, a server remembers a client by sending a cookie, a small piece of data that is stored by the browser, with the Set-Cookie header. Whenever the client queries the server in the future, the cookie is sent along with the request using the Cookie header. Cookies allows a server to keep track of clients.
 
 <details>
 
@@ -214,9 +264,13 @@ Host
 
 Set-Cookie
 
+Set-Cookie is a header included in HTTP responses that includes a cookie for the browser to save.
+
 </details>
 
 ## Task 7: Making Requests
+
+Practice making requests by viewing the site associated with this task.
 
 <details>
 

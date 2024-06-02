@@ -20,14 +20,14 @@ layout:
 
 ## Task 1: Introduction
 
-A court of law has authorized us to conduct a search on a specific person and analyze artifacts and evidence. This room will have us:
-* Ensure proper Chain of Custody procedures for transport to the Forensics Laboratory
-* Use FTK Imager to acquire a forensic disk image and preserve digital artifacts and evidence
-* Analyze forensic artefacts received at the Forensics Laboratory for presentation during a trial in a court of law
+A court of law has authorized us to conduct a search on a specific person by analyzing artifacts and evidence. This room will have us:
+* Ensuring proper chain of custody procedures for transport to the forensics laboratory
+* Using FTK Imager to acquire a forensic disk image and preserve digital artifacts and evidence
+* Analyzing forensic artefacts received at the forensics laboratory for presentation during a trial in a court of law
 
 ## Task 2: Case B4DM755: Details of the Crime
 
-We are a forensic lab analyst whose job is to analyze artifacts from crime scenes.
+Suppose we are a forensic lab analyst whose job is to analyze artifacts from crime scenes.
 
 We were given the following information about the suspect:
 * Name: William S. McClean (William Super McClean)
@@ -43,7 +43,7 @@ We have been assigned as DFIR first responder and are tasked with appropriately 
 
 forensic lab analyst
 
-As noted above, our official role is our job title: forensic lab analyst.
+As noted above, our official role is your job title: forensic lab analyst.
 
 </details>
 
@@ -54,6 +54,7 @@ As noted above, our official role is our job title: forensic lab analyst.
 DFIR first responder
 
 In this specific scenario, we are acting as a DFIR first responder.
+
 </details>
 
 
@@ -63,7 +64,7 @@ In this specific scenario, we are acting as a DFIR first responder.
 
 digital artefacts and evidence
 
-As a DFIR first responder, we are responsible for gathering digital artifacts and evidence that will be analyzed and possible used in court.
+As a DFIR first responder, we are responsible for gathering digital artifacts and evidence that will be analyzed and possibly used in court.
 
 </details>
 
@@ -110,7 +111,7 @@ Whether the drive is encrypted or not needs to be known before trying to imaging
 
 hash and copy
 
-Hashing and copying allows us to ensure that the original files have not been modified in any way.
+Hashing and copying allows we to ensure that the original files have not been modified in any way.
 
 <details>
 
@@ -124,7 +125,7 @@ Artifacts need to be secured and labeled before being sent to a different locati
 
 ## Task 4: Case B4DM755: At the Scene of Crime
 
-Law enforcement arrived at the suspect's residence after the transaction supposedly happened. There were indications of attempts to eradicate evidence.
+Law enforcement arrived at the suspect's residence after the transaction supposedly happened. There were indications that he attempted to eradicate evidence.
 
 Law enforcement officers searched the suspect's residence and discovered a flash drive with an attached key chain. The key chain had the initials WSM and is believed to belong to the suspect.
 

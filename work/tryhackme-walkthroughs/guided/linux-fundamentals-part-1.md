@@ -18,8 +18,6 @@ layout:
 
 ***
 
-This room can be found [here]().
-
 ## Task 1: Introduction
 
 This room will have us:
@@ -133,7 +131,7 @@ Use `grep THM* access.log` to search for prefixes of "THM". The * in the pattern
 
 Various operators in the Linux command line allow us to use commands with more flexibility. `&` allows us to run commands in the background of our terminal. `&&` looks similar but is unrelated to `&`. Rather, `&&` allows us to combine multiple commands together in one line of your terminal.
 
-The `>` operator is a redirector, meaning that we can take the output from a command (such as using cat to output a file) and direct it elsewhere. `>>` has the same functionality as the `>` operator but appends the output rather than replacing (meaning nothing is overwritten).
+The`>` operator is a redirector, meaning that we can take the output from a command (such as using cat to output a file) and direct it elsewhere. `>>` has the same functionality as the `>` operator but appends the output rather than replacing (meaning nothing is overwritten).
 
 <details>
 

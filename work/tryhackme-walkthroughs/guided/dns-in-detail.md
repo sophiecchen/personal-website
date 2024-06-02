@@ -20,7 +20,7 @@ layout:
 
 ## Task 1: What is DNS?
 
-Devices on the Internet are identified with an address, called an IP address. IP addresses, such as 104.26.10.229, are strings of numbers and can be difficult to remember. Thus, we use the Domain Name System (DNS) in order to communicate with devices instead. DNS allows us to remember tryhackme.com instead of 104.26.10.229 when visiting a website.
+Devices on the Internet are identified with an address called an IP address. IP addresses such as 104.26.10.229 can be difficult to remember. To make IP addresses more friendly to humans, we use a protocol called the Domain Name System (DNS). DNS translates between IP addresses and domain names such as tryhackme.com and allows us to communicate with devices more easily.
 
 <details>
 
@@ -28,7 +28,7 @@ Devices on the Internet are identified with an address, called an IP address. IP
 
 Domain Name System
 
-The Domain Name System the protocol that allows us to use easy-to-remember names to communicate with devices on the Internet. 
+The Domain Name System protocol allows us to use easy-to-remember names to communicate with devices on the Internet. 
 
 </details>
 
@@ -55,7 +55,7 @@ A subdomain name has the same creation restrictions as a Second-Level Domain, be
 
 \_
 
-A subdomain can onl use the characters a-z, 0-9, and hyphens .
+A subdomain can onl use the characters a-z, 0-9, and hyphens.
 
 </details>
 

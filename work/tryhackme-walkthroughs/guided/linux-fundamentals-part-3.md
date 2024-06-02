@@ -62,11 +62,21 @@ First start a web server in the home directory of "tryhackme" with `python3 -m h
 
 ## Task 5: Processes 101
 
+Processes are the programs that are running on your machine. They are managed by the kernel, where each process will have an ID associated with it, also known as its PID. PIDs are assigned by the order in which a process starts.
+
+`ps` can be used to view processes running as our user session. `ps aux` includes processes run by other users and system processes.
+
+`ps` gives you a one-time view of processes. In contrast, `top` can be used to see real-time statistics about the processes running on your system.
+
+TODO
+
 <details>
 
 <summary>If we were to launch a process where the previous ID was "300", what would the ID of this new process be?</summary>
 
 301
+
+IDs are assigned by the order in which a process starts. If the previous ID was 300, then the next ID assigned will be 300 + 1 = 301.
 
 </details>
 
@@ -76,6 +86,8 @@ First start a web server in the home directory of "tryhackme" with `python3 -m h
 
 SIGTERM
 
+The SIGTERM signal kills a process but allows it to clean up beforehand.
+
 </details>
 
 <details>
@@ -83,6 +95,8 @@ SIGTERM
 <summary>Locate the process that is running on the deployed instance (MACHINE_IP). What flag is given?</summary>
 
 THM{PROCESSES}
+
+TODO
 
 </details>
 
@@ -92,6 +106,8 @@ THM{PROCESSES}
 
 systemctl stop myservice
 
+`systemctl <option> <service>` TODO.
+
 </details>
 
 <details>
@@ -99,6 +115,8 @@ systemctl stop myservice
 <summary>What command would we use to start the same service on the boot-up of the system?</summary>
 
 systemctl enable myservice
+
+TODO
 
 </details>
 
@@ -108,9 +126,13 @@ systemctl enable myservice
 
 fg
 
+`fg` brings a previously backgrounded process back to focus.
+
 </details>
 
 ## Task 6: Maintaining Your System: Automation
+
+TODO
 
 <details>
 
@@ -118,9 +140,13 @@ fg
 
 @reboot
 
+TODO
+
 </details>
 
 ## Task 7: Maintaining Your System: Package Management
+
+TODO
 
 ## Task 8: Maintaining Your System: Logs
 
@@ -132,6 +158,8 @@ As noted in [Linux Fundamentals Part 1](linux-fundamentals-part-1.md), logs are 
 
 10.9.232.111
 
+TODO
+
 </details>
 
 <details>
@@ -139,6 +167,8 @@ As noted in [Linux Fundamentals Part 1](linux-fundamentals-part-1.md), logs are 
 <summary>What file did they access?</summary>
 
 catsanddogs.jpg
+
+TODO
 
 </details>
 

@@ -29,11 +29,11 @@ This room will cover the following:
 
 The Open Systems Interconnection (OSI) Model is a standard model used in computer networking theory that breaks down computer networks into 7 layers. In practice, networking is more compact.
 1. **Physical**: This layer is responsible for converting binary data into physical signals, transporting these signals, receiving them, and converting them back into binary data.
-2. **Data Link**: This layer
-3. **Network**: This layer
-4. **Transport**: This layer
-5. **Session**: This layer
-6. **Presentation**: This layer
+2. **Data Link**: This layer TODO
+3. **Network**: This layer TODO
+4. **Transport**: This layer TODO
+5. **Session**: This layer TODO
+6. **Presentation**: This layer TODO
 7. **Application**: This layer provides an interface for applications running on a computer to transmit information across a network.
 
 <details>
@@ -122,6 +122,8 @@ Layer 3 is the network layer.
 
 Segments
 
+TODO
+
 </details>
 
 <details>
@@ -146,11 +148,17 @@ UDP is preferred in situations where speed is more important than accuracy.
 
 ## Task 3: Encapsulation
 
+Suppose a computer wants to send information another. The data starts at layer 7 and works its way down to layer 1, where it is then sent to the other computer. At each layer, more information is added to the data in a process called encapsulation. 
+
+The receiving computer then reverses encapsulation in a process called de-encapsulation. TODO
+
 <details>
 
 <summary>How would you refer to data at layer 2 of the encapsulation process (with the OSI model)?</summary>
 
 Frames
+
+The data link layer, layer 2, works with frames.
 
 </details>
 
@@ -160,6 +168,8 @@ Frames
 
 Datagrams
 
+The transport, layer 4, works with datagrams in the UDP protocol and segments in the TCP protocol.
+
 </details>
 
 <details>
@@ -167,6 +177,8 @@ Datagrams
 <summary>What process would a computer perform on a received message?</summary>
 
 De-encapsulation
+
+A computer receiving a message performs de-encapsulation in order to recover the original data.
 
 </details>
 
@@ -176,6 +188,8 @@ De-encapsulation
 
 Data Link
 
+All layers in the OSI model add a header during encapsulation, but the data link layer also adds a trailer.
+
 </details>
 
 <details>
@@ -184,15 +198,21 @@ Data Link
 
 Aye
 
+The data link layer's trailer mathematically verifies that the data has not been corrupted during transmission. This feature also protects against tampering.
+
 </details>
 
 ## Task 4: The TCP/IP Model
+
+TODO
 
 <details>
 
 <summary>Which model was introduced first, OSI or TCP/IP?</summary>
 
 TCP/IP
+
+The TCP/IP model is older than OSI and serves as a basis for real-world networking.
 
 </details>
 
@@ -202,6 +222,8 @@ TCP/IP
 
 Transport
 
+TODO
+
 </details>
 
 <details>
@@ -209,6 +231,8 @@ Transport
 <summary>Which layer of the TCP/IP model covers the functionality of the Session layer of the OSI model (Full Name)?</summary>
 
 Application
+
+TODO
 
 </details>
 
@@ -218,6 +242,8 @@ Application
 
 Physical
 
+TODO
+
 </details>
 
 <details>
@@ -225,6 +251,8 @@ Physical
 <summary>Which layer of the TCP/IP model handles the functionality of the OSI network layer?</summary>
 
 Internet
+
+TODO
 
 </details>
 
@@ -234,6 +262,8 @@ Internet
 
 Connection-based
 
+TODO
+
 </details>
 
 <details>
@@ -241,6 +271,8 @@ Connection-based
 <summary>What is SYN short for?</summary>
 
 Synchronise
+
+TODO
 
 </details>
 
@@ -250,6 +282,8 @@ Synchronise
 
 SYN/ACK
 
+TODO
+
 </details>
 
 <details>
@@ -258,15 +292,21 @@ SYN/ACK
 
 ACK
 
+TODO
+
 </details>
 
 ## Task 5: Ping
+
+The `ping` command can be used to test whether a connection to a remote resource is possible. This command can be run with `ping <resource>`.
 
 <details>
 
 <summary>What command would you use to ping the bbc.co.uk website?</summary>
 
 ping bbc.co.uk
+
+You can ping a website using `ping <resource>`.
 
 </details>
 
@@ -276,6 +316,8 @@ ping bbc.co.uk
 
 217.160.0.152
 
+Run `ping muirlandoracle.co.uk.` and look at the response to see the IPv4 address.
+
 </details>
 
 <details>
@@ -283,6 +325,8 @@ ping bbc.co.uk
 <summary>What switch lets you change the interval of sent ping requests?</summary>
 
 \-i
+
+View the manual with `man ping` to see options for the `ping` command.
 
 </details>
 
@@ -292,6 +336,8 @@ ping bbc.co.uk
 
 \-4
 
+View the manual with `man ping` to see options for the `ping` command.
+
 </details>
 
 <details>
@@ -300,15 +346,21 @@ ping bbc.co.uk
 
 \-v
 
+View the manual with `man ping` to see options for the `ping` command.
+
 </details>
 
 ## Task 6: Traceroute
+
+`traceroute` can be used to map the path a request takes as it heads to the target machine. On Linux, the command is run as `traceroute <destination>`. The Windows equivalent to `traceroute` is `tracert`. Linux uses UDP by default, while Windows uses ICMP.
 
 <details>
 
 <summary>What switch would you use to specify an interface when using Traceroute?</summary>
 
 \-i
+
+View the manual with `man traceroute` to see options for the `traceroute` command.
 
 </details>
 
@@ -318,6 +370,8 @@ ping bbc.co.uk
 
 \-T
 
+View the manual with `man traceroute` to see options for the `traceroute` command.
+
 </details>
 
 <details>
@@ -326,15 +380,21 @@ ping bbc.co.uk
 
 Internet
 
+TODO
+
 </details>
 
 ## Task 7: WHOIS
+
+`whois` allows us to query who a domain name is registered to. In Europe personal details are redacted; however, elsewhere a great deal of information may be available. The tool can be installed with `sudo apt-get install whois` and run with `whois <domain>`.
 
 <details>
 
 <summary>What is the registrant postal code for facebook.com?</summary>
 
 94025
+
+Run `whois facebook.com` and look for the registrant postal code.
 
 </details>
 
@@ -344,6 +404,8 @@ Internet
 
 29/03/1997
 
+Run `whois facebook.com` and look for the registration date.
+
 </details>
 
 <details>
@@ -351,6 +413,8 @@ Internet
 <summary>Which city is the registrant based in?</summary>
 
 Redmond
+
+Run `whois facebook.com` and look for the city of the registrant.
 
 </details>
 
@@ -370,15 +434,21 @@ I used Google Maps to search for golf courses near the listed registrant address
 
 msnhst@microsoft.com
 
+Run `whois microsoft.com` and look for the registered tech email.
+
 </details>
 
 ## Task 8: Dig
+
+The Domain Name System (DNS) protcol TODO.
 
 <details>
 
 <summary>What is DNS short for?</summary>
 
 Domain Name System
+
+The Domain Name System the protocol that allows us to use easy-to-remember names to communicate with devices on the Internet. 
 
 </details>
 
@@ -388,6 +458,8 @@ Domain Name System
 
 Recursive
 
+A recursive DNS server will be the queried by a computer first. It will check its cache for an address before going to a root server to seek out an answer.
+
 </details>
 
 <details>
@@ -395,6 +467,8 @@ Recursive
 <summary>What type of DNS server contains records specific to domain extensions (i.e. <em>.com,</em> .co.uk*, etc)*? Use the long version of the name.</summary>
 
 Top-Level Domain
+
+Top-level domains are the TODO.
 
 </details>
 
@@ -404,6 +478,8 @@ Top-Level Domain
 
 Hosts File
 
+TODO
+
 </details>
 
 <details>
@@ -412,6 +488,8 @@ Hosts File
 
 8.8.4.4
 
+Search "Google public DNS servers" on Google.
+
 </details>
 
 <details>
@@ -419,6 +497,8 @@ Hosts File
 <summary>If a DNS query has a TTL of 24 hours, what number would the dig query show?</summary>
 
 86400
+
+Dig shows time in seconds, so the query would show $24 \cdot 60 \cdot 60 = 86400$.
 
 </details>
 

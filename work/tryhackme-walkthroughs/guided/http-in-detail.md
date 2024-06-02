@@ -48,12 +48,12 @@ Notice the lock with the red slash on the left of the URL. This means that your 
 
 A uniform resource locator (URL) is an instruction on how to access a resource on the Internet. Consider the url `http://user:password@tryhackme.com:80/view-room?id=1#task3`.
 * **http**: This is the scheme, which instructs what protocol to use for accessing the resource
-* **user:password**: This is the user since logging in may be necessary to access the resource 
-* **tryhackme.com**: This is the host, the domain name or IP address of the resource
+* **user:password**: This is the user, which is needed if logging is necessary to access the resource 
+* **tryhackme.com**: This is the host, also known as the domain name or IP address of the resource
 * **80**: This is the port to connect to
-* **view-room**: This is the path, the file name or location of the resource
+* **view-room**: This is the path, also known as the file name or location of the resource
 * **?id=1**: This is the query string, which includes extra bits of information that can be sent to the requested path
-* **#task3**: This is the fragment, a reference to a location on the actual page that is only viewable to the client
+* **#task3**: This is the fragment, which is a reference to a location on the actual page that is only viewable to the client
 
 HTTP uses a series of requests and responses to transmit data.
 

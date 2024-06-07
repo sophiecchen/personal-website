@@ -14,7 +14,7 @@ layout:
 
 # Beginner-Friendly Cybersecurity Resources
 
-When first started learning cybersecurity, I felt overwhelmed by the sheer number of resources online, so I've compiled a small list of resources, geared toward beginners, for your reference.
+When first started learning cybersecurity, I felt overwhelmed by the sheer amount of information I had to learn. So, I've compiled a list of resources, geared toward beginners, for your reference.
 
 ## Informational
 
@@ -23,6 +23,7 @@ Building a basic understanding of how computers work as well and learning common
 * [Hack The Box Academy](https://academy.hackthebox.com/) teaches beginners cybersecurity topics with a focus on penetration testing.
 * [TryHackMe Guided Rooms](https://tryhackme.com/r/hacktivities) guide beginners through various areas of cybersecurity.
 * [Professor Messer's Security+ Videos](https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/) explain a wide variety of fundamental cybersecurity concepts. These videos are geared toward the CompTIA Security+ Certification.
+* [The Hitchhiker's Guide to DFIR: Experiences From Beginners and Experts](https://leanpub.com/TheHitchhikersGuidetoDFIRExperiencesFromBeginnersandExperts) is a free, crowdsourced book by the members of the Digital Forensics Discord Server on all things DFIR.
 
 ## CTFs and Labs
 
@@ -45,9 +46,11 @@ If you are interested in digital forensics like me, Magnet Forensics holds a yea
 
 Podcasts are a useful for integrating cybersecurity into your daily routine.
 
+* [Cyberwire Daily](https://thecyberwire.com/podcasts/daily-podcast) provides daily cybersecurity news and analysis geared at professionals.
 * [DFIRL](https://www.magnetforensics.com/resources/introduction-to-digital-forensics-in-real-life-dfirl-podcast/) discusses real-life cases in which digital evidence (uncovered by digital forensics) has played a pivotal role.
 * [Technology Pill](https://privacyinternational.org/learning-resources/technology-pill-podcast) discusses the changing role of technology in society and the way it impacts people around the world.
 * [Malicious Life](https://malicious.life/) shares the stories of some of the wildest hacks in history.
+* [CyberWork](https://www.infosecinstitute.com/podcast/) invites industry leaders to discuss cybersecurity careers and skills needed to join the field.
 
 ## Research and Reports
 

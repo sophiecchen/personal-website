@@ -14,6 +14,8 @@ layout:
 
 # Beginner-Friendly Cybersecurity Resources
 
+*May 2024*
+
 When first started learning cybersecurity, I felt overwhelmed by the sheer amount of information I had to learn. So, I've compiled a list of resources, geared toward beginners, for your reference.
 
 ## Informational

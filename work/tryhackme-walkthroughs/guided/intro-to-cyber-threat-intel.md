@@ -18,7 +18,7 @@ layout:
 
 ## Task 1: Introduction
 
-In this room, we will learn:
+This room introduces us to the basics of cyber threat intelligence. In this room, we will learn:
 * The basics of CTI and its various classifications
 * The lifecycle followed to deploy and use intelligence during threat investigations
 * Frameworks and standards used in distributing intelligence
@@ -27,13 +27,13 @@ In this room, we will learn:
 
 Cyber Threat Intelligence (CTI) is evidence-based knowledge about adversaries, including their indicators, tactics, motivations, and actionable advice against them. 
 
-Intelligence differs from data and information and is the correlation of data and information to extract patterns of actions based on contextual analysis. Threat intelligence can be gathered internally, from the community and forums, or from external sources such as public sources and threat intelligence feeds.
+Intelligence is the correlation of data and information to extract patterns of actions based on contextual analysis. Threat intelligence can be gathered internally, from the community forums, or from external sources such as public sources and threat intelligence feeds.
 
 There are a few different types of intelligence:
-* **Strategic Intel**: Looks into the organization's threat landscape and maps out risk areas
-* **Technical Intel**: Looks into evidence and artifacts of an attack performed by an adversary
-* **Tactical Intel**: Assesses adversaries' tactics, techniques, and procedures (TTPs)
-* **Operational Intel**: Looks into the adversary's motives and intent to attack
+* **Strategic intel**: Looks into the organization's threat landscape and maps out risk areas
+* **Technical intel**: Looks into evidence and artifacts of an attack performed by an adversary
+* **Tactical intel**: Assesses adversaries' tactics, techniques, and procedures (TTPs)
+* **Operational intel**: Looks into the adversary's motives and intent to attack
 
 <details>
 
@@ -49,7 +49,7 @@ CTI is short for cyber threat intellgence, a subfield of cybersecurity that focu
 
 <summary>IP addresses, Hashes and other threat artifacts would be found under which Threat Intelligence classification?</summary>
 
-Technical Intel
+technical intel
 
 Technical intelligence includes specific artifacts and evidence on system, such as IP addresses and hashes.
 
@@ -57,8 +57,8 @@ Technical intelligence includes specific artifacts and evidence on system, such 
 
 ## Task 3: CTI Lifecycle
 
-Cyber threat intelligence follows six steps that repeat, forming a feedback process loop.
-1. **Planning & Direction**: Define objectives and goals and identify crucial parameters such as information assets, tools, sources of intelligence, etc.
+Cyber threat intelligence follows six, cyclic steps that form a feedback process loop.
+1. **Planning & direction**: Define objectives and goals and identify crucial parameters such as information assets, tools, sources of intelligence, etc.
 2. **Collection**: Gather the required data to address bojectives
 3. **Processing**: Extract, sort, organize, and correlate data to present it in a usable and understandable format
 4. **Analysis**: Derive insights from the data and potentially investigate a threat or strengthen security controls
@@ -69,7 +69,7 @@ Cyber threat intelligence follows six steps that repeat, forming a feedback proc
 
 <summary>At which phase of the CTI lifecycle is data converted into usable formats through sorting, organizing, correlation and presentation?</summary>
 
-Processing
+processing
 
 Processing is the phase where raw data is converted into understandable insights.
 
@@ -79,7 +79,7 @@ Processing is the phase where raw data is converted into understandable insights
 
 <summary>During which phase do security analysts get the chance to define the questions to investigate incidents?</summary>
 
-Direction
+direction
 
 Defining questions to investigate incidents should happen at the first phase (direction), of the CTI lifecycle.
 
@@ -116,7 +116,7 @@ After obtaining access and extracting data, the adversary has already establishe
 
 ## Task 5: Practical Analysis
 
-Open the site associated with the task to answer the questions.
+Open the site associated with the task to answer the following questions.
 
 <details>
 

@@ -19,11 +19,11 @@ layout:
 ***
 ## Task 1: Introduction
 
-This room will cover the following:
+This room provides an overview of key networking concepts. This room will teach us:
 * The OSI Model
 * The TCP/IP Model
 * How these models look in practice
-* An introduction to basic networking tools
+* Basic networking tools
 
 ## Task 2: The OSI Model: An Overview
 
@@ -424,7 +424,7 @@ Run `whois facebook.com` and look for the city of the registrant.
 
 Bellevue Golf Course
 
-I used Google Maps to search for golf courses near the listed registrant address.
+Use Google Maps to search for golf courses near the listed registrant address.
 
 </details>
 

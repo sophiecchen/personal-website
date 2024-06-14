@@ -20,11 +20,11 @@ layout:
 
 ## Task 1: Introduction
 
-This room will have us:
-* Unlocking the potential of your first few commands by introducing you to using flags and arguments
-* Advancing your knowledge of the filesystem to perform some more useful commands such as copying and moving files
+This room is the second in a three-part series on Linux fundamentals. This room will have us:
+* Unlocking the potential of our first few commands by introducing flags and arguments
+* Advancing our knowledge of the filesystem by copying and moving files
 * Discovering how access to files and folders is managed and how we can determine our access
-* Running your first few scripts and executables
+* Running our first few scripts and executables
 
 
 ## Task 2: Accessing Your Linux Machine Using SSH (Deploy)
@@ -133,7 +133,7 @@ The `su` command is used to switch users.
 
 THM{SU\_USER2}
 
-Once you switch to user2 using `su`, we can `cat` to view the output of "important".
+After switching to user2 using `su`, we can `cat` to view the output of "important".
 
 </details>
 
@@ -173,11 +173,11 @@ The root user's home directory is simply `root`.
 
 ## Task 7: Conclusions and Summaries
 
-In conclusion, this room covered the following:
-* Using terminal text editors
-* General utilities such as downloading and serving contents using a python webserver
-* A look into processes
-* Maintaining & automating your system by the use of crontabs, package management, and reviewing logs
+In conclusion, this room allowed us to:
+* Use terminal text editors
+* Deploy general utilities, such as downloading and serving contents using a Python webserver
+* Take a look into processes
+* Maintain and automate our system using crontabs, package management, and reviewing logs
 
 ## Task 8: Linux Fundamentals Part 3
 

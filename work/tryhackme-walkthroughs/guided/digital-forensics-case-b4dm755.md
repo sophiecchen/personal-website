@@ -20,16 +20,16 @@ layout:
 
 ## Task 1: Introduction
 
-A court of law has authorized us to conduct a search on a specific person by analyzing artifacts and evidence. This room will have us:
-* Ensuring proper chain of custody procedures for transport to the forensics laboratory
-* Using FTK Imager to acquire a forensic disk image and preserve digital artifacts and evidence
-* Analyzing forensic artefacts received at the forensics laboratory for presentation during a trial in a court of law
+This room simulates a public-sector digital forensics case spanning from evidence collection to court testimony. A court of law has authorized us to conduct a search on a specific person by analyzing artifacts and evidence. In this room, we will:
+* Ensure proper chain of custody procedures for transporting evidence to the forensics laboratory
+* Use FTK Imager to acquire a forensic disk image and preserve digital artifacts and evidence
+* Analyze forensic artifacts received at the forensics laboratory for presentation during a trial in a court of law
 
 ## Task 2: Case B4DM755: Details of the Crime
 
 Suppose we are a forensic lab analyst whose job is to analyze artifacts from crime scenes.
 
-We were given the following information about the suspect:
+We have been given the following information about the suspect:
 * Name: William S. McClean (William Super McClean)
 * Nationality: British
 * Charges Pressed: Corporate espionage and theft of trade secrets
@@ -43,7 +43,7 @@ We have been assigned as DFIR first responder and are tasked with appropriately 
 
 forensic lab analyst
 
-As noted above, our official role is your job title: forensic lab analyst.
+As noted above, our official role is our job title: forensic lab analyst.
 
 </details>
 
@@ -87,10 +87,10 @@ DFIR first responders typically follow these steps for computer systems at the s
 2. Check for drive encryption
 3. Take an image of the drive(s)
 
-DFIR first responders should establish a chain of custody while following thee best practices:
+DFIR first responders should establish a chain of custody while following these best practices:
 * Ensure proper documentation of seized materials
 * Hash and copy obtained files
-* Do **not** shutdown devices as this can alter data. Pull the power plug instead.
+* Do **not** shutdown devices since this can alter data. Pull the power plug instead.
 * Bag, seal, and tag the obtained artifacts.
 
 <details>
@@ -131,6 +131,10 @@ Law enforcement officers searched the suspect's residence and discovered a flash
 
 <details>
 <summary>What is the only possible artefact found in the suspect's residence?</summary>
+
+flash drive
+
+As noted above, law enforcement officers discovered a flash drive with an attached keychain.
 
 </details>
 

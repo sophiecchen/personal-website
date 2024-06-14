@@ -20,11 +20,11 @@ layout:
 
 ## Task 1: Introduction to Digital Forensics
 
-Forensics applies science to investigate crimes. Digital forensics, focusing on digital evidence, stands at the intersection between cybersecurity and forensics.
+The field of forensics applies science to investigate crimes. Digital forensics, focusing on digital evidence, stands at the intersection between cybersecurity and forensics.
 
 There are two types of investigations where digital forensics is applicable:
-1. Public-sector investigations: carried out by government and law enforcement
-2. Private-sector investigations: carried out by corporations
+1. Public-sector investigations: These investigations are carried out by government and law enforcement.
+2. Private-sector investigations: These investigations are carried out by corporations.
 
 <details>
 
@@ -32,7 +32,7 @@ There are two types of investigations where digital forensics is applicable:
 
 Laptop
 
-Laptops often contain a wealth of evidence recoverable using digital forensics. 
+Laptops often contain a wealth of recoverable evidence. 
 
 </details>
 
@@ -40,17 +40,17 @@ Laptops often contain a wealth of evidence recoverable using digital forensics.
 
 Before acquiring evidence, we should have proper search authorization.
 
-At the scene, we should do the following:
-1. Acquire the evidence
-2. Establish a chain of custody so that we know who has the evidence at any time
-3. Place the evidence in a secure container
-4. Transport the evidence to the lab
+At the scene, we should complete the following tasks:
+1. Acquire the evidence.
+2. Establish a chain of custody so that we know who has the evidence at any time.
+3. Place the evidence in a secure container.
+4. Transport the evidence to the lab.
 
 Upon arrival at the lab, we should do the following:
-1. Retrieve the evidence from the secure container
-2. Create a forensic copy of the evidence using validated tools
-3. Return the evidence to the secure container
-4. Begin analysis on the forensic copy
+1. Retrieve the evidence from the secure container.
+2. Create a forensic copy of the evidence using validated tools.
+3. Return the evidence to the secure container.
+4. Begin analysis on the forensic copy.
 
 Following proper procedures is crucial in digital forensics because our findings must be repeatable.
 
@@ -58,7 +58,7 @@ Following proper procedures is crucial in digital forensics because our findings
 
 <summary>It is essential to keep track of who is handling it at any point in time to ensure that evidence is admissible in the court of law. What is the name of the documentation that would help establish that?</summary>
 
-Chain of Custody
+chain of custody
 
 The chain of custody keep track of who is handling evidence at any point in time so that the evidence is verifiably not tampered with.
 

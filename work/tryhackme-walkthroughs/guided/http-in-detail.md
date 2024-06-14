@@ -20,12 +20,15 @@ layout:
 
 ## Task 1: What is HTTP(S)?
 
-HTTP (HyperText Transfer Protocol) is a protocol, or set of rules, used to communicate with web servers and transmit webpage data. HTTPS, the S standing for secure, is the encrypted version of HTTP.
+HyperText Transfer Protocol (HTTP) is a protocol, or set of rules, used to communicate with web servers and transmit webpage data. HTTPS, the S standing for secure, is the encrypted version of HTTP.
 
 <details>
 <summary>What does HTTP stand for?</summary>
 
 HyperText Transfer Protocol
+
+The HyperText Transfer Protocol is used to send and receive webpage data.
+
 </details>
 
 <details>
@@ -256,7 +259,7 @@ Host is used to specify which website on a web server is wanted. This header is 
 
 ## Task 6: Cookies
 
-HTTP is a stateless protocol, meaning it does not keep track of previous requests. Thus, a server remembers a client by sending a cookie, a small piece of data that is stored by the browser, with the Set-Cookie header. Whenever the client queries the server in the future, the cookie is sent along with the request using the Cookie header. Cookies allows a server to keep track of clients.
+HTTP is a stateless protocol; this means that it does not keep track of previous requests. Thus, a server remembers a client by sending a cookie, a small piece of data that is stored by the browser, with the Set-Cookie header. Whenever the client queries the server in the future, the cookie is sent along with the request using the Cookie header. Cookies allows a server to keep track of clients.
 
 <details>
 
@@ -270,7 +273,7 @@ Set-Cookie is a header included in HTTP responses that includes a cookie for the
 
 ## Task 7: Making Requests
 
-Practice making requests by viewing the site associated with this task.
+Open the site associated with the task to answer the following questions.
 
 <details>
 

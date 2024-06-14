@@ -20,10 +20,10 @@ layout:
 
 ## Task 1: Introduction
 
-This room will have us:
-* Running our very first commands in an interactive Linux machine in our browser
+This room is the first in a three-part series on Linux fundamentals. This room will have us:
+* Running our very first commands in an interactive Linux machine
 * Learning some essential commands used to interact with the file system
-* Learning how users and groups work on Linux (and what this means for us as penetration testers) 
+* Learning how users and groups work on Linux (and why this is important for penetration testing) 
 
 ## Task 2: A Bit of Background on Linux
 
@@ -71,7 +71,7 @@ Use the command `whoami` to see our username.
 
 The Linux command line allows us to interact with the filesystem. `cd <directory>` allows us to change directories and `pwd` prints which directory we are currently in.
 
-`ls` lists the files in the current directory. `cat <file1> <file2>` stands for concatenate. The number of files provided to this command can vary since `cat` outputs the given files concatenated together. This command, however, is most commonly used to print the contents of a single file.
+`ls` lists the files in the current directory. `cat <file1> <file2>` stands for concatenate. The number of files provided to this command can vary since `cat` outputs the given files concatenated together. Despite its name, this command is most commonly used to print the contents of a single file.
 
 <details>
 
@@ -165,12 +165,12 @@ echo tryhackme >> passwords
 
 ## Task 8: Conclusions & Summaries
 
-In conclusion, this room covered the following:
-* Understanding why Linux is so commonplace today
-* Interacting with our first-ever Linux machine
-* Running some of the most fundamental commands
-* Getting an introduction to navigating around the filesystem and using commands like find and grep to make finding data even more efficient
-* Powering up our commands by learning about some of the important shell operators
+In conclusion, this room has allowed us to:
+* Understand why Linux is so commonplace today
+* Interact with our first-ever Linux machine
+* Run some of the most fundamental commands
+* Get an introduction to navigating around the filesystem and using commands like find and grep to make finding data even more efficient
+* Power up our commands by learning about some of the important shell operators
 
 ## Task 9: Linux Fundamentals Part 2
 

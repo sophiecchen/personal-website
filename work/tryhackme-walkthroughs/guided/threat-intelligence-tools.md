@@ -19,7 +19,7 @@ layout:
 ***
 ## Task 1: Room Outline
 
-In this room, we will:
+This room will introduce us to common tools used in cyber threat intelligence. In this room, we will:
 * Understand the basics of threat intelligence & its classifications
 * Use UrlScan.io to scan for malicious URLs
 * Use Abuse.ch to track malware and botnet indicators
@@ -29,10 +29,10 @@ In this room, we will:
 ## Task 2: Threat Intelligence
 
 Threat intelligence analyzes data to understand how to defend risks associated with existing or emerging threats targeting organizations, industries, or governments. There are a few different types of intelligence:
-* **Strategic Intel**: Looks into the organization's threat landscape and maps out risk areas
-* **Technical Intel**: Looks into evidence and artifacts of an attack performed by an adversary
-* **Tactical Intel**: Assesses adversaries' tactics, techniques, and procedures (TTPs)
-* **Operational Intel**: Looks into the adversary's motives and intent to attack
+* **Strategic intel**: Looks into the organization's threat landscape and maps out risk areas
+* **Technical intel**: Looks into evidence and artifacts of an attack performed by an adversary
+* **Tactical intel**: Assesses adversaries' tactics, techniques, and procedures (TTPs)
+* **Operational intel**: Looks into the adversary's motives and intent to attack
 
 ## Task 3: UrlScan.io
 
@@ -79,11 +79,11 @@ This information is listed in the first section of the Summary.
 ## Task 4: Abuse.ch
 
 [Abuse.ch](https://abuse.ch/) is a research project hosted at Bern University of Applied Sciences. The project identifies and tracks malware and botnets through various platforms.
-* [**Malware Bazaar**](https://bazaar.abuse.ch/): An all-in-one malware collection and analysis database
-* [**Feodo Tracker**](https://feodotracker.abuse.ch/): A resource that tracks botnet command and control (C2) infrastructure linked with Emotet, Dridex and TrickBot
-* [**SSL Blacklist**](https://sslbl.abuse.ch/): A tool that identifies and detects malicious SSL connections, identified by certificates and JA3/JA3s fingerprints
-* [**URL Haus**](https://urlhaus.abuse.ch/): A tool that shares malicious URLs used for malware distribution
-* [**Threat Fox**](https://threatfox.abuse.ch/): A resource for searching and sharing indicators of compromise (IOCs) associated with malware
+* [**Malware Bazaar**](https://bazaar.abuse.ch/) is an all-in-one malware collection and analysis database.
+* [**Feodo Tracker**](https://feodotracker.abuse.ch/) is a resource that tracks botnet command and control (C2) infrastructure linked with Emotet, Dridex and TrickBot.
+* [**SSL Blacklist**](https://sslbl.abuse.ch/) is a tool that identifies and detects malicious SSL connections, identified by certificates and JA3/JA3s fingerprints.
+* [**URL Haus**](https://urlhaus.abuse.ch/) is a tool that shares malicious URLs used for malware distribution
+* [**Threat Fox**](https://threatfox.abuse.ch/) is a resource for searching and sharing indicators of compromise (IOCs) associated with malware
 
 <details>
 
@@ -225,7 +225,7 @@ This information can be found at the top of the email.
 
 HIDDENEXT/Worm.Gen
 
-I downloaded this file and ran the command `sha256sum <file>` to get the SHA256 hash. I put this hash into Talos Intelligence.
+Download this file and run the command `sha256sum <file>` to get the SHA256 hash. Put this hash into Talos Intelligence.
 
 </details>
 
@@ -249,7 +249,7 @@ This information can be found at the bottom of the email.
 
 Dridex
 
-I downloaded this file and ran the command `sha256sum <file>` to get the SHA256 hash. I put this hash into Talos Intelligence.
+Download this file and ran the command `sha256sum <file>` to get the SHA256 hash. Put this hash into Talos Intelligence.
 
 </details>
 

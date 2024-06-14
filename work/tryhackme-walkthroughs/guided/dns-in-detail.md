@@ -20,7 +20,7 @@ layout:
 
 ## Task 1: What is DNS?
 
-Devices on the Internet are identified with an address called an IP address. IP addresses such as 104.26.10.229 can be difficult to remember. To make IP addresses more friendly to humans, we use a protocol called the Domain Name System (DNS). DNS translates between IP addresses and domain names such as tryhackme.com and allows us to communicate with devices more easily.
+Devices on the Internet are identified with an address called an IP address. IP addresses, such as 104.26.10.229, can be difficult to remember. To make IP addresses more friendly to humans, we use a protocol called the Domain Name System (DNS). DNS translates between IP addresses and domain names, such as tryhackme.com, and allows us to communicate with devices more seamlessly.
 
 <details>
 
@@ -35,9 +35,15 @@ The Domain Name System protocol allows us to use easy-to-remember names to commu
 ## Task 2: Domain Hierarchy
 
 A domain can be split into different levels. Consider the domain `https://feodotracker.abuse.ch`.
-* **.ch**: This is the top-level domain (TLD). TLDs can be generic TLDs (gTLD) or country code TLDs (ccTLD).
-* **abuse**: This is a second-level domain. When registering a domain name, the second-level domain is limited to 63 characters and can only use the characters a-z, 0-9, and hyphens.
-* **feodotracker**: This is a subdomain, which is separated from the second-level domain by a period. It has the same restrictions as a second-level domain. There can be multiple subdomains as long as the entire domain name is 253 characters or less.
+* **.ch**: This is the top-level domain (TLD).
+  * TLDs can be generic TLDs (gTLD) or country code TLDs (ccTLD).
+* **abuse**: This is a second-level domain. 
+  * Second-level domains are limited to 63 characters.
+  * Second-level domains can only use the characters a-z, 0-9, and hyphens.
+* **feodotracker**: This is a subdomain.
+  * The subdomain is separated from the second-level domain by a period.
+  * Subdomains have the same restrictions as a second-level domain.
+  * A domain can have multiple subdomains as long as the entire domain name is 253 characters or less.
 
 <details>
 
@@ -45,7 +51,7 @@ A domain can be split into different levels. Consider the domain `https://feodot
 
 63
 
-A subdomain name has the same creation restrictions as a Second-Level Domain, being limited to 63 characters.
+A subdomain name has the same creation restrictions as a Second-Level Domain, which is limited to 63 characters.
 
 </details>
 
@@ -55,7 +61,7 @@ A subdomain name has the same creation restrictions as a Second-Level Domain, be
 
 \_
 
-A subdomain can onl use the characters a-z, 0-9, and hyphens.
+A subdomain can only use the characters a-z, 0-9, and hyphens.
 
 </details>
 
@@ -82,11 +88,12 @@ ccTLD stands for country code top-level domain.
 ## Task 3: Record Types
 
 There are many types of DNS records.
-* **A**: These records resolve IPv4 addresses
-* **AAAA**: These records resolve IPv6 addresses
-* **CNAME**: These records resolve another domain name
-* **MX**: These records resolve to the address of the servers that handle the email for the domain you are querying
-* **TXT**: These records are free text fields where any text-based data can be stored and are commonly used to verify domain ownership and list authortative servers to check for spoofing
+* **A**: These records resolve IPv4 addresses.
+* **AAAA**: These records resolve IPv6 addresses.
+* **CNAME**: These records resolve another domain name.
+* **MX**: These records resolve to the address of the servers that handle the email for the domain being queried
+* **TXT**: These records are free text fields where any text-based data can be stored.
+  * TXT records are commonly used to verify domain ownership and list authortative servers.
 
 <details>
 
@@ -110,12 +117,12 @@ AAAA records resolve IPv6 addresses.
 
 ## Task 4: Making A Request
 
-When you make a DNS request, the following steps occur:
+When a DNS request is made, the following steps occur:
 1. The computer checks its cache to see if the address has been looked up recently. If the address is not in the cache, a request to the computer's Recursive DNS Server is made.
-2. The Recursive DNS Server, usually provided by an ISP, checks its cache for the address. to send back to the computer. If the address is not in the cache, then root servers are used.
+2. The recursive DNS server, usually provided by an ISP, checks its cache for the address. to send back to the computer. If the address is not in the cache, then root servers are queried.
 3. The root server directs the computer to the correct Top Level Domain Server.
 4. The TLD server holds records for where to find the authortative server, or nameserver, to answer the DNS request.
-5. The authoritative server is responsible for storing the DNS records for a particular domain name. THe DNS record may also be sent back to the Recursive DNS server in order to be cached for a certain amount time, specified by the record's time to live (TTL) value.
+5. The authoritative server is responsible for storing the DNS records for a particular domain name. THe DNS record may also be sent back to the Recursive DNS server in order to be cached for a certain amount time, specified by the record's time-to-live (TTL) value.
 
 <details>
 
@@ -123,7 +130,7 @@ When you make a DNS request, the following steps occur:
 
 TTL
 
-TTL stands for Time to Live (ie how much time the DNS record should live in cache).
+TTL stands for time-to-live (ie how much time the DNS record should live in cache).
 
 </details>
 
@@ -131,9 +138,9 @@ TTL stands for Time to Live (ie how much time the DNS record should live in cach
 
 <summary>What type of DNS Server is usually provided by your ISP?</summary>
 
-Recursive
+recursive
 
-A recursive DNS server is usually provided by the ISP, which will check its cache for an address before going to a root server to seek out an answer.
+A recursive DNS server is usually provided by the ISP. A recursive DNS server will check its cache for an address before going to a root server to seek out an answer.
 
 </details>
 
@@ -141,7 +148,7 @@ A recursive DNS server is usually provided by the ISP, which will check its cach
 
 <summary>What type of server holds all the records for a domain?</summary>
 
-Authoritative
+authoritative
 
 An authortative server is also known as the nameserver for a domain and holds all of that domain's records.
 

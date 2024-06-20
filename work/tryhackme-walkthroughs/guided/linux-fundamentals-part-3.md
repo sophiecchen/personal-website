@@ -18,21 +18,23 @@ layout:
 
 ***
 
+*Between the time I finished this room and the time I wrote this walkthrough, this room has unfortunately become premium-access only. I've constructed this walkthrough based on my personal notes, but I now lack access to the original room. So, please let me know if this walkthrough has any inaccuracies.*
+
 ## Task 1: Introduction
 
 In this room, we will learn about automation, package management, and service/application logging.
 
 ## Task 2: Deploy Your Linux Machine
 
-To complete this room, we first need to deploy and log into the associated machine.
+To complete this room, we first need to deploy and log into the room's associated machine.
 
 ## Task 3: Terminal Text Editors
 
 We can edit files with terminal text editors like Nano and Vim.
 
-`nano <filename>` can be used to open or create a file in the text editor. Pressing `CTRL+X` will allow us to exit nano.
+`nano <filename>` can be used to open or create a file in the text editor. Pressing `CTRL+X` on our keyboard will allow us to exit nano.
 
-Vim is a much more advanced text editor. Its learning curve is higher but also includes advanced features and customizability.
+Vim is a much more advanced text editor. Learning Vim is much more difficult than learning Nano, but Vim offers advanced features and customizability that Nano does not have.
 
 <details>
 
@@ -62,11 +64,16 @@ First start a web server in the home directory of "tryhackme" with `python3 -m h
 
 ## Task 5: Processes 101
 
-Processes are the programs that are running on your machine. They are managed by the kernel, where each process will have an ID associated with it, also known as its PID. PIDs are assigned by the order in which a process starts.
+Processes are the programs that are running on a machine. They are managed by the kernel, where each process will have an ID associated with it, also known as its PID. PIDs are assigned by the order in which a process starts.
 
 `ps` can be used to view processes running as our user session. `ps aux` includes processes run by other users and system processes.
 
-`ps` gives you a one-time view of processes. In contrast, `top` can be used to see real-time statistics about the processes running on your system.
+`ps` gives a one-time view of processes. In contrast, `top` can be used to see real-time statistics about the processes running on a system.
+
+We can send signals to processes in order to terminate them. Consider these three signals:
+*
+*
+*
 
 TODO
 
@@ -174,11 +181,11 @@ TODO
 
 ## Task 9: Conclusions & Summaries
 
-In conclusion, this room covered the following:
-* Using terminal text editors
+In conclusion, this room taught us:
+* How to use terminal text editors
 * General utilities such as downloading and serving contents using a python webserver
-* A look into processes
-* Maintaining & automating your system by the use of crontabs, package management, and reviewing logs
+* The basics of processes
+* How to maintainin and automate a system using crontabs, package management, and reviewing logs
 
 ***
 

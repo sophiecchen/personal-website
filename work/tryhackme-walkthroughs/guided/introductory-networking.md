@@ -158,7 +158,7 @@ The receiving computer then reverses encapsulation in a process called de-encaps
 
 The encapsulation and de-capsulation process allows for a standard format of transmititng data. Encapsulated data is given a different names at different layers. Each step in encapsulation can be referenced below.
 
-![encapsulation](https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image.jpeg)
+<figure><img src="https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image.jpeg" alt=""><figcaption><p>Headers and sometimes footers are added to data at each layer in the OSI model through a process called encapsulation.</p></figcaption></figure>
 
 Notice how, in addition to a header, layer 2 also adds a trailer. This trailer is used to verify that the data has not been corrupted or tampered with during transmission.
 
@@ -222,7 +222,7 @@ The TCP/IP model for networking reflects how networking occurs in the real-world
 
 These four layers cover the same functions as the seven layers of the OSI model. A comparison between these two networking models can be seen below.
 
-![osi_v_tcpip](https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image-3.png)
+<figure><img src="https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image-3.png" alt=""><figcaption><p>The OSI and TCP/IP models have different layers but cover the same functionality.</p></figcaption></figure>
 
 TCP/IP takes half of its name from TCP. Task 2 contrasted TCP, a connection-based protocol, with UDP, a connectionless protocol. To form a connection between two computers using TCP, a connection is first formed using a three-way handshake.
 1. The intiating computer sends a request contiaining synchronize (SYN) information.

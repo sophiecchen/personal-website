@@ -18,10 +18,12 @@ layout:
 
 ***
 
+I choose the following two papers after learning about them through the 2023 Forensic 4:cast awards. TODO
+
 ## ChatGPT for Digital Forensic Investigation: The Good, The Bad, and The Unknown
 
-*By*
+*By Mark Scanlon, Frank Breitinger, Christopher Hargreaves, Jan-Niclas Hilgert, and John Sheppard*
 
 ## An Alternate Location for Deleted SMS/iMessage Data in Apple Devices
 
-## Links to Readings
+*By James McGee*

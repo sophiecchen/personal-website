@@ -20,6 +20,8 @@ layout:
 
 ## Apple-FBI Encryption Dispute
 
+(include links to materials here)
+
 ### TODO
 
 ### Amicus Briefs in Support of Apple
@@ -27,6 +29,3 @@ layout:
 ### Letters to the Court
 
 ### Amicus Briefs in Support of the FBI
-
-## Links to Readings
-

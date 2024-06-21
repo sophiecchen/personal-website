@@ -26,7 +26,7 @@ I already had VirtualBox downloaded on my laptop, so I proceeded by downloading 
 
 I powered up the machine and used the [default credentials](https://www.kali.org/docs/introduction/default-credentials/) for Kali Linux to login. I noticed that I had some installation errors with this VM. In particular, [Volatility](https://www.volatilityfoundation.org/) failed to download. Furthermore, it appeared that Python 2.7 was being used, which is a deprecated version (as of February 2024, when I am completing this lab). I attempted to run the `install.sh` executable included with the VM, but this did not resolve all installation errors. I took note of these errors and decided that I would install these tools manually when they were needed.
 
-I took a snapshot of my machine in VirtualBox by pressing clicking the hamburger menu -> Snapshots -> Take.
+I took a snapshot of my machine in VirtualBox by pressing clicking the hamburger menu (☰) -> Snapshots -> Take.
 
 #### Up Next: [2.1 Number Systems](2-basic-computer-skills-for-digital-forensics/2.1-number-systems.md)
 

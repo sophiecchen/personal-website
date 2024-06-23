@@ -33,7 +33,7 @@ Secure Shell (SSH) is a protocol between devices in an encrypted form. We can SS
 
 ## Task 3: Introduction to Flags and Switches
 
-Commands in Linux have a default behavior. For example, `ls` lists the contents of the working directory. We can add flags to commands to extend the behaviour of commands. `man <command>` can be used to view the associated flags for each command.
+Commands in Linux have a default behavior. For example, `ls` lists the contents of the working directory. We can add flags to commands to extend the behavior of commands. `man <command>` can be used to view the associated flags for each command.
 
 <details>
 
@@ -175,7 +175,7 @@ The root user's home directory is simply `root`.
 
 In conclusion, this room allowed us to:
 * Use terminal text editors
-* Deploy general utilities, such as downloading and serving contents using a Python webserver
+* Deploy general utilities, such as downloading and serving contents using a Python web server
 * Take a look into processes
 * Maintain and automate our system using crontabs, package management, and reviewing logs
 

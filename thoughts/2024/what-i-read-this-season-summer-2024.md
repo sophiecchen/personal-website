@@ -24,6 +24,10 @@ I choose the following two papers after learning about them through the 2023 For
 
 *By Mark Scanlon, Frank Breitinger, Christopher Hargreaves, Jan-Niclas Hilgert, and John Sheppard*
 
+This paper evaulates how effective GPT-4 is at TODO.
+
+summary-takeaways-strengths and improvements-questions
+
 ## An Alternate Location for Deleted SMS/iMessage Data in Apple Devices
 
 *By James McGee*

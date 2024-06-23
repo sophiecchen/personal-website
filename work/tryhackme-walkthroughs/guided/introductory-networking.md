@@ -32,7 +32,7 @@ The Open Systems Interconnection (OSI) Model is a standard model used in compute
 2. **Data Link**: This layer is responsible for adding a physical identifier, called the Media Access Control (MAC) address, of the receiving endpoint and presenting the data in a format suitable for transmission.
     * When receiving data, this layer also checks for errors.
 3. **Network**: This layer is responsible for locating the destination of a request using the IP address.
-4. **Transport**: This layer is responsible for selecting a protocol for transmission and dividng up the data into bite-sized pieces.
+4. **Transport**: This layer is responsible for selecting a protocol for transmission and dividing up the data into bite-sized pieces.
     * Transmission Control Protocol (TCP) is a common protocol that is connection-based and values accuracy over speed.
     * User Datagram Protocol (UDP) is a common protocol that is connectionless and values speed over accuracy.
     * The bite-sized pieces are called segments in TCP and datagrams in UDP.
@@ -156,7 +156,7 @@ Suppose a computer wants to send information another. The data starts at layer 7
 
 The receiving computer then reverses encapsulation in a process called de-encapsulation.
 
-The encapsulation and de-capsulation process allows for a standard format of transmititng data. Encapsulated data is given a different names at different layers. Each step in encapsulation can be referenced below.
+The encapsulation and de-capsulation process allows for a standard format of transmitting data. Encapsulated data is given a different names at different layers. Each step in encapsulation can be referenced below.
 
 <figure><img src="https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image.jpeg" alt=""><figcaption><p>Headers and sometimes footers are added to data at each layer in the OSI model through a process called encapsulation.</p></figcaption></figure>
 
@@ -225,9 +225,9 @@ These four layers cover the same functions as the seven layers of the OSI model.
 <figure><img src="https://muirlandoracle.co.uk/wp-content/uploads/2020/02/image-3.png" alt=""><figcaption><p>The OSI and TCP/IP models have different layers but cover the same functionality.</p></figcaption></figure>
 
 TCP/IP takes half of its name from TCP. Task 2 contrasted TCP, a connection-based protocol, with UDP, a connectionless protocol. To form a connection between two computers using TCP, a connection is first formed using a three-way handshake.
-1. The intiating computer sends a request contiaining synchronize (SYN) information.
-2. The receiving computer responds with the SYN information and an acknlowledgement (ACK), collectively referred to as SYN/ACK.
-3. The intiating computer sends the ACK information back to the receiving computer.
+1. The initiating computer sends a request containing synchronize (SYN) information.
+2. The receiving computer responds with the SYN information and an acknowledgement (ACK), collectively referred to as SYN/ACK.
+3. The initiating computer sends the ACK information back to the receiving computer.
 
 After these three steps are completed, a connection between the two computers is established for reliable data transmission.
 
@@ -267,7 +267,7 @@ The functionality of the OSI session layer is included in the TCP/IP application
 
 physical
 
-The TCP/IP network interface layer covers the functionalty of both the OSI data link and physical layers.
+The TCP/IP network interface layer covers the functionality of both the OSI data link and physical layers.
 
 </details>
 
@@ -465,7 +465,7 @@ Run `whois microsoft.com` and look for the registered tech email.
 
 ## Task 8: Dig
 
-The Domain Name System (DNS) protcol translates between IP addresses, which identify computers on the Internet using strings of numbers like 10.10.10.10, and domain names, which identify computers on the Internet using strings of letters like tryhackme.com.
+The Domain Name System (DNS) protocol translates between IP addresses, which identify computers on the Internet using strings of numbers like 10.10.10.10, and domain names, which identify computers on the Internet using strings of letters like tryhackme.com.
 
 Here is the process for translating a domain name to an IP address. If the computer finds an IP address and domain match, then the translation process is complete.
 1. When a domain is requested, the computer first checks its hosts file to see if an IP address has been explicitly mapped to a domain.

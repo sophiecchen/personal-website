@@ -93,7 +93,7 @@ There are many types of DNS records.
 * **CNAME**: These records resolve another domain name.
 * **MX**: These records resolve to the address of the servers that handle the email for the domain being queried
 * **TXT**: These records are free text fields where any text-based data can be stored.
-  * TXT records are commonly used to verify domain ownership and list authortative servers.
+  * TXT records are commonly used to verify domain ownership and list authoritative servers.
 
 <details>
 
@@ -121,7 +121,7 @@ When a DNS request is made, the following steps occur:
 1. The computer checks its cache to see if the address has been looked up recently. If the address is not in the cache, a request to the computer's Recursive DNS Server is made.
 2. The recursive DNS server, usually provided by an ISP, checks its cache for the address. to send back to the computer. If the address is not in the cache, then root servers are queried.
 3. The root server directs the computer to the correct Top Level Domain Server.
-4. The TLD server holds records for where to find the authortative server, or nameserver, to answer the DNS request.
+4. The TLD server holds records for where to find the authoritative server, or nameserver, to answer the DNS request.
 5. The authoritative server is responsible for storing the DNS records for a particular domain name. THe DNS record may also be sent back to the Recursive DNS server in order to be cached for a certain amount time, specified by the record's time-to-live (TTL) value.
 
 <details>
@@ -150,7 +150,7 @@ A recursive DNS server is usually provided by the ISP. A recursive DNS server wi
 
 authoritative
 
-An authortative server is also known as the nameserver for a domain and holds all of that domain's records.
+An authoritative server is also known as the nameserver for a domain and holds all of that domain's records.
 
 </details>
 

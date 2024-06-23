@@ -33,9 +33,9 @@ We have been given the following information about the suspect:
 * Name: William S. McClean (William Super McClean)
 * Nationality: British
 * Charges Pressed: Corporate espionage and theft of trade secrets
-* Other information: Currently in Metro Manila, Phillippines; transaction with incriminating materials will happen today with local gang member
+* Other information: Currently in Metro Manila, Philippines; transaction with incriminating materials will happen today with local gang member
 
-We have been assigned as DFIR first responder and are tasked with appropriately acquiring digital artifacts and evidence. Proper search authority and a search warrent have been obtained.
+We have been assigned as DFIR first responder and are tasked with appropriately acquiring digital artifacts and evidence. Proper search authority and a search warrant have been obtained.
 
 <details>
 
@@ -62,7 +62,7 @@ In this specific scenario, we are acting as a DFIR first responder.
 
 <summary>What do you have to gather?</summary>
 
-digital artefacts and evidence
+digital artfacts and evidence
 
 As a DFIR first responder, we are responsible for gathering digital artifacts and evidence that will be analyzed and possibly used in court.
 

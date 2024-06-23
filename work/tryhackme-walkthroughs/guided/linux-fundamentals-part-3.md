@@ -77,7 +77,7 @@ We can send signals to processes in order to terminate them. Consider these thre
 
 A computer's operating system uses namespaces to split up the computer's resources, such as CPU and RAM. Namespaces help isolate processes from one another.
 
-One of the first processes that starts when a computer botts is `systemd`. `systemctl <option> <service>` allows to interact with the `systemd` process. The four options we can use with this command are start, stop, enable, and disable.
+One of the first processes that starts when a computer boots is `systemd`. `systemctl <option> <service>` allows to interact with the `systemd` process. The four options we can use with this command are start, stop, enable, and disable.
 
 Processes can either run in the foreground or in the background. Processes that run in the background allow us to continue running further commands while waiting for that process to complete. A process can be backgrounded by adding the `&` operator to the command. A backgrounded process can be brought back to the foreground using `fg`.
 
@@ -143,7 +143,7 @@ fg
 
 ## Task 6: Maintaining Your System: Automation
 
-We can schdule certain tasks to occur after every system boot using the `cron` process. We interact with this process by writing crontabs, or special files that are executed by the `cron` process.
+We can schedule certain tasks to occur after every system boot using the `cron` process. We interact with this process by writing crontabs, or special files that are executed by the `cron` process.
 
 <details>
 
@@ -157,7 +157,7 @@ View the crontab on the machine with `nano <file>`.
 
 ## Task 7: Maintaining Your System: Package Management
 
-Software on Linux can be downloaded and managed with the Advanced Package Tool (apt). We can download packages with `apt-get install <package>` and remoe packages with `apt-get remove <package>`.
+Software on Linux can be downloaded and managed with the Advanced Package Tool (apt). We can download packages with `apt-get install <package>` and remove packages with `apt-get remove <package>`.
 
 ## Task 8: Maintaining Your System: Logs
 
@@ -192,9 +192,9 @@ Navigate to `/var/log/apache2` and look through the access logs.
 
 In conclusion, this room taught us:
 * How to use terminal text editors
-* General utilities such as downloading and serving contents using a python webserver
+* General utilities such as downloading and serving contents using a Python web server
 * The basics of processes
-* How to maintainin and automate a system using crontabs, package management, and reviewing logs
+* How to maintain and automate a system using crontabs, package management, and reviewing logs
 
 ***
 

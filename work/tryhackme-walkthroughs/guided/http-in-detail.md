@@ -217,7 +217,7 @@ Headers can be used to send additional information when making a HTTP request.
 Common request headers include:
 * **Host**: Specifies which website on the server is wanted
 * **User-Agent**: Specifies the client browser and version number
-* **Content-Length**: Speciifes the length of the content sent to the server
+* **Content-Length**: Specifies the length of the content sent to the server
 * **Accept-Encoding**:  Specifies what data compression methods the browser supports
 * **Cookie**: Specifies a piece of data remembered by the browser and used by the server to remember client information
 
@@ -233,7 +233,7 @@ Common response headers include:
 
 User-Agent
 
-User-Agent specifies browser and verison number.
+User-Agent specifies browser and version number.
 
 </details>
 

@@ -41,7 +41,7 @@ There are a few different types of intelligence:
 
 Cyber Threat Intelligence
 
-CTI is short for cyber threat intellgence, a subfield of cybersecurity that focuses on intelligence about adversaries. 
+CTI is short for cyber threat intelligence, a subfield of cybersecurity that focuses on intelligence about adversaries. 
 
 </details>
 
@@ -59,7 +59,7 @@ Technical intelligence includes specific artifacts and evidence on system, such 
 
 Cyber threat intelligence follows six, cyclic steps that form a feedback process loop.
 1. **Planning & direction**: Define objectives and goals and identify crucial parameters such as information assets, tools, sources of intelligence, etc.
-2. **Collection**: Gather the required data to address bojectives
+2. **Collection**: Gather the required data to address objectives
 3. **Processing**: Extract, sort, organize, and correlate data to present it in a usable and understandable format
 4. **Analysis**: Derive insights from the data and potentially investigate a threat or strengthen security controls
 5. **Dissemination**: Disseminate intelligence to stakeholders
@@ -92,7 +92,7 @@ Standards and frameworks in CTI allow for common terminology and the distributio
 * **TAXII**: Defines two models, collection and channel, for exchanging threat intelligence 
 * **STIX**: Provides relationships between threat information such as attack campaigns, indicators, etc.
 * **Cyber Kill Chain**: Breaks down adversary into 7 steps: (1) reconnaissance, (2) weaponization, (3) delivery, (4) exploitation, (5) installation, (6) command and control, and (7) actions on objectives 
-* **The Diamond Model**: Looks at intrusion analsis and tracking attack groups over time using four key areas: (1) adversary, (2) victim, (3) infrastructure, and (4) capabilities
+* **The Diamond Model**: Looks at intrusion analysis and tracking attack groups over time using four key areas: (1) adversary, (2) victim, (3) infrastructure, and (4) capabilities
 
 <details>
 

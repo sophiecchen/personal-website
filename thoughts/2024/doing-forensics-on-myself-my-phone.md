@@ -12,7 +12,7 @@ layout:
     visible: false
 ---
 
-# Doing Forensics on Myself: My Personal Computer
+# Doing Forensics on Myself: My Phone
 
 *July 2024*
 

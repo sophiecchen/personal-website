@@ -48,10 +48,10 @@ The Linux operating system can be broken down into layers.
 
 The Linux operating system is structured in a tree-like hierarchy and is documented by the [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/) (FHS).
 
-<figure><img srcg="https://academy.hackthebox.com/storage/modules/18/NEW_filesystem.png" alt=""><figcaption><p>The Linux file system is structured in a tree-like hierarchy.</p></figcaption></figure>
+<figure><img src="https://academy.hackthebox.com/storage/modules/18/NEW_filesystem.png" alt=""><figcaption><p>The Linux file system is structured in a tree-like hierarchy.</p></figcaption></figure>
 
 The Linux filesystem contains the following directories:
-* `/`: Contains all files required to boot the operating system and other filesystems
+* `/`: Contains all files required to boot the operating system and other file systems
 * `/bin`: Contains essential command binaries
 * `/boot`: Contains static bootloader, kernel executable, and other files required to boot the operating systems
 * `/dev`: Contains device files to facilitate access to hardware devices attached to the system
@@ -59,7 +59,7 @@ The Linux filesystem contains the following directories:
 * `/home`: Contains files for each user on the system
 * `/lib`: Contains shared library files that are required for system boot
 * `/media`: Acts as the mount point for external removable media devices such as USB drives
-* `/mnt`: Acts as the temporary mount point for regular filesystems
+* `/mnt`: Acts as the temporary mount point for regular file systems
 * `/opt`: Contains optional files such as third-party tools
 * `/root`: Acts as the root user's home directory
 * `/sbin`: Contains executables used for system administration
@@ -120,23 +120,29 @@ usr@htb[/htb]$ apropos <keyword>
 
 ### System Information
 
-The following commands are useful tools often installed by default:
+Many useful tools are installed by default in Linux.
+
+The following commands display or set basic information about the system:
 * `whoami`: Displays the current username
-|`id`|Returns users identity and group membership|
-|`hostname`|Sets or prints the name of current host system.|
-|`uname`|Prints basic information about the operating system name and system hardware.|
-|`pwd`|Returns working directory name.|
-|`ifconfig`|The ifconfig utility is used to assign or to view an address to a network interface and/or configure network interface parameters.|
-|`ip`|Ip is a utility to show or manipulate routing, network devices, interfaces and tunnels.|
-|`netstat`|Shows network status.|
-|`ss`|Another utility to investigate sockets.|
-|`ps`|Shows process status.|
-|`who`|Displays who is logged in.|
-|`env`|Prints environment or sets and executes command.|
-|`lsblk`|Lists block devices.|
-|`lsusb`|Lists USB devices|
-|`lsof`|Lists opened files.|
-|`lspci`|Lists PCI devices.|
+* `id`: Returns user's identity and group membership
+* `hostname`: Sets or prints the name of the current host system
+* `uname`: Prints basic information about the operating system name and system hardware
+* `pwd`: Returns working directory name
+* `who`: Displays who is logged in
+* `env`: Prints environment or sets and executes command
+* `lsblk`: Lists block devices
+* `lsusb`: Lists USB devices
+* `lsof`: Lists opened files
+* `lspci`: Lists PCI devices
+
+The following commands display or set information relating to the networking functions of the system:
+* `ifconfig`: Used to assign or to view an address to a network interface and used to configure network interface parameters
+* `ip`: Used to show or manipulate routing, network devices, interfaces and tunnels
+* `netstat`: Shows network status
+* `ss`: Used to investigate sockets
+* `ps`: Shows process status
+
+We can also use `ssh <username>@<ip_address>` to securely log into a remote system.
 
 <details>
 
@@ -154,6 +160,8 @@ The `uname -i` command prints the hardware of the system.
 
 /home/htb-student
 
+Recall that user home directories are stored in `/home`. Navigate to the htb-student directory and type `pwd` to print the present working directory.
+
 </details>
 
 <details>
@@ -162,6 +170,8 @@ The `uname -i` command prints the hardware of the system.
 
 /var/mail/htb-student
 
+Recall that mail is stored in `/var`. Navigate to the htb-student's mail and type `pwd` to print the present working directory.
+
 </details>
 
 <details>
@@ -169,6 +179,8 @@ The `uname -i` command prints the hardware of the system.
 <summary>Which shell is specified for the htb-student user?</summary>
 
 /bin/bash
+
+Type `env` to print information about the environment and look for what `SHELL` is set to.
 
 </details>
 
@@ -195,15 +207,14 @@ The `ipconfig` command allows us to see network interface information.
 ## Workflow
 
 ### Navigation
+ 
+As mentioned in the previous section, typing `pwd` in the command line prints the current directory. We can navigate through our file system using `ls`, which lists files in our current directory, and `cd <directory>`, which allows us to change directories.
 
-`pwd` can be used to see the current directory. `ls` is used to list and `cd` is used to change directory.
+Here are some navigation shortcuts to improve your workflow:
 - Use `cd -` to jump into the directory one was last in
-- Use [Ctrl] + [L] as a shortcut for `clean`
-- Use [Ctrl] + [R] and type some target text to search through command history
-### Working with Files and Directories
-`touch` can be used to make files and `mkdir` can be used to make directories. `mkdir -p parent/directory` will add parent directories if they do not exist. `tree .` can be used to view the file structure of the current directory. `mv`and `cp` are used for moving (and renaming) and copying.
-
-Use `stat <file>` to see file information!
+- Use `cd ..` to move to the parent directory of the current directory
+- Use `[CTRL] + [L]` as a shortcut for `clean`, which clears the terminal
+- Use `[CTRL] + [R]` and type some target text to search through command history
 
 <details>
 
@@ -227,6 +238,12 @@ Navigate to the /etc directory with `cd`. `ls -i` lists the inode/index number o
 
 ### Working with Files and Directories
 
+`touch <file>` can be used to make files while `mkdir <directory>` can be used to make directories. As a shortcut, `mkdir -p <parent>/<directory>` will add parent directories if they do not exist.
+
+`tree .` can be used to view the file structure of the current directory. `stat <file>` can be used to view file information.
+
+`mv <file> <destination>`and `cp <file> <destination>` are used for moving (and renaming) and copying files or directories.
+
 <details>
 
 <summary>What is the name of the last modified file in the "/var/backups" directory?</summary>
@@ -249,25 +266,19 @@ Navigate to the /var/backups directory with `cd`. `ls -i` lists the inode/index 
 
 ### Editing Files
 
-Editing is done with either `nano`or `vim`. Vim is a powerful and compact modal editor that is worth getting to know. `cat` can be used to view files.
+We can edit flies directly in the command line with text editors like Nano and Vim, which can be opened with `nano <file>` or `vim <file>`. Nano has a more approachable learning curve, but Vim is a powerful and compact modal editor that is worth getting to know.
+
+If we just desire to view files without editing them, we can use `cat <file>` to print the contents directly to the terminal.
 
 ### Find Files and Directories
 
-Finding files fast is very useful.
+In a large system, finding the files and folders we need is crucial.
 
-```Shell
-which <program>   # returns path to file that should be executed
-				  # returns nothing if program does not exist
+We can use `which <program>` to find the path to a file that is executed when running the program, if it exists.
 
-find <location> <options>  # possible options include:
-						   # type -f (look for files)
-						   # -name *.conf (look for .conf filenames)
-						   # 2>/dev/null (hides error messages)
+`find <location> <options>` allows us to find files and folders and filter results. For example, adding `-type f` as an option allows us to look for files while `-name *.conf` allows us to look for files ending with ".conf". We should add `2>/dev/null` at the end of our command to hide error messages. 
 
-sudo updatedb
-locate *.conf   # faster than find because uses database
-				# has less options than find
-```
+`locate <file>` allows us to search through a local database about existing files and folders. Before running this command though, we should type `sudo updatedb` in order to update this database.
 
 <details>
 
@@ -295,24 +306,27 @@ Type `find / -name *.bak -type f 2>/dev/null | wc -l`.  This searches for files 
 
 /usr/bin/xxd
 
+Type `which xxd` to find the "xxd" binary.
+
 </details>
 
 ### File Descriptors and Redirections
 
-A file descriptor (FD) indicates a connection maintained by the kernel to perform I/O operations.
+A file descriptor (FD) indicates a connection maintained by the kernel to perform I/O operations. The first three Linux file descriptors are as follows: 
 1. Data Stream for Input (STDIN - 0)
-	1. < is input file, << is input literal
 2. Data Stream for Output (STDOUT - 1)
-	1. > is write, >> is append
-	2. | is redirect output from one program to another
 3. Data Stream for Error Output (STDERR - 2)
-	1. This is why there is a 2 in `2>/dev/null` when redirecting errors to a sinkhole (getting rid of them)
 
-For example,
+We can use a file's contents as input using the `<` operator.
 
 ```Shell
-find /etc/ -name *.conf 2>dev/null | grep systemd | wc -l
+BOOKMARK
 ```
+
+	  * `<` is input file, `<<` is input literal
+	  * `>` is write, `>>` is append
+	  *| is redirect output from one program to another
+    	  * This is why there is a 2 in `2>/dev/null` when redirecting errors to a sinkhole (getting rid of them)
 
 <details>
 
@@ -336,7 +350,9 @@ Type `find / -name *.log -type f 2>/dev/null | wc -l`.  This searches for files 
 
 ### Filter Contents
 
-Pagers allow us to scroll through the file in an interactive view. Use `q`to quit the pager.
+INstead of using `nano` or `vim` to read a file, we can use pagers such as `more` and `less`. Pagers allow us to scroll through the file in an interactive view. We can press `q` to quit the pager.
+
+`more <file>` opens in a file in a pager and leaves the file contents in the terminal after we quit the pager. `less <file>`
 
 ```Shell
 more /etc/passwd    # leaves output in terminal after quitting
@@ -360,6 +376,8 @@ Also check out `awk` and `sed` for further sorting and manipulating results.
 
 7
 
+TODO
+
 </details>
 
 <details>
@@ -368,6 +386,8 @@ Also check out `awk` and `sed` for further sorting and manipulating results.
 
 proftpd
 
+TODO
+
 </details>
 
 <details>
@@ -375,6 +395,8 @@ proftpd
 <summary>Use cURL from your Pwnbox (not the target machine) to obtain the source code of the "https://www.inlanefreight.com" website and filter all unique paths of that domain. Submit the number of these paths as the answer.</summary>
 
 34
+
+TODO
 
 </details>
 
@@ -400,16 +422,15 @@ Special permissions for files can be set using the Set User ID (SUID) and Set Gr
 
 ### User Management
 
-| **Command** | **Description**                                                                                                                                            |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sudo`      | Execute command as a different user.                                                                                                                       |
-| `su`        | The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser). A shell is then executed. |
-| `useradd`   | Creates a new user or update default new user information.                                                                                                 |
-| `userdel`   | Deletes a user account and related files.                                                                                                                  |
-| `usermod`   | Modifies a user account.                                                                                                                                   |
-| `addgroup`  | Adds a group to the system.                                                                                                                                |
-| `delgroup`  | Removes a group from the system.                                                                                                                           |
-| `passwd`    | Changes user password.                                                                                                                                     |
+
+- **sudo**: Execute command as a different user.
+- **su**: The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser). A shell is then executed.
+- **useradd**: Creates a new user or update default new user information.
+- **userdel**: Deletes a user account and related files.
+- **usermod**: Modifies a user account.
+- **addgroup**: Adds a group to the system.
+- **delgroup**: Removes a group from the system.
+- **passwd**: Changes user password.                                                                                                                                 |
 
 <details>
 
@@ -487,15 +508,16 @@ kill -l          # lists a signals that can be sent to a process
 kill 9 <PID>     # force kill a frozen process
 ```
 
-| **Signal** | **Description**                                                                                                          |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `1`        | `SIGHUP` - This is sent to a process when the terminal that controls it is closed.                                       |
-| `2`        | `SIGINT` - Sent when a user presses `[Ctrl] + C` in the controlling terminal to interrupt a process.                     |
-| `3`        | `SIGQUIT` - Sent when a user presses `[Ctrl] + D` to quit.                                                               |
-| `9`        | `SIGKILL` - Immediately kill a process with no clean-up operations.                                                      |
-| `15`       | `SIGTERM` - Program termination.                                                                                         |
-| `19`       | `SIGSTOP` - Stop the program. It cannot be handled anymore.                                                              |
-| `20`       | `SIGTSTP` - Sent when a user presses `[Ctrl] + Z` to request for a service to suspend. The user can handle it afterward. |
+Certainly! Here's the markdown bulleted list based on your table:
+
+- **1**: `SIGHUP` - This is sent to a process when the terminal that controls it is closed.
+- **2**: `SIGINT` - Sent when a user presses `[Ctrl] + C` in the controlling terminal to interrupt a process.
+- **3**: `SIGQUIT` - Sent when a user presses `[Ctrl] + D` to quit.
+- **9**: `SIGKILL` - Immediately kill a process with no clean-up operations.
+- **15**: `SIGTERM` - Program termination.
+- **19**: `SIGSTOP` - Stop the program. It cannot be handled anymore.
+- **20**: `SIGTSTP` - Sent when a user presses `[Ctrl] + Z` to request for a service to suspend. The user can handle it afterward.
+
 Display background processes with `jobs`.  Use `SIGTSTP` to suspend a process, and then let that process run in the background `bg`. You can also do this automatically by putting `&` at the end of a command. `fg <ID>` will allow you to foreground a process.
 
 Run several commands:
@@ -665,13 +687,11 @@ Firewalls provide a security mechanism for controlling and monitoring network tr
 
 The iptables utility provides a flexible set of rules for filtering network traffic based on various criteria such as source and destination IP addresses, port numbers, protocols, and more.
 
-| **Component** | **Description**                                                                                                                                                              |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Tables`      | Tables are used to organize and categorize firewall rules.                                                                                                                   |
-| `Chains`      | Chains are used to group a set of firewall rules applied to a specific type of network traffic.                                                                              |
-| `Rules`       | Rules define the criteria for filtering network traffic and the actions to take for packets that match the criteria.                                                         |
-| `Matches`     | Matches are used to match specific criteria for filtering network traffic, such as source or destination IP addresses, ports, protocols, and more.                           |
-| `Targets`     | Targets specify the action for packets that match a specific rule. For example, targets can be used to accept, drop, or reject packets or modify the packets in another way. |
+- **Tables**: Tables are used to organize and categorize firewall rules.
+- **Chains**: Chains are used to group a set of firewall rules applied to a specific type of network traffic.
+- **Rules**: Rules define the criteria for filtering network traffic and the actions to take for packets that match the criteria.
+- **Matches**: Matches are used to match specific criteria for filtering network traffic, such as source or destination IP addresses, ports, protocols, and more.
+- **Targets**: Targets specify the action for packets that match a specific rule. For example, targets can be used to accept, drop, or reject packets or modify the packets in another way.
 *See HTB Linux Fundamentals for details about each of these core components.*
 
 ### System Logs and Monitoring
@@ -682,14 +702,14 @@ System logs on Linux are a set of files that contain information about the syste
 - Authentication Logs: stored in `/var/log/auth.log`
 - Application Logs: stored in logs depending on application
 
-| **Service**  | **Description**                                                                                             |
-| ------------ | ----------------------------------------------------------------------------------------------------------- |
-| `Apache`     | Access logs are stored in the /var/log/apache2/access.log file (or similar, depending on the distribution). |
-| `Nginx`      | Access logs are stored in the /var/log/nginx/access.log file (or similar).                                  |
-| `OpenSSH`    | Access logs are stored in the /var/log/auth.log file on Ubuntu and in /var/log/secure on CentOS/RHEL.       |
-| `MySQL`      | Access logs are stored in the /var/log/mysql/mysql.log file.                                                |
-| `PostgreSQL` | Access logs are stored in the /var/log/postgresql/postgresql-version-main.log file.                         |
-| `Systemd`    | Access logs are stored in the /var/log/journal/ directory.                                                  |
+Sure, here's how the table would look as a markdown bulleted list:
+
+- **Apache**: Access logs are stored in the /var/log/apache2/access.log file (or similar, depending on the distribution).
+- **Nginx**: Access logs are stored in the /var/log/nginx/access.log file (or similar).
+- **OpenSSH**: Access logs are stored in the /var/log/auth.log file on Ubuntu and in /var/log/secure on CentOS/RHEL.
+- **MySQL**: Access logs are stored in the /var/log/mysql/mysql.log file.
+- **PostgreSQL**: Access logs are stored in the /var/log/postgresql/postgresql-version-main.log file.
+- **Systemd**: Access logs are stored in the /var/log/journal/ directory.
 
 - Security Logs: stored in logs such as `/var/log/fail2ban.log` (failed login attempts), `/var/log/ufw.log` (firewall), etc.
 
@@ -699,21 +719,21 @@ System logs on Linux are a set of files that contain information about the syste
 
 Solaris is a Unix-based operating system known for its robustness, scalability, and support for high-end hardware and software systems. It is widely used in the banking, finance, and government sectors. It is also used in large-scale data centers, cloud computing environments, and virtualization platforms.
 
-Solaris is propriety and differs from Linux in its filesystem, security, system monitoring, process and package management, and kernel and hardware support.
-
-*See HTB Linux Fundamentals for key differences*.
+Solaris is propriety and differs from Linux in its filesystem, security, system monitoring, process and package management, and kernel and hardware support. For example, Solaris uses `pkgadd` to install packages instead of `apt-get` like Linux.
 
 ## Tips and Tricks
 
 ### Shortcuts
-- `[CTRL] + A` - Move the cursor to the `beginning` of the current line.
-- `[CTRL] + E` - Move the cursor to the `end` of the current line.
-- `[CTRL] + [←]` / `[→]` - Jump at the beginning of the current/previous word.
-- `[ALT] + B` / `F` - Jump backward/forward one word.
-- `[CTRL] + U` - Erase everything from the current position of the cursor to the `beginning` of the line.
-- `[Ctrl] + K` - Erase everything from the current position of the cursor to the `end` of the line.
-- `[CTRL] + L` - Clears the terminal. An alternative to this shortcut is the `clear` command you can type to clear our terminal.
-- `[CTRL] + R` - Search through command history for commands we typed previously that match our search patterns.
+
+The following keyboard shortcuts will allow us to work more efficiently in command line.
+- `[CTRL] + A`: Move the cursor to the beginning of the current line
+- `[CTRL] + E`: Move the cursor to the end of the current line
+- `[CTRL] + [←]`/`[→]`: Jump at the beginning of the current/previous word
+- `[ALT] + B`/`F`: Jump backward/forward one word
+- `[CTRL] + U`: Erase everything from the current position of the cursor to the beginning of the line
+- `[CTRL] + K`: Erase everything from the current position of the cursor to the end of the line
+- `[CTRL] + L`: Clears the terminal (equivalent to `clear`)
+- `[CTRL] + R`: Search through command history for commands we typed previously that match our search patterns
 
 ***
 

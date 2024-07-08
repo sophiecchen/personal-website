@@ -141,54 +141,113 @@ As noted above, law enforcement officers discovered a flash drive with an attach
 <details>
 <summary>Based on the scenario and the previous task, what should be done with that acquired suspect artefact?</summary>
 
+taking an image 
+
+Once an artifact has been transported to the laboratory, a professional should take an image for analysis.
+
 </details>
 
 <details>
-<summary>What is the crucial aspect of the Chain of Custody that ensures individual accountability and guarantees a transparent and untainted transfer of artefacts and evidence?</summary>
+<summary>What is the crucial aspect of the Chain of Custody that ensures individual accountability and guarantees a transparent and untainted transfer of artefacts and evidence?
+
+ensure proper documentation
+
+Artifacts and evidence must be properly documented so that we can ensure they were not tampered with. 
+</summary>
 
 </details>
 
 ## Task 5: Introduction to FTK Imager
 
+FTK Imager is a forensic tool that allows DFIR professionals to acquire data and perform analysis on a copy of that data. In a real-world setting, a write-blocking device, or write blocker for short, must be used to prevent the original evidence from being modified.
+
+The user interface (UI) of FTK Imager includes three parts:
+* **Evidence tree pane**: Displays a hierarchical view of added evidence sources
+* **File list pane**: Displays a list of files and folders contained in a selected directory from the evidence tree pane 
+* **Viewer pane**: Displays the content of selected files
+
+The following scenario emulates a situation where a physical drive, connected to a write blocker, is attached. EFS encryption is a type of filesystem-level encryption provided by Windows on NTFS file systems. We can detect the presence of EFS encryption with the following steps:
+1. Open FTK Imager and go to `File -> Add  Evidence Item...`
+2. Choose `Physical Drive` as the selected source and `Microsoft Virtual Disk` as the selected drive. Click `Finish`. 
+3. Go to `File -> Detect EFS Encryption` to see whether there is EFS encryption on the drive.
+
 <details>
 <summary>What device will prevent tampering when acquiring a forensic disk image?</summary>
+
+write-blocking device
+
+A write-blocking device prevents the original evidence from being written to, which would compromise the evidence's integrity.
 
 </details>
 
 <details>
 <summary>What is the UI element of FTK Imager which displays a hierarchical view of the added evidence sources?</summary>
 
+evidence tree pane
+
+The evidence tree pane displays a hierarchical view of added evidence sources.
+
 </details>
 
 <details>
 <summary>Is the attached flash drive encrypted? (Y/N)</summary>
+
+N
+
+After following the steps above, FTK Imager indicates that no EFS encryption was detected.
 
 </details>
 
 <details>
 <summary>What is the UI element of FTK Imager which displays a list of files and folders?</summary>
 
+file list pane
+
+The file list pane displays a list of files and folders contained in a selected directory from the evidence tree pane.
+
 </details>
 
 ## Task 6: Using FTK Imager to Acquire Digital Artifacts and Evidence
 
+We can create a disk image with the following steps:
+1. Open FTK Imager and go to `File -> Create Disk Image`.
+2. Choose `Physical Drive` as the selected source and `Microsoft Virtual Disk` as the selected drive. Click `Finish`. 
+
+TODO
+
 <details>
 <summary>What is the UI element of FTK Imager which displays the content of selected files?</summary>
+
+viewer pane
+
+The viewer pane displays the content of selected files.
 
 </details>
 
 <details>
 <summary>What is the SHA1 hash of the physical drive and forensic image?</summary>
 
+d82f393a67c6fc87a023b50c785a7247ab1ac395
+
+TODO
+
 </details>
+
+TODO
 
 <details>
 <summary>Including hidden files, how many files are currently stored on the flash drive?</summary>
+
+TODO (ignore ones with an X on the icon and other icon values)
 
 </details>
 
 <details>
 <summary>How many files were deleted in total?</summary>
+
+6
+
+TODO (note 14 - 8)
 
 </details>
 
@@ -198,6 +257,8 @@ As noted above, law enforcement officers discovered a flash drive with an attach
 </details>
 
 ## Task 7: Case B4DM755: At the Forensics Laboratory
+
+TODO
 
 <details>
 <summary>Aside from FTK Imager, what is the directory name of the other tool located in the tools directory under Desktop?</summary>
@@ -261,18 +322,35 @@ As noted above, law enforcement officers discovered a flash drive with an attach
 
 ## Task 8: Post-Analysis of Evidence to Court Proceedings
 
+Law enforcement agencies and DFIR professionals must follow four phases of investigation when investigating a case for court.
+1. **Pre-search**: Send requests to preserve data of suspect's social media and ISPs, obtain a warrant, and perform inspections of suspect's public information
+2. **Search**: Perform search, seizure, and examination of digital devices and obtain data from social media networks and ISPs
+3. **Post-search**: Perform forensic analysis of acquired evidence
+4. **Trial**: Present forensic evidence with documentation at court
+
 <details>
 <summary>In which phase is a warrant obtained for search, seizure, and examination of the suspect's computer data due to violations of domestic and international laws?</summary>
+
+pre-search
+
+A warrant must be obtained before performing any searches or seizing any evidence. Thus, obtaining a warrant occurs in the pre-search phase.
 
 </details>
 
 <details>
 <summary>In which phase is a forensic analysis performed on the acquired digital evidence requested from various sources?</summary>
 
+post-search
+
+The post-search phase is when analysis of acquired digital evidence is performed.
 </details>
 
 <details>
 <summary>Which phase involves presenting forensic artefacts and evidence with proper documentation in a court of law?</summary>
+
+trial
+
+Forensic evidence with documentation are presented in court during the trial phase.
 
 </details>
 

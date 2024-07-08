@@ -32,7 +32,7 @@ To complete this room, we first need to deploy and log into the room's associate
 
 We can edit files with terminal text editors like Nano and Vim.
 
-`nano <file>` can be used to open or create a file in the text editor. Pressing `CTRL+X` on our keyboard will allow us to exit nano.
+`nano <file>` can be used to open or create a file in the text editor. Pressing `[CTRL] + [X]` on our keyboard will allow us to exit nano.
 
 Vim is a much more advanced text editor. Learning Vim is much more difficult than learning Nano, but Vim offers advanced features and customizability that Nano does not have.
 

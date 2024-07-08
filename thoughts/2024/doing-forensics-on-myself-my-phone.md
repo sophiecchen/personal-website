@@ -16,10 +16,16 @@ layout:
 
 *July 2024*
 
-I recently did a logical acquisition of my phone in order to learn more about TODO and TODO.
+***
 
-I first started out by TODO. I also listened to various episodes of the [CyberWork]() podcast, and TODO mentioned that TODO was a valid TODO.
+I recently did a logical acquisition of my phone in order to learn more about mobile forensics and get my feet wet in practicing DFIR.
 
-"Logical acquisition. This is the most universal and the most compatible extraction method based on Apple’s APIs and protocols. With logical acquisition, experts can make the phone create the full local backup of its data, pull pictures and videos, and obtain certain logs and shared files. This method is one of the most limited, too: both Apple and developers can restrict which parts of data are backed up, and the user can protect local backups with a password, which must be broken or removed in order to access the data. Breaking the password might be time-consuming or not even possible depending on the length and complexity of the password, while resetting the password involves removing the screen lock passcode on the iPhone, which, in turn, has important consequences. On the other hand, media files (including metadata) can be extracted regardless of the backup password, while log files may help recover some of the device usage timeline."
+I first started out by searching on Google how to take a forensic image of my phone. I stumbled upon a [discussion](https://security.stackexchange.com/questions/55058/mount-iphone-for-forensic-analysis-or-take-forensic-image) on the information Stack Exchange and a [blog post](https://blog.elcomsoft.com/2021/03/breaking-the-iphone-12-forensic-extraction-of-ios-14-devices/) from ElcomSoft. I also listened to various episodes of the [CyberWork](https://www.infosecinstitute.com/podcast/) podcast, where a guest speaker recommended using iTunes backup to perform a logical acquisition.
+
+TODO.
+
+Encrypted iPhone backup with a known password is a very common methodology (more information if encrypted! Digital forensics careers: fact vs fiction)  
 
 ***
+
+[Home](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/036xtfEIzcEdGegONXWM/) ⋅ [Work](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/WaFS755Q4sf02CxLcghQ/) ⋅ [Thoughts](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/s4QQPMntQ25hmJToKSOu/)

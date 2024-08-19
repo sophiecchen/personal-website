@@ -14,6 +14,8 @@ layout:
 
 # Digital Forensics Lab Walkthrough
 
+*Please note that this project is in progress and stay tuned for updates.*
+
 Learning digital forensics with [Weifeng Xu, Lin Deng, and Dianxiang Xu's Digital Forensics Lab](https://github.com/frankwxu/digital-forensics-lab) has been one of my most anticipated projects, so I'm very excited to share my experience with this lab.
 
 My goal for this walkthrough is to provide a sort of informal textbook version of the PowerPoints provided in the GitHub and to document any troubleshooting I had to do. I hope that this walkthrough can be of use for other students who are reviewing the lab content or learning digital forensics by themselves.

@@ -12,66 +12,35 @@ layout:
     visible: false
 ---
 
-# Beginner-Friendly Cybersecurity Resources
+# What I Read This Season: Fall 2024
 
-*June 2024*
+*October 2024*
 
 ***
 
-When first started learning cybersecurity, I felt overwhelmed by the sheer amount of information I had to learn. So, I've compiled a list of resources, geared toward beginners, for your reference.
+"What I Read This Season" is a new series that I've decided to start in order to both share papers I've read and motivate myself keep up with computer science and cybersecurity literature. I was planning to post this in at the end of fall (around December), but I got a little excited.
 
-## Informational
+## Troubling Trends in Machine Learning Scholarship
 
-Building a basic understanding of how computers work as well and learning common security terminology and concepts is crucial for diving deeper into security. I've found these resources helpful for building a strong foundation.
+*Zachary C. Lipton and Jacob Steinhardt*
 
-* [Hack The Box Academy](https://academy.hackthebox.com/) teaches beginners cybersecurity topics with a focus on penetration testing.
-* [TryHackMe Guided Rooms](https://tryhackme.com/r/hacktivities) guide beginners through various areas of cybersecurity.
-* [Professor Messer's Security+ Videos](https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/) explain a wide variety of fundamental cybersecurity concepts. These videos are geared toward the CompTIA Security+ Certification.
-* [The Hitchhiker's Guide to DFIR: Experiences From Beginners and Experts](https://leanpub.com/TheHitchhikersGuidetoDFIRExperiencesFromBeginnersandExperts) is a free, crowdsourced book by the members of the Digital Forensics Discord Server on all things DFIR.
+One of the professors I researched with emphasized the importance of rigorous research and shared this paper with the lab. The authors in this paper point out trends in machine learning research that undermine rigorous research and propose ways to combat each of these trends.
 
-## CTFs and Labs
+I personally found that this paper was thoughtfully written. The authors supported each of the trends they pointed out with specific examples. Their paper critiques were carefully and constructively worded. The authors also took care to criticize either their own work or the work senior researchers rather than of the work of junior researchers. This decision clearly reflects the authors' commitment to improving the rigor of machine learning research while contributing to a supportive and welcoming research community.
 
-Once you have a basic understanding of cybersecurity, I recommend using labs to get hands-on experience.
+You can read the paper [here](https://arxiv.org/pdf/1807.03341).
 
-* [Digital Forensics Lab](https://github.com/frankwxu/digital-forensics-lab) teaches users the fundamentals of digital forensics through labs and case studies.
-* [SEED Labs 2.0](https://seedsecuritylabs.org/Labs_20.04/) introduces users to various cybersecurity concepts and vulnerabilities through guided labs.
-* [OWASP Bricks](https://sechow.com/bricks/index.html) introduces users to common application vulnerabilities through an insecure web application.
-* [Hack The Box Lab](https://hackthebox.com/) provides CTF-style machines for all levels to hack into.
-* [TryHackMe Practice Rooms](https://tryhackme.com/r/hacktivities/practice) allows users to practice skills in a CTF-style room.
-* [Malware Unicorn](https://malwareunicorn.org/) provides reverse-engineering workshops.
+## ChatGPT for Digital Forensic Investigation: The Good, The Bad, and The Unknown
 
-## Events
+*By Mark Scanlon, Frank Breitinger, Christopher Hargreaves, Jan-Niclas Hilgert, and John Sheppard*
 
-SANS Cybersecurity Summits are free to attend online. They are a great way to get connected to the cybersecurity community.
+I learned about this paper through the 2023 Forensic 4:cast awards. This paper evaluates how effective ChatGPT-4 is at various digital forensic tasks, from artifact identification to self-directed learning.
 
-If you are interested in digital forensics like me, Magnet Forensics holds a yearly virtual summit that is free to attend. [Replays of the talks](https://www.magnetforensics.com/magnet-virtual-summit-2024-replays/) for 2024 are now available online.
+I found this paper to be more breath than depth. I enjoyed the variety of possibilities suggested by the authors, and I think that this paper can give digital forensics professionals new ideas about how to adapt their workflow to include large language models. This paper touched on many topics, and I think that each topic warrants more exploration. I would love to see more research that builds off of each of the possible applications of ChatGPT for digital forensic investigations mentioned in this paper.
 
-## Podcasts
+I would love to see the authors elaborate more on the prompts they used, as prompting techniques have been shown to improve the responses of large language models (LLMs) such as ChatGPT-4. To properly evaluate which prompts work better for LLMs in digital forensic applications, future work would have to find a way to systematically determine what makes one response better than another. In addition, the paper mentions how ChatGPT-4 has non-deterministic behavior. While this is true, there are ways to manipulate the level of deterministic behavior in ChatGPT models by interacting with these models through their API and setting the temperature parameter. The ChatGPT-4 API was not widely available during this paper's research. I would love to know more about the rational for choosing a newer ChatGPT model without an API over an older ChatGPT model with an API.
 
-Podcasts are a useful for integrating cybersecurity into your daily routine.
-
-* [Cyberwire Daily](https://thecyberwire.com/podcasts/daily-podcast) provides daily cybersecurity news and analysis geared at professionals.
-* [DFIRL](https://www.magnetforensics.com/resources/introduction-to-digital-forensics-in-real-life-dfirl-podcast/) discusses real-life cases in which digital evidence (uncovered by digital forensics) has played a pivotal role.
-* [Technology Pill](https://privacyinternational.org/learning-resources/technology-pill-podcast) discusses the changing role of technology in society and the way it impacts people around the world.
-* [Malicious Life](https://malicious.life/) shares the stories of some of the wildest hacks in history.
-* [CyberWork](https://www.infosecinstitute.com/podcast/) invites industry leaders to discuss cybersecurity careers and skills needed to join the field.
-
-## Research and Reports
-
-I've personally found reading cybersecurity research very rewarding. Dr. Srinivasan Keshav's [How To Read a Research Paper](http://svr-sk818-web.cl.cam.ac.uk/keshav/papers/07/paper-reading.pdf) explains how to read research in a clear and concise way.
-
-Google Scholar is a great tool for finding interesting papers by keyword. If you've found a paper you like, you can find similar papers through the related work and reference sections of the paper. Google Scholar also lists other papers that cite a paper.
-
-Here are some of my personal recommendations for those who have never read a research paper before. These papers are approachable, speak to both computing and society. Reading these will help familiarize you with how papers in computing tend to be structured.
-
-* ["A Stalker’s Paradise": How Intimate Partner Abusers Exploit Technology](https://rist.tech.cornell.edu/papers/stalkers-paradise-intimate.pdf) by Diana Freed, Jackeline Palmer, Diana Minchala, Karen Levy, Thomas Ristenpart, and Nicola Dell (2018)
-* [Investigating Large Scale HTTPS Interception in Kazakhstan](https://ensa.fi/papers/HTTPSKaz.pdf) by Ram Sundara Raman, Leonid Evdokimov, Eric Wurstrow, J. Alex Halderman, and Roya Ensafi (2020)
-* [Throttling Twitter: An Emerging Censorship Technique in Russia](https://ensa.fi/papers/throttling-imc-paper.pdf) by by Diwen Xue, Reethika Ramesh, ValdikSS, Leonid Evdokimov, Andrey Viktorov, Arham Jain, Eric Wustrow, Simone Basso, and Roya Ensafi (2021)
-* [The Antrim County 2020 Election Incident: An Independent Forensic Investigation](https://www.usenix.org/system/files/sec22-halderman.pdf) by J. Alex Halderman (8/2022)
-
-## More Resources
-
-SANS has compiled a [list of free tools](https://www.sans.org/img/free-faculty-tools.pdf) used in nearly every area of cybersecurity. You can also find an extensive list of cybersecurity resources (tools and learning material) on Hack-with-Github's [Awesome Hacking](https://github.com/Hack-with-Github/Awesome-Hacking) repository. 
+You can read the paper [here](https://arxiv.org/pdf/2307.10195).
 
 ***
 

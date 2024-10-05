@@ -38,62 +38,64 @@ The filename of the image is `/home/SakuraSnowAngelAiko/Desktop/pwnedletter.png`
 
 ## Task 3: RECONNAISSANCE
 
+This task 
+
 <details>
-<summary></summary>
+<summary>What is the full email address used by the attacker?</summary>
 </details>
 
 <details>
-<summary></summary>
+<summary>What is the attacker's full real name?</summary>
 </details>
 
 ## Task 4: UNVEIL
 
 <details>
-<summary></summary>
+<summary>What cryptocurrency does the attacker own a cryptocurrency wallet for?</summary>
 </details>
 
 <details>
-<summary></summary>
+<summary>What is the attacker's cryptocurrency wallet address?</summary>
 </details>
 
 <details>
-<summary></summary>
+<summary>What mining pool did the attacker receive payments from on January 23, 2021 UTC?</summary>
 </details>
 
 <details>
-<summary></summary>
+<summary>What other cryptocurrency did the attacker exchange with using their cryptocurrency wallet?</summary>
 </details>
 
 ## Task 5: TAUNT
 
 <details>
-<summary></summary>
+<summary>What is the attacker's current Twitter handle?</summary>
 </details>
 
 <details>
-<summary></summary>
+<summary>What is the URL for the location where the attacker saved their WiFi  SSIDs and passwords?</summary>
 </details>
 
 <details>
-<summary></summary>
+<summary>What is the BSSID for the attacker's Home WiFi?</summary>
 </details>
 
 ## Task 6: HOMEBOUND
 
 <details>
-<summary></summary>
+<summary>What airport is closest to the location the attacker shared a photo from prior to getting on their flight?</summary>
 </details>
 
 <details>
-<summary></summary>
+<summary>What airport did the attacker have their last layover in?</summary>
 </details>
 
 <details>
-<summary></summary>
+<summary>What lake can be seen in the map shared by the attacker as they were on their final flight home?</summary>
 </details>
 
 <details>
-<summary></summary>
+<summary>What city does the attacker likely consider "home"?</summary>
 </details>
 
 ***

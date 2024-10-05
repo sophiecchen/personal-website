@@ -18,7 +18,7 @@ layout:
 
 ***
 
-"What I Read This Season" is a new series that I've decided to start in order to both share papers I've read and motivate myself keep up with computer science and cybersecurity literature. I was planning to post this in at the end of fall (around December), but I got a little excited.
+What I Read This Season is a new series that I've decided to start in order to both share papers I've read and motivate myself keep up with computer science and cybersecurity literature. I was planning to post this in at the end of fall (around December), but I got a little excited.
 
 ## Troubling Trends in Machine Learning Scholarship
 

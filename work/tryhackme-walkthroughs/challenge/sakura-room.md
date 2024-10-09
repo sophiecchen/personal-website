@@ -38,7 +38,7 @@ The filename of the image is `/home/SakuraSnowAngelAiko/Desktop/pwnedletter.png`
 
 ## Task 3: RECONNAISSANCE
 
-This task 
+This task asks us to find the TODO. I used 
 
 <details>
 <summary>What is the full email address used by the attacker?</summary>
@@ -52,6 +52,10 @@ This task
 
 <details>
 <summary>What cryptocurrency does the attacker own a cryptocurrency wallet for?</summary>
+
+Ethereum
+
+TODO
 </details>
 
 <details>

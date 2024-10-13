@@ -18,6 +18,8 @@ layout:
 
 ***
 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10819343/
+https://www.nist.gov/spo/forensic-science-program/digital-investigation-techniques-nist-scientific-foundation-review 
 
 ***
 

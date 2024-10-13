@@ -18,7 +18,26 @@ layout:
 
 ***
 
-readings for technology and abuse
+[readings for technology and abuse](https://www.ipvtechresearch.org/about) (already read one!)
+
+Diana Freed, Sam Havron, Emily Tseng, Andrea Gallardo, Rahul Chatterjee, Thomas Ristenpart, and Nicola Dell.
+"Is my phone hacked?" Analyzing Clinical Computer Security Interventions with Survivors of Intimate Partner Violence.
+Proceedings of the ACM on Human-Computer Interaction: Vol. 3 Issue CSCW. 2019.
+
+Rosanna Bellini.
+
+Paying the Price: When Intimate Partners Use Technology for Financial Harm
+
+ACM Conference on Human Factors in Computing Systems (CHI). 2023.
+
+Best Paper Award
+
+Rosanna Bellini, Emily Tseng, Noel Warford, Alaa Daffalla, Tara Matthews, Sunny Consolvo, Jill Woelfer, Patrick Gage Kelley, Michelle Mazurek, Dana Cuomo, Nicola Dell, and Thomas Ristenpart.
+
+SoK: Safer Digital-Safety Research Involving At-Risk Users
+
+IEEE Symposium on Security and Privacy (Oakland). 2024.
+
 
 ***
 

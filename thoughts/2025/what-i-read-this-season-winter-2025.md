@@ -20,7 +20,7 @@ layout:
 
 ## Apple-FBI Encryption Dispute
 
-I am taking a cryptography course this semester at university, and as someone who is interested in digital forensics, I am on a journey exploring the tension between cryptography, privacy, and digital forensics.
+I took a cryptography course last semester at university, and as someone who is interested in digital forensics, I am on a journey exploring the tension between cryptography, privacy, and digital forensics.
 
 The Apple-FBI encryption dispute centers around a attacks in San Bernaridino, CA in December of 2025.
 

@@ -18,7 +18,7 @@ layout:
 
 [TryHackMe](https://tryhackme.com/) is a popular platform for beginners in cybersecurity to learn and practice their skills. TryHackMe emphasizes bite-sized, gamified lessons (called rooms). These rooms can be guided (geared toward teaching you a new concept) or challenge-focused (geared toward reinforcing your skills). TryHackMe requires no setup, and its rooms-focused approach helped me integrate learning a bit of cybersecurity into my daily routine.
 
-<table data-card-size="large" data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h2>Guided</h2></td><td><a href="guided/">guided</a></td></tr><tr><td><h2>Challenge</h2></td><td><a href="challenge/">challenge</a></td></tr></tbody></table>
+<table data-card-size="large" data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h2>Guided</h2></td><td><a href="guided/">guided</a></td></tr></tbody></table>
 
 ***
 

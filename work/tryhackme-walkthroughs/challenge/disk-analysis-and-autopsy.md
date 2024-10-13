@@ -14,7 +14,7 @@ layout:
 
 # Disk Analysis & Autopsy
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Disk Analysis & Autopsy
+[TryHackMe Walkthroughs](./) ⋅ [Challenge](../) ⋅ Disk Analysis & Autopsy
 
 ***
 

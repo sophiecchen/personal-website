@@ -7,16 +7,14 @@ layout:
   tableOfContents:
     visible: false
   outline:
-    visible: true
+    visible: false
   pagination:
     visible: false
 ---
 
-# PrintNightmare, thrice!
+# Roppers Academy Notes
 
-[TryHackMe Walkthroughs](./) ⋅ [Practice](../) ⋅ PrintNightmare, thrice!
-
-***
+<table data-card-size="large" data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h2>Practical Networking</h2></td><td><a href="practical-networking/">practical-networking</a></td></tr></tbody></table>
 
 ***
 

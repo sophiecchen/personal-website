@@ -14,8 +14,6 @@ layout:
 
 # Linux Fundamentals Part 3
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Linux Fundamentals Part 3
-
 ***
 
 *Between the time I finished this room and the time I wrote this walkthrough, this room has unfortunately become premium-access only. I've constructed this walkthrough based on my personal notes, but I now lack access to the original room. So, please let me know if this walkthrough has any inaccuracies.*

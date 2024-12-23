@@ -14,8 +14,6 @@ layout:
 
 # Linux Fundamentals
 
-[Hack The Box Walkthroughs](./) ⋅ [Academy](../) ⋅ Linux Fundamentals
-
 ***
 
 ## Introduction

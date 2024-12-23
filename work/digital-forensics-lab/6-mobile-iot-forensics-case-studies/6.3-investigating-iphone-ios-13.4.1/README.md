@@ -14,10 +14,6 @@ layout:
 
 # 6.3 Investigating iPhone iOS 13.4.1
 
-[Digital Forensics Lab Walkthrough](../../) ⋅ [6 Mobile/IoT Forensics Case Studies](../) ⋅ 6.3 Investigating iPhone iOS 13.4.1
-
-***
-
 <table data-view="cards">
   <thead>
     <tr>

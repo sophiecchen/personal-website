@@ -14,8 +14,6 @@ layout:
 
 # Introductory Networking
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Introductory Networking
-
 ***
 ## Task 1: Introduction
 

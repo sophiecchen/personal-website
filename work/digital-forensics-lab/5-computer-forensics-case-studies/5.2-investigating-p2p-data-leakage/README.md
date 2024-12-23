@@ -14,10 +14,6 @@ layout:
 
 # 5.2 Investigating P2P Data Leakage
 
-[Digital Forensics Lab Walkthrough](../../) ⋅ [5 Computer Forensics Case Studies](../) ⋅ 5.2 Investigating P2P Data Leakage
-
-***
-
 <table data-view="cards">
   <thead>
     <tr>

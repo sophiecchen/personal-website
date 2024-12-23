@@ -14,8 +14,6 @@ layout:
 
 # Windows Fundamentals
 
-[Hack The Box Walkthroughs](./) ⋅ [Academy](../) ⋅ Windows Fundamentals
-
 ***
 
 ## Introduction

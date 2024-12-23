@@ -14,8 +14,6 @@ layout:
 
 # Intro to Digital Forensics
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Intro to Digital Forensics
-
 ***
 
 ## Task 1: Introduction to Digital Forensics

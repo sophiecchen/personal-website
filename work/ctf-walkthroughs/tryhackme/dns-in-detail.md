@@ -14,8 +14,6 @@ layout:
 
 # DNS in Detail
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ DNS in Detail
-
 ***
 
 ## Task 1: What is DNS?

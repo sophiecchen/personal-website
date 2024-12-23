@@ -14,8 +14,6 @@ layout:
 
 # Digital Forensics Case B4DM755
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Digital Forensics Case B4DM755
-
 ***
 
 ## Task 1: Introduction

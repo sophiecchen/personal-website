@@ -14,8 +14,6 @@ layout:
 
 # Threat Intelligence Tools
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Threat Intelligence Tools
-
 ***
 ## Task 1: Room Outline
 

@@ -14,10 +14,6 @@ layout:
 
 # 5.4 Investigating Email Harassment
 
-[Digital Forensics Lab Walkthrough](../../) ⋅ [5 Computer Forensics Case Studies](../) ⋅ 5.4 Investigating Email Harassment
-
-***
-
 <table data-view="cards">
   <thead>
     <tr>

@@ -14,7 +14,7 @@ layout:
 
 # Intro to Cyber Threat Intel
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Intro to Cyber Threat Intel
+***
 
 ## Task 1: Introduction
 

@@ -14,10 +14,6 @@ layout:
 
 # 5.3 Investigating Illegal Possession of Images
 
-[Digital Forensics Lab Walkthrough](../../) ⋅ [5 Computer Forensics Case Studies](../) ⋅ 5.3 Investigating Illegal Possession of Images
-
-***
-
 <table data-view="cards">
   <thead>
     <tr>

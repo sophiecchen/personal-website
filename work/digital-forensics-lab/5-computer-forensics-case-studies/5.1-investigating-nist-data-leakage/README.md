@@ -14,10 +14,6 @@ layout:
 
 # 5.1 Investigating NIST Data Leakage
 
-[Digital Forensics Lab Walkthrough](../../) ⋅ [5 Computer Forensics Case Studies](../) ⋅ 5.1 Investigating NIST Data Leakage
-
-***
-
 <table data-view="cards">
   <thead>
     <tr>

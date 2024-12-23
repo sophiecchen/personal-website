@@ -14,8 +14,6 @@ layout:
 
 # HTTP in Detail
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ HTTP in Detail
-
 ***
 
 ## Task 1: What is HTTP(S)?

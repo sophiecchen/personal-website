@@ -14,8 +14,6 @@ layout:
 
 # Linux Fundamentals Part 2
 
-[TryHackMe Walkthroughs](./) ⋅ [Guided](../) ⋅ Linux Fundamentals Part 2
-
 ***
 
 ## Task 1: Introduction

@@ -14,8 +14,6 @@ layout:
 
 # 1 Setting Up
 
-[Digital Forensics Lab Walkthrough](./) ⋅ 1 Setting Up
-
 ***
 
 ## Kali Linux and VirtualBox

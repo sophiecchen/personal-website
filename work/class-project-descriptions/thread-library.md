@@ -14,19 +14,13 @@ layout:
 
 # Thread Library
 
-This thread library is a kernel library on Unix written in C++. This library uses timer interrupts, atomicity, and a FIFO scheduling order. It can be initialized with multiple CPUs supports the following functionality:
+This thread library is a kernel library on Unix written in C++. This library uses timer interrupts, atomicity, and a FIFO scheduling order. It can be initialized with multiple CPUs. 
 
-CPU:
-*
-
-Thread:
-*
-*
-
-Mutex:
-
-Condition Variable
-* 
+My partner and I were responsible for implementing the following functionality for the following objects:
+* CPU:
+* Thread: constructor, destructor, `void join()` and `void yield()` where `join` waits for the thread to finish and `yield` yields the CPU to the next thread on the ready queue.
+* Mutex:
+* Condition Variable: 
 
 *This project was completed for my operating systems class and is stored in a private GitHub. If you would like to see the code for this project, please contact me.*
 

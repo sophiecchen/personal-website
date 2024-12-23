@@ -14,6 +14,10 @@ layout:
 
 # Multithreaded Network File Server
 
+This network file server, implement in C++, is crash-consistent and supports multiple users and nested directories and files. It uses POSIX sockets for client communication and Boost threads and upgradable reader-writer locks for concurrency.
+
+The server supports functionality for reading a block of data (specified by pathname and offset), writing a block of data (specified by pathname and offset), creating a new file or directory "pathname", and deleting an existing file or directory "pathname".
+
 *This project was completed for my operating systems class and is stored in a private GitHub. If you would like to see the code for this project, please contact me.*
 
 ***

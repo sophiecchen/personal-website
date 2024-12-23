@@ -14,15 +14,21 @@ layout:
 
 # Home
 
-## Hello! I'm Sophie. I'm a cybersecurity enthusiast and university student majoring in computer science.
+## Hello! I'm Sophie. I'm a student and cybersecurity enthusiast interested in defending and investigating computer systems.
 
 ## Work
 
-<table data-column-title-hidden data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h3>Digital Forensics Lab Walkthrough</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A walkthrough of Dr. Frank Xu's Digital Forensics Lab</p></td><td><em>Digital Forensics, Lab</em></td><td><a href="https://app.gitbook.com/s/WaFS755Q4sf02CxLcghQ/digital-forensics-lab-walkthrough">Digital Forensics Lab Walkthrough</a></td></tr><tr><td><h3>PPP Theory in Empirical SWE</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>An examination of the Policy-Process-Product Theory in empirical software engineering research</p></td><td><em>Software Engineering, Research</em></td><td><a href="https://dl.acm.org/doi/10.1145/3611643.3613075">https://dl.acm.org/doi/10.1145/3611643.3613075</a></td></tr><tr><td><h3>Tâi-gí-koa</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A website for Taiwanese song lyrics in two writing systems</p></td><td><em>Python, Flask, HTML, CSS</em></td><td><a href="https://tai-gi-koa.vercel.app/">https://tai-gi-koa.vercel.app/</a></td></tr></tbody></table>
+<table data-column-title-hidden data-view="cards">
+  <thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead>
+  <tbody>
+    <tr><td><h3>Digital Forensics Lab</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>My experiences learning with Weifeng Xu, Lin Deng, and Dianxiang Xu's Digital Forensics Lab</p></td><td><em>Digital Forensics, Lab</em></td><td><a href="https://app.gitbook.com/s/WaFS755Q4sf02CxLcghQ/digital-forensics-lab-walkthrough">Digital Forensics Lab Walkthrough</a></td></tr>
+    <tr><td><h3>Multithreaded Network File Server</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>An examination of the Policy-Process-Product Theory in empirical software engineering research</p></td><td><em>C++, Operating Systems, Project</em></td><td><a href="https://app.gitbook.com/s/WaFS755Q4sf02CxLcghQ/digital-forensics-lab-walkthrough">LINKNAME</a></td></tr><tr><td><h3>Virtual Memory Pager</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A website for Taiwanese song lyrics in two writing systems</p></td><td><em>C++, Operating Systems, Project</em></td><td><a href="https://tai-gi-koa.vercel.app/">LINKNAME/</a></td></tr>
+  </tbody>
+</table>
 
 ## Thoughts
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h3>What I Read This Season: Fall 2024</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>The computer science and cybersecurity literature I read in the fall of 2024</p></td><td><a href="https://app.gitbook.com/s/s4QQPMntQ25hmJToKSOu/2024/readme">What I Read This Season: Fall 2024</a></td></tr><tr><td><h3>My Favorite Cybersecurity Resources</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A list of my favorite beginner-friendly labs, study materials, podcasts, and more</p></td><td><a href="https://app.gitbook.com/s/s4QQPMntQ25hmJToKSOu/2024/beginner-friendly-cybersecurity-resources">Beginner-Friendly Cybersecurity Resources</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h3>Reading List</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>My current reading list and favorite technical literature</p></td><td><a href="https://app.gitbook.com/s/s4QQPMntQ25hmJToKSOu/readme">Reading List</a></td></tr><tr><td><h3>Security and DFIR Resources</h3></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A list of my favorite labs, study materials, podcasts, and more for security and DFIR</p></td><td><a href="https://app.gitbook.com/s/s4QQPMntQ25hmJToKSOu/security-and-dfir-resources">Security and DFIR Resources</a></td></tr></tbody></table>
 
 ***
 

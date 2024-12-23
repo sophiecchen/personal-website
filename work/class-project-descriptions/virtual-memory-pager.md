@@ -12,9 +12,9 @@ layout:
     visible: false
 ---
 
-# Forensic Imaging
+# Virtual Memory Pager
 
-***
+*This project was completed for my operating systems class and is stored in a private GitHub. If you would like to see the code for this project, please contact me.*
 
 ***
 

@@ -12,36 +12,31 @@ layout:
     visible: false
 ---
 
-# What I Read This Season: Fall 2024
-
-*October 2024*
+# Reading List
 
 ***
 
-What I Read This Season is a new series that I've decided to start in order to both share papers I've read and motivate myself keep up with computer science and cybersecurity literature. I was planning to post this in at the end of fall (around December), but I got a little excited.
+## Current Reading List
 
-## Troubling Trends in Machine Learning Scholarship
+- [File System Forensic Analysis](https://www.amazon.com/System-Forensic-Analysis-Brian-Carrier/dp/0321268172) by Brian Carrier (2005)
+- [The Art of Memory Forensics: Detecting Malware and Threats in Windows, Linux, and Mac Memory](http://smile.amazon.com/Art-Memory-Forensics-Detecting-Malware/dp/1118825098) by Michael Hale Ligh, Andrew Case, Jamie Levy, and AAron Walters (2014)
+- [Lessons Learned Too Well: Anonymity in a Time of Surveillance](https://repository.law.miami.edu/cgi/viewcontent.cgi?article=1311&context=fac_articles) by A. Michael Froomkin (2017)
+- [Intelligence-Driven Incident Response: Outwitting the Adversary](https://www.amazon.com/Intelligence-Driven-Incident-Response-Outwitting-Adversary/dp/1491934948) by Scott J. Roberts and Rebekah Brown (2017)
+- [Computer Forensics Tool Testing Program (CFTT)](https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt) by NIST (2018)
+- [Digital Investigation Techniques: A NIST Scientific Foundation Review](https://www.nist.gov/publications/digital-investigation-techniques-nist-scientific-foundation-review) by NIST (2022)
+- [DFPulse: The 2024 digital forensic practitioner survey](https://www.sciencedirect.com/science/article/pii/S2666281724001719#fn0030) by Christopher Hargreaves, Frank Breitinger, Liz Dowthwaite, Helena Webb, and Mark Scanlon (2024) 
+- [Cloud Digital Forensics: Beyond Tools, Techniques, and Challenges](https://pmc.ncbi.nlm.nih.gov/articles/PMC10819343/pdf/sensors-24-00433.pdf) by Annas Wasim Malik, David Samuel Bhatti, Tae-Jin Park, Hafiz Usama Ishtiaq, Jae-Cheol Ryou, and Ki-Il Kim (2024)
 
-*Zachary C. Lipton and Jacob Steinhardt*
+## Favorite Technical Literature
 
-One of the professors I researched with emphasized the importance of rigorous research and shared this paper with the lab. The authors in this paper point out trends in machine learning research that undermine rigorous research and propose ways to combat each of these trends.
+- [Security without Identification: Transaction Systems to Make Big Brother Obsolete](https://dl.acm.org/doi/abs/10.1145/4372.4373) by David Chaum (1981)
+- [Reflections on trusting trust](https://dl.acm.org/doi/10.1145/358198.358210) by Ken Thompson (1984)
+- [Tor: The Second-Generation Onion Router](https://svn-archive.torproject.org/svn/projects/design-paper/tor-design.pdf) by Roger Dingledine, Nick Mathewson, and Paul Syverson (2004)
+- [The Moral Character of Cryptographic Work](https://web.cs.ucdavis.edu/~rogaway/papers/moral-fn.pdf) by Phillip Rogaway (2015)
+- [Troubling Trends in Machine Learning Scholarship](https://arxiv.org/pdf/1807.03341) by Zachary C. Lipton and Jacob Steinhardt (2018)
+- [“A Stalker’s Paradise”: How Intimate Partner Abusers Exploit Technology](http://nixdell.com/papers/stalkers-paradise-intimate.pdf) by Diana Freed, Jackeline Palmer, Diana Minchala, Karen Levy, Thomas Ristenpart, and Nicola Dell (2018)
+- [The Surveillance AI Pipeline](https://arxiv.org/pdf/2309.15084) by Pratyusha Ria Kalluri, William Agnew, Myra Cheng, Kentrell Owens, Luca Soldaini, and Abeba Birhane (2023)
 
-I personally found that this paper was thoughtfully written. The authors supported each of the trends they pointed out with specific examples. Their paper critiques were carefully and constructively worded. The authors also took care to criticize either their own work or the work senior researchers rather than of the work of junior researchers. This decision clearly reflects the authors' commitment to improving the rigor of machine learning research while contributing to a supportive and welcoming research community.
-
-You can read the paper [here](https://arxiv.org/pdf/1807.03341).
-
-## ChatGPT for Digital Forensic Investigation: The Good, The Bad, and The Unknown
-
-*By Mark Scanlon, Frank Breitinger, Christopher Hargreaves, Jan-Niclas Hilgert, and John Sheppard*
-
-I learned about this paper through the 2023 Forensic 4:cast awards. This paper evaluates how effective ChatGPT-4 is at various digital forensic tasks, from artifact identification to self-directed learning.
-
-I really liked this paper for the breath it provided. I enjoyed the variety of possibilities suggested by the authors, and I think that this paper can give digital forensics professionals new ideas about how to adapt their workflow to include large language models. This paper touched on many interesting applications that I had not even imagined, and I think that each topic opens up doors for further research and exploration. I would love to see more research that builds off of each of the possible applications of ChatGPT for digital forensic investigations mentioned in this paper.
-
-I would love to see the authors elaborate more on the prompts they used, as prompting techniques have been shown to improve the responses of large language models (LLMs) such as ChatGPT-4. To properly evaluate which prompts work better for LLMs in digital forensic applications, future work will likely have to find a way to systematically determine what makes one response better than another. In addition, the paper mentions how ChatGPT-4 has non-deterministic behavior. While this is true, there are ways to manipulate the level of deterministic behavior in ChatGPT models by interacting with these models through their API and setting the temperature parameter. The ChatGPT-4 API was not widely available during this paper's research. I would love to know more about the rational for choosing a newer ChatGPT model without an API over an older ChatGPT model with an API.
-
-You can read the paper [here](https://arxiv.org/pdf/2307.10195).
-
-***
-
+For digital forensics must-read literature, check out r/computerforensics's [reading list](https://www.reddit.com/r/computerforensics/wiki/resources/#wiki_most_important).
+ 
 [Home](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/036xtfEIzcEdGegONXWM/) ⋅ [Work](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/WaFS755Q4sf02CxLcghQ/) ⋅ [Thoughts](https://app.gitbook.com/o/0kO27okC5uVB9ALX3rho/s/s4QQPMntQ25hmJToKSOu/)

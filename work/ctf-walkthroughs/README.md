@@ -18,8 +18,8 @@ These are walkthroughs for the various CTFs and CTF-esque exercises that I have 
 
 <table data-view="cards"><thead>
   <tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody>
-  <tr><td><h2>Hack The Box</h2></td><td><em>Security, Fundamentals</em></td><td><a href="./hack-the-box/README.md">windows-fundamentals.md</a></td></tr>
-  <tr><td><h2>TryHackMe</h2></td><td><em>Security, Fundamentals</em></td><td><a href="./">linux-fundamentals.md</a></td></tr>
+  <tr><td><h2>Hack The Box</h2></td><td><em>Security, Fundamentals</em></td><td><a href="./hack-the-box/README.md">hack-the-box</a></td></tr>
+  <tr><td><h2>TryHackMe</h2></td><td><em>Security, Fundamentals</em></td><td><a href="./tryhackme/README.md">tryhackme</a></td></tr>
 </table>
 
 ***

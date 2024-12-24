@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Work](README.md)
-* [Digital Forensics Lab Walkthrough](digital-forensics-lab/README.md)
+* [Digital Forensics Lab](digital-forensics-lab/README.md)
   * [1 Setting Up](digital-forensics-lab/1-setting-up.md)
   * [2 Basic Computer Skills for Digital Forensics](digital-forensics-lab/2-basic-computer-skills-for-digital-forensics/README.md)
     * [2.1 Number Systems](digital-forensics-lab/2-basic-computer-skills-for-digital-forensics/2.1-number-systems.md)

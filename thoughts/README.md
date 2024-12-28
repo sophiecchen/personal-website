@@ -25,6 +25,7 @@ layout:
 - [Computer Forensics Tool Testing Program (CFTT)](https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt) by NIST (2018)
 - [Digital Investigation Techniques: A NIST Scientific Foundation Review](https://www.nist.gov/publications/digital-investigation-techniques-nist-scientific-foundation-review) by NIST (2022)
 - [DFPulse: The 2024 digital forensic practitioner survey](https://www.sciencedirect.com/science/article/pii/S2666281724001719#fn0030) by Christopher Hargreaves, Frank Breitinger, Liz Dowthwaite, Helena Webb, and Mark Scanlon (2024) 
+- [Sources of error in digital forensics](https://www.sciencedirect.com/science/article/pii/S2666281724000027) by Graeme Horsman (2024)
 - [Cloud Digital Forensics: Beyond Tools, Techniques, and Challenges](https://pmc.ncbi.nlm.nih.gov/articles/PMC10819343/pdf/sensors-24-00433.pdf) by Annas Wasim Malik, David Samuel Bhatti, Tae-Jin Park, Hafiz Usama Ishtiaq, Jae-Cheol Ryou, and Ki-Il Kim (2024)
 
 ## Favorite Technical Literature

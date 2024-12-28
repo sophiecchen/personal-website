@@ -28,7 +28,7 @@ Building a basic understanding of how computers work as well and learning common
 
 ## DFIR Courses and Labs
 
-Once you have a basic understanding of cybersecurity, I recommend using labs to get hands-on experience.
+Once you have a basic understanding of cybersecurity, I recommend looking into a subfield that you find interesting. I personally am interested in DFIR, and these courses and labs are helpful for getting hands-on experience.
 
 * [Digital Forensics Lab](https://github.com/frankwxu/digital-forensics-lab) teaches users the fundamentals of digital forensics through labs and case studies.
 * [Hexordia](https://learn.hexordia.com/) teaches multiple courses on digital forensics, with a focus on mobile forensics.
@@ -46,7 +46,7 @@ Podcasts are a useful for integrating cybersecurity into your daily routine.
 
 ## Free Tools
 
-These DFIR tools are free to use.
+These DFIR tools are free to use and commonly used in the field.
 
 * [Eric Zimmerman's Tools](https://ericzimmerman.github.io/#!index.md) include multiple tools useful for a variety of tasks relevant to digital forensics.
 * [LEAPP Projects](https://github.com/abrignoni?tab=repositories) include parsers for many types of artifacts and logs.
@@ -61,6 +61,7 @@ These are other resources that I personally find helpful.
 
 * [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/) contains common certifications for different points of your career in different security subfields.
 * [Digital Forensics Images](https://cfreds.nist.gov/all) includes many device images that you can download and practice on.
+* [This Week in 4n6](https://thisweekin4n6.com/) compiles the most relevant digital forensics and cyber threat intelligence articles and sends them to your inbox.
 
 SANS has compiled a [list of free tools](https://www.sans.org/img/free-faculty-tools.pdf) used in nearly every area of cybersecurity. You can also find an extensive list of cybersecurity resources (tools and learning material) on Hack-with-Github's [Awesome Hacking](https://github.com/Hack-with-Github/Awesome-Hacking) repository. 
 

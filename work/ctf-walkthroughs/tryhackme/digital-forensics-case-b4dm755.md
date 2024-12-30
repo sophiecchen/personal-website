@@ -166,7 +166,7 @@ The user interface (UI) of FTK Imager includes three parts:
 
 The following scenario emulates a situation where a physical drive, connected to a write blocker, is attached. EFS encryption is a type of filesystem-level encryption provided by Windows on NTFS file systems. We can detect the presence of EFS encryption with the following steps:
 1. Open FTK Imager and go to `File -> Add  Evidence Item...`
-2. Choose `Physical Drive` as the selected source and `Microsoft Virtual Disk` as the selected drive. Click `Finish`. 
+2. Choose "Physical Drive" as the selected source and "Microsoft Virtual Disk" as the selected drive. Click `Finish`. 
 3. Go to `File -> Detect EFS Encryption` to see whether there is EFS encryption on the drive.
 
 <details>
@@ -209,9 +209,13 @@ The file list pane displays a list of files and folders contained in a selected 
 
 We can create a disk image with the following steps:
 1. Open FTK Imager and go to `File -> Create Disk Image`.
-2. Choose `Physical Drive` as the selected source and `Microsoft Virtual Disk` as the selected drive. Click `Finish`. 
-
-TODO
+2. Choose "Physical Drive" as the selected source and "Microsoft Virtual Disk" as the selected drive. Click `Finish`. 
+3. Check "Verify images after they are created" and "Create directory listings of all files in the image after they are created" at the bottom of the Create Image window.
+4. Press `Add` to open the Select Image Type window, and choose "Raw (dd)." Click `Next`.
+5. Enter case details in the Evidence Item Information window. Click `Next`.
+6. Enter the Image Destination Folder and Image Filename. Click `Finish`.
+7. Press `Start` to create the forensic disk image.
+8. Once the image has been created, check that the cryptographic hashes of the physical drive and the acquired forensic image match.
 
 <details>
 <summary>What is the UI element of FTK Imager which displays the content of selected files?</summary>
@@ -227,16 +231,23 @@ The viewer pane displays the content of selected files.
 
 d82f393a67c6fc87a023b50c785a7247ab1ac395
 
-TODO
+The hash of the image pops up after the image is created.
 
 </details>
 
-TODO
+We can mount the forensic disk image we created with the following steps:
+1. Open FTK Imager and go to `File -> Add Evidence Item`.
+2. Choose "Image File" on the Select Source window. Click `Next`.
+3. Set "Evidence Source" to the path of the forensic disk image that we created previously. Click `Finish`.
+
+FTK Imager will be populated with our disk image.
 
 <details>
 <summary>Including hidden files, how many files are currently stored on the flash drive?</summary>
 
-TODO (ignore ones with an X on the icon and other icon values)
+8
+
+Taking a look at the output in FTK, count the number of items that do not have an X on the icon. Do not include entries with the `.FileSlack` extension.
 
 </details>
 
@@ -245,76 +256,135 @@ TODO (ignore ones with an X on the icon and other icon values)
 
 6
 
-TODO (note 14 - 8)
+There were 6 icons that had an X on the icon.
 
 </details>
 
 <details>
 <summary>How many recovered files are corrupted (e.g., 0 file size)?</summary>
 
+3
+
+Three files had a size of 0: `condominium.pdf`, `resortsworld.png`, and `townhouse.pdf`.
+
 </details>
 
 ## Task 7: Case B4DM755: At the Forensics Laboratory
 
-TODO
+Upon receiving evidence at the Forensics Lab, an analyst should do the following steps:
+- Verify and document every detail of the Chain of Custody form.
+- Use FTK Imager to create a forensic disk image of the seized flash drive from the suspect's residence.
+- Check that the cryptographic hashes of the physical drive and the acquired forensic image match.
+- Preserve the flash drive after creating an image.
+- Perform review and analysis on the created forensic disk image.
+- Document all operations and analysis you do as a forensic analyst
+- While presenting at trial, ensure that the cryptographic hashes of the physical evidence and the forensic disk image match.
+
+To analyze the files further, I right clicked on the files I wanted to examin in FTK imager and exported the files into a folder.
 
 <details>
 <summary>Aside from FTK Imager, what is the directory name of the other tool located in the tools directory under Desktop?</summary>
+
+exiftool-12.47
+
+This is the name of the other tool, as named by the directory inside the tools directory on the user Desktop.
 
 </details>
 
 <details>
 <summary>What is the visible extension of the "hideout" file?</summary>
 
+.png
+
+The hideout file is called "hideout.png."
+
 </details>
 
 <details>
 <summary>View the metadata of the "hideout" file. What is its actual extension?</summary>
+
+.jpg
+
+I ran the command `exiftool hideout.pdf` to see the metadata of the file. The file type extension for this file was jpg.
 
 </details>
 
 <details>
 <summary>A phone was used to photograph the "hideout". What is the phone's model?</summary>
 
+ONEPLUS A6013
+
+The metadata of the file also listed the camera model name as ONEPLUS A6013.
+
 </details>
 
 <details>
 <summary>A phone was used to photograph the "warehouse". What is the phone's model?</summary>
+
+I ran the command `exiftool warehouse.pdf` to see the metadata of the file. The camera model name for this file was Mi 9 Lite.
 
 </details>
 
 <details>
 <summary>Are there any indications that the suspect is involved in other illegal activity? (Y/N)</summary>
 
+Y
+
+I used exiftool to view the metadata of the rest of the files. When I ran `exiftool operations.xlsx`, I noticed that the file type was listed as a zip file. So, I ran `cp operations.xlsx operations.zip` and `Expand-Archive -LiteralPath operations.zip -DestinationPath operations` to unzip the file. Within the unzipped operations directory was a notes.txt file that indicated there was other illegal activity.
+
 </details>
 
 <details>
 <summary>Who was the point of contact of Mr William S. McClean in 2022?</summary>
+
+Karl Renato Abelardo
+
+I used `cat notes.txt` to print the contents of the notes file. In the file, the 2022 point of contact is listed as Karl Renato Abelardo.
 
 </details>
 
 <details>
 <summary>A meetup occurred in 2022. What are the GPS coordinates during that time?</summary>
 
+14°26'25.7"N 120°59'00.8"E
+
+In the notes file, the 2022 GPS coordinates are listed as 14°26'25.7"N 120°59'00.8"E.
+
 </details>
 
 <details>
 <summary>What is the password to extract the contents of pandorasbox.zip?</summary>
+
+DarkVault$Pandora=DONOTOPEN!K1ngCr1ms0n!
+
+This password was listed at the bottom of notes.txt.
 
 </details>
 
 <details>
 <summary>From which company did the source code in the pandorasbox directory originate?</summary>
 
+SwiftSpend Financial
+
+I used the Windows File System GUI to unzip pandorasbox. Within the unzipped pandorasbox directory was a directory called HFT_Algorithm. I used `cat` to view the contents of the main.py script within this directory. The comment at the top of `main.py` included information about the source code.
+
 </details>
 
 <details>
 <summary>In one of the documents that the suspect has yet to sign, who was listed as the beneficiary?</summary>
 
+Mr. Giovanni Vittorio DeVentura
+
+This information was included in the pandorasbox directory in the file "UTCL242231 - Capital distribution to the principal beneficiary GVDeVentura.docx."
+
 </details>
 
 <details>
 <summary>What is the hidden flag?</summary>
+
+THM{sCr0LL_sCr0LL_cL1cK_cL1cK_4TT3NT10N_2_D3T41L5_15_CRUC14L!!}
+
+Within the unzipped pandorasbox directory, I used the command `cat DONOTOPEN` to get the flag.
 
 </details>
 

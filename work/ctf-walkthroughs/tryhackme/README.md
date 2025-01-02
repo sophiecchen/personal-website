@@ -14,8 +14,6 @@ layout:
 
 # TryHackMe
 
-#### TryHackMe is challenge-based, so I _highly_ recommend you trying the problems yourself first.
-
 [TryHackMe](https://tryhackme.com/) is a popular platform for beginners in cybersecurity to learn and practice their skills. TryHackMe emphasizes bite-sized, gamified lessons (called rooms). These rooms can be guided (geared toward teaching you a new concept) or challenge-focused (geared toward reinforcing your skills). TryHackMe requires no setup, and its rooms-focused approach helped me integrate learning a bit of cybersecurity into my daily routine.
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody>

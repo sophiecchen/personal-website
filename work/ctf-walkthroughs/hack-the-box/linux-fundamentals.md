@@ -75,7 +75,7 @@ We refer to individual operating systems in the Linux family as distributions, o
 
 ### Introduction to Shell
 
-A Linux terminal, also called a shell or command line, provides a text-based input-output (I/O) interface that allows users and the system's kernel to interact. The most commonly used shell in Linux is the `Bourne-Again Shell` (BASH).
+A Linux terminal, also called a shell or command line, provides a text-based input-output (I/O) interface that allows users and the system's kernel to interact. The most commonly used shell in Linux is the Bourne-Again Shell (BASH).
 
 Terminal emulators are a type of software that emulate terminal functionality. This software allows text-based programs to be used within a graphical user interface (GUI). Command-line interfaces (CLI) run as additional terminals in a single terminal.
 
@@ -97,7 +97,7 @@ The prompt can be customized using special characters and variables in the shell
 
 ### Getting Help
 
-Linux includes built-in functionality for us to view information about commands we are unfamiliar with. We can view the manual of a command with `man`:
+Linux includes built-in functionality for us to view information about commands we are unfamiliar with. We can view the manual of a command with `man`. Note that throughout this tutorial, I will use `<>` to signify placeholders that you can fill in.
 
 ```Shell
 usr@htb[/htb]$ man <tool>
@@ -315,16 +315,28 @@ A file descriptor (FD) indicates a connection maintained by the kernel to perfor
 2. Data Stream for Output (STDOUT - 1)
 3. Data Stream for Error Output (STDERR - 2)
 
-We can use a file's contents as input using the `<` operator.
+We can use a file's contents as input using the `<` operator. We can input a literal instead of a file using `<<`.
 
 ```Shell
-BOOKMARK
+usr@htb[/htb]$ cat < <input file>
 ```
 
-	  * `<` is input file, `<<` is input literal
-	  * `>` is write, `>>` is append
-	  *| is redirect output from one program to another
-    	  * This is why there is a 2 in `2>/dev/null` when redirecting errors to a sinkhole (getting rid of them)
+We can save the output of a command to a file using the `>` operator. We can append to a file rather than write to one using `>>`.
+
+```Shell
+usr@htb[/htb]$ cat > <output file>
+```
+
+A common application of this operator is to redirect errors in a command into the sinkhole `/dev/null`:
+```Shell
+usr@htb[/htb]$ <command> > 2>/dev/null
+```
+
+A pipe `|` allows us to redirect output from one program to another. For example, the following command searches for `.conf` files in `/etc`, and of those files, looks for those files which have "systemd" in their name.
+
+```Shell
+find /etc/ -name *.conf 2>/dev/null | grep systemd
+```
 
 <details>
 
@@ -348,13 +360,12 @@ Type `find / -name *.log -type f 2>/dev/null | wc -l`.  This searches for files 
 
 ### Filter Contents
 
-INstead of using `nano` or `vim` to read a file, we can use pagers such as `more` and `less`. Pagers allow us to scroll through the file in an interactive view. We can press `q` to quit the pager.
+We do not always need a file editor to view the contents of a file. Pagers allow us to scroll through the file in an interactive view. We can press `q` to quit the pager. `more <file>` opens in a file in a pager and leaves the file contents in the terminal after we quit the pager. `less <file>` also opens the file in the pager, but it does not leave the file contents in the terminal after we quit the pager.
 
-`more <file>` opens in a file in a pager and leaves the file contents in the terminal after we quit the pager. `less <file>`
+BOOKMARK
+If we just want to use TODO. =
 
 ```Shell
-more /etc/passwd    # leaves output in terminal after quitting
-less /etc/passwd    # does not leave output in terminal after quitting
 head /etc/passwd    # prints the first 10 lines of the file
 tail /etc/passwd    # prints the last 10 lines of the file
 

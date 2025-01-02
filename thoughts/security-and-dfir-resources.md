@@ -35,6 +35,15 @@ Once you have a basic understanding of cybersecurity, I recommend looking into a
 * [13Cubed](https://training.13cubed.com/) teaches a broad range of digital forensics courses, from Windows forensics to malware analysis.
 * [Cyber5W](https://cyber5w.com/) teaches multiple courses on digital forensics fundamentals, with labs included.
 * [Malware Unicorn](https://malwareunicorn.org/) provides reverse-engineering workshops.
+* [DFIR Diva](https://dfirdiva.com/) includes free resources, training recommendations, and blogs about DFIR. 
+* [DFIR Training](https://www.dfir.training/) keeps track of upcoming trainings in DFIR.
+
+## Journals and Blogs
+
+Since technology evolves rapidly, keeping up with the the latest research in security is a necessity.
+
+* [IEEE Security & Privacy](https://www.computer.org/csdl/magazine/sp) is a top security journal for researchers in all domains of security.
+* [Forensic Science International: Digital Investigation](https://www.sciencedirect.com/journal/forensic-science-international-digital-investigation) includes research relating to crime and security, with a focus on digital evidence and multimedia.
 
 ## Podcasts
 

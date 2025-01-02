@@ -14,7 +14,7 @@ layout:
 
 # CTF Walkthroughs
 
-These are walkthroughs for the various CTFs and CTF-esque exercises that I have completed.
+These are walkthroughs for the various CTFs and CTF-esque exercises that I have completed. I _highly_ recommend you trying these challenges yourself first before reading.
 
 <table data-view="cards"><thead>
   <tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody>

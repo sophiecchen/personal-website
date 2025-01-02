@@ -23,7 +23,6 @@ layout:
 - [Intelligence-Driven Incident Response: Outwitting the Adversary](https://www.amazon.com/Intelligence-Driven-Incident-Response-Outwitting-Adversary/dp/1491934948) by Scott J. Roberts and Rebekah Brown (2017)
 - [Computer Forensics Tool Testing Program (CFTT)](https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt) by NIST (2018)
 - [Digital Investigation Techniques: A NIST Scientific Foundation Review](https://www.nist.gov/publications/digital-investigation-techniques-nist-scientific-foundation-review) by NIST (2022)
-- [DFPulse: The 2024 digital forensic practitioner survey](https://www.sciencedirect.com/science/article/pii/S2666281724001719#fn0030) by Christopher Hargreaves, Frank Breitinger, Liz Dowthwaite, Helena Webb, and Mark Scanlon (2024) 
 - [Sources of error in digital forensics](https://www.sciencedirect.com/science/article/pii/S2666281724000027) by Graeme Horsman (2024)
 
 ## Favorite Technical Literature
@@ -36,6 +35,7 @@ layout:
 - [Troubling Trends in Machine Learning Scholarship](https://arxiv.org/pdf/1807.03341) by Zachary C. Lipton and Jacob Steinhardt (2018)
 - [“A Stalker’s Paradise”: How Intimate Partner Abusers Exploit Technology](http://nixdell.com/papers/stalkers-paradise-intimate.pdf) by Diana Freed, Jackeline Palmer, Diana Minchala, Karen Levy, Thomas Ristenpart, and Nicola Dell (2018)
 - [The Surveillance AI Pipeline](https://arxiv.org/pdf/2309.15084) by Pratyusha Ria Kalluri, William Agnew, Myra Cheng, Kentrell Owens, Luca Soldaini, and Abeba Birhane (2023)
+- [DFPulse: The 2024 digital forensic practitioner survey](https://www.sciencedirect.com/science/article/pii/S2666281724001719#fn0030) by Christopher Hargreaves, Frank Breitinger, Liz Dowthwaite, Helena Webb, and Mark Scanlon (2024) 
 
 For digital forensics must-read literature, check out r/computerforensics's [reading list](https://www.reddit.com/r/computerforensics/wiki/resources/#wiki_most_important).
  

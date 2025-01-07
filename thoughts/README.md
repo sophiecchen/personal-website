@@ -18,14 +18,17 @@ layout:
 
 ## Current Reading List
 
+These are the readings that I am either currently reading or hoping to read soon.
+
 - [File System Forensic Analysis](https://www.amazon.com/System-Forensic-Analysis-Brian-Carrier/dp/0321268172) by Brian Carrier (2005)
 - [The Art of Memory Forensics: Detecting Malware and Threats in Windows, Linux, and Mac Memory](http://smile.amazon.com/Art-Memory-Forensics-Detecting-Malware/dp/1118825098) by Michael Hale Ligh, Andrew Case, Jamie Levy, and AAron Walters (2014)
 - [Intelligence-Driven Incident Response: Outwitting the Adversary](https://www.amazon.com/Intelligence-Driven-Incident-Response-Outwitting-Adversary/dp/1491934948) by Scott J. Roberts and Rebekah Brown (2017)
 - [Computer Forensics Tool Testing Program (CFTT)](https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt) by NIST (2018)
 - [Digital Investigation Techniques: A NIST Scientific Foundation Review](https://www.nist.gov/publications/digital-investigation-techniques-nist-scientific-foundation-review) by NIST (2022)
-- [Sources of error in digital forensics](https://www.sciencedirect.com/science/article/pii/S2666281724000027) by Graeme Horsman (2024)
 
 ## Favorite Technical Literature
+
+This is my favorite computer science and cybersecurity literature. I think these are must-reads for anyone in the field.
 
 - [Security without Identification: Transaction Systems to Make Big Brother Obsolete](https://dl.acm.org/doi/abs/10.1145/4372.4373) by David Chaum (1981)
 - [Reflections on trusting trust](https://dl.acm.org/doi/10.1145/358198.358210) by Ken Thompson (1984)
@@ -35,7 +38,8 @@ layout:
 - [Troubling Trends in Machine Learning Scholarship](https://arxiv.org/pdf/1807.03341) by Zachary C. Lipton and Jacob Steinhardt (2018)
 - [“A Stalker’s Paradise”: How Intimate Partner Abusers Exploit Technology](http://nixdell.com/papers/stalkers-paradise-intimate.pdf) by Diana Freed, Jackeline Palmer, Diana Minchala, Karen Levy, Thomas Ristenpart, and Nicola Dell (2018)
 - [The Surveillance AI Pipeline](https://arxiv.org/pdf/2309.15084) by Pratyusha Ria Kalluri, William Agnew, Myra Cheng, Kentrell Owens, Luca Soldaini, and Abeba Birhane (2023)
-- [DFPulse: The 2024 digital forensic practitioner survey](https://www.sciencedirect.com/science/article/pii/S2666281724001719#fn0030) by Christopher Hargreaves, Frank Breitinger, Liz Dowthwaite, Helena Webb, and Mark Scanlon (2024) 
+- [DFPulse: The 2024 digital forensic practitioner survey](https://www.sciencedirect.com/science/article/pii/S2666281724001719#fn0030) by Christopher Hargreaves, Frank Breitinger, Liz Dowthwaite, Helena Webb, and Mark Scanlon (2024)
+- [Sources of error in digital forensics](https://www.sciencedirect.com/science/article/pii/S2666281724000027) by Graeme Horsman (2024)
 
 For digital forensics must-read literature, check out r/computerforensics's [reading list](https://www.reddit.com/r/computerforensics/wiki/resources/#wiki_most_important).
  

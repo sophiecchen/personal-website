@@ -16,8 +16,6 @@ layout:
 
 ***
 
-These are my favorite resources for learning security, with a focus on DFIR. 
-
 ## Security Fundamentals
 
 Building a basic understanding of how computers work as well and learning common security terminology and concepts is crucial for diving deeper into security. I've found these resources helpful for building a strong foundation.

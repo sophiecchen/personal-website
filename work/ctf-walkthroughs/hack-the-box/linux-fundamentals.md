@@ -362,22 +362,30 @@ Type `find / -name *.log -type f 2>/dev/null | wc -l`.  This searches for files 
 
 We do not always need a file editor to view the contents of a file. Pagers allow us to scroll through the file in an interactive view. We can press `q` to quit the pager. `more <file>` opens in a file in a pager and leaves the file contents in the terminal after we quit the pager. `less <file>` also opens the file in the pager, but it does not leave the file contents in the terminal after we quit the pager.
 
-BOOKMARK
-If we just want to use TODO. =
+If we just want to see part of a file, we can use `head <file>` to view the first 10 lines of the file and `tail <file>` to view the last 10 lines of the file.
+
+We can sort the output of a file numerically or alphabetically with the `sort` command.
 
 ```Shell
-head /etc/passwd    # prints the first 10 lines of the file
-tail /etc/passwd    # prints the last 10 lines of the file
+usr@htb[/htb]$ cat /etc/passwd | sort 
+```
 
-cat /etc/passwd | sort    # sorts numerically or alphabetically
-grep <pattern> <file>     # finds patterns (use -v to exclude patterns)
+We can use `grep <pattern> <file>` to find patterns in a file. By using the `-v` flag, we can exclude patterns in a file. For example, the following command exclude users who have disabled the standard shell.
+
+```Shell
+usr@htb[/htb]$ cat /etc/passwd | grep -v "false\|nologin"
+```
+
+BOOKMARK
+
+`cut -d"<deliminator>" -f<number>` TODO allows us to cut, while ``. 
+
+```Shell
 cut -d":" -f1             # cuts with the deliminator ":"
 tr ":" " "                # replaces colon with space
 column -t                 # displays results in tabular form
 wc -l                     # counts number of lines in output
 ```
-
-Also check out `awk` and `sed` for further sorting and manipulating results.
 
 <details>
 
@@ -411,7 +419,24 @@ TODO
 
 ### Regular Expressions
 
-Regexes are commonly used with `grep` and `sed`.
+Regular expressions, or regexes, allow us to search for patterns in text and files. Regexes are commonly used with the `grep` and `sed` commands.
+
+The basic syntax of regexes is as follows:
+- `(a)`:
+- `[a-z]`:
+- `{1, 10}`:
+- |:
+- .*: 
+
+For example, the following TODO.
+
+```Shell
+```
+
+The following regex TODO.
+
+```Shell
+```
 
 ### Permission Management
 
@@ -439,7 +464,7 @@ Special permissions for files can be set using the Set User ID (SUID) and Set Gr
 - **usermod**: Modifies a user account.
 - **addgroup**: Adds a group to the system.
 - **delgroup**: Removes a group from the system.
-- **passwd**: Changes user password.                                                                                                                                 |
+- **passwd**: Changes user password.
 
 <details>
 
@@ -481,14 +506,13 @@ Most package managers provide the following features:
 - Additional system-related configuration and functionality
 - Quality control
 
-| `dpkg`     | The `dpkg` is a tool to install, build, remove, and manage Debian packages. The primary and more user-friendly front-end for `dpkg` is aptitude.                                                                                                                                                                                                        |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `apt`      | Apt provides a high-level command-line interface for the package management system.                                                                                                                                                                                                                                                                     |
-| `aptitude` | Aptitude is an alternative to apt and is a high-level interface to the package manager.                                                                                                                                                                                                                                                                 |
-| `snap`     | Install, configure, refresh, and remove snap packages. Snaps enable the secure distribution of the latest apps and utilities for the cloud, servers, desktops, and the internet of things.                                                                                                                                                              |
-| `gem`      | Gem is the front-end to RubyGems, the standard package manager for Ruby.                                                                                                                                                                                                                                                                                |
-| `pip`      | Pip is a Python package installer recommended for installing Python packages that are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation. |
-| `git`      | Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.                                                                                                                                                                                  |
+dpkg`: The `dpkg` is a tool to install, build, remove, and manage Debian packages. The primary and more user-friendly front-end for `dpkg` is aptitude.
+`apt`: Apt provides a high-level command-line interface for the package management system.
+`aptitude`: Aptitude is an alternative to apt and is a high-level interface to the package manager.
+`snap`: Install, configure, refresh, and remove snap packages. Snaps enable the secure distribution of the latest apps and utilities for the cloud, servers, desktops, and the internet of things.
+`gem`: Gem is the front-end to RubyGems, the standard package manager for Ruby.
+`pip`: Pip is a Python package installer recommended for installing Python packages that are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation.
+| `git`      | Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
 Debian-based Linux distributions use the `APT` package manager. A package is an archive file containing multiple ".deb" files. The `dpkg` utility is used to install programs from the associated ".deb" file. `APT` packages together all of the dependencies needed to install a program.
 
@@ -552,8 +576,6 @@ Systemd is a service that can be used to set up processes and scripts to run at 
 3. Activate the timer
 
 We can also use Cron to schedule and automate processes. We setup a Cron daemon to store the tasks in a file called crontab and then tell the daemon where to run the tasks.
-
-*See HTB Linux Fundamentals for specifics on how to do this with Systemd and Cron.*
 
 <details>
 
@@ -631,8 +653,6 @@ Use `sudo fdisk -l` to see all of the partitions.
 
 Containerization is a process of packaging and running applications in isolated environments, such as a container, virtual machine, or serverless environment. Containers, simulating a system or network, are useful for safely testing exploits or malware in a controlled environment.
 
-*See HTB Linux Fundamentals for how to setup Docker and Linux containers.*
-
 ## Linux Networking
 
 ### Network Configuration
@@ -701,7 +721,6 @@ The iptables utility provides a flexible set of rules for filtering network traf
 - **Rules**: Rules define the criteria for filtering network traffic and the actions to take for packets that match the criteria.
 - **Matches**: Matches are used to match specific criteria for filtering network traffic, such as source or destination IP addresses, ports, protocols, and more.
 - **Targets**: Targets specify the action for packets that match a specific rule. For example, targets can be used to accept, drop, or reject packets or modify the packets in another way.
-*See HTB Linux Fundamentals for details about each of these core components.*
 
 ### System Logs and Monitoring
 
@@ -735,6 +754,7 @@ Solaris is propriety and differs from Linux in its filesystem, security, system 
 ### Shortcuts
 
 The following keyboard shortcuts will allow us to work more efficiently in command line.
+- `[TAB]`: Initiates auto-complete
 - `[CTRL] + A`: Move the cursor to the beginning of the current line
 - `[CTRL] + E`: Move the cursor to the end of the current line
 - `[CTRL] + [←]`/`[→]`: Jump at the beginning of the current/previous word

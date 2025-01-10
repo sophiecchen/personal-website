@@ -5,17 +5,18 @@ layout:
   description:
     visible: false
   tableOfContents:
-    visible: false
+    visible: true
   outline:
     visible: true
   pagination:
     visible: false
 ---
 
-# Thoughts
+# Forensics on my Phone
 
-- [Reading List](reading-list.md)
-- [Security and DFIR Resources](security-and-dfir-resources.md)
+*X 2025*
+
+***
 
 ***
 

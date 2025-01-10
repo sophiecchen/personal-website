@@ -5,20 +5,25 @@ layout:
   description:
     visible: false
   tableOfContents:
-    visible: false
+    visible: true
   outline:
     visible: true
   pagination:
     visible: false
 ---
 
-# 3.7 DNS Introduction
+# A Review of Windows Forensics with Belkasoft
+
+*February 2025*
 
 ***
 
+## An Overview of the Course
+Belkasoft recently offered its course materials for [Windows Forensics with Belkasoft](https://belkasoft.com/windows-forensics-training) for free from January 15, 2025 to February 14, 2025.
 
+The course broadly covered
 
-#### Up Next: [3.8 DNS Spoofing Forensics](3.8-dns-spoofing-forensics.md)
+TODO, so I signed up. 
 
 ***
 

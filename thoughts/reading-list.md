@@ -20,6 +20,7 @@ layout:
 
 These are the readings that I am either currently reading or hoping to read soon.
 
+- [End-To-End Arguments in System Design](https://dl.acm.org/doi/pdf/10.1145/357401.357402) by J. H. Saltzer, D. P. Reed, D. D. Clark (1984)
 - [File System Forensic Analysis](https://www.amazon.com/System-Forensic-Analysis-Brian-Carrier/dp/0321268172) by Brian Carrier (2005)
 - [The Art of Memory Forensics: Detecting Malware and Threats in Windows, Linux, and Mac Memory](http://smile.amazon.com/Art-Memory-Forensics-Detecting-Malware/dp/1118825098) by Michael Hale Ligh, Andrew Case, Jamie Levy, and AAron Walters (2014)
 - [Intelligence-Driven Incident Response: Outwitting the Adversary](https://www.amazon.com/Intelligence-Driven-Incident-Response-Outwitting-Adversary/dp/1491934948) by Scott J. Roberts and Rebekah Brown (2017)

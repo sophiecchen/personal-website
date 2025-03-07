@@ -387,7 +387,7 @@ cry0l1t3
 htb-student
 ```
 
-`tr <replaced> <replacee>` allows us to replace certain characters, while `column -t` allows us to display results in tabular form. For example, a possible output of the command `cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | column -t` is as follows:
+`tr <replaced> <replace>` allows us to replace certain characters, while `column -t` allows us to display results in tabular form. For example, a possible output of the command `cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | column -t` is as follows:
 
 ```
 root         x  0     0      root               /root        		 /bin/bash
@@ -466,37 +466,46 @@ Permissions can be specified for the resource owner, group, and others.
 
 Note that execute permissions for a directory are necessary to traverse a directory. This does not allow a user to modify or execute files within the directory.
 
-We can view the permissions of a file with `ls -l`. Here is an example outupt of `ls -l shell`:
+We can view the permissions of a file with `ls -l`. Here is an example output of `ls -l shell`:
 
 ```
 -rwxr-x--x   1 cry0l1t3 htbteam 0 May  4 22:12 shell
 ```
 
-BOOKMARK
+The above output signifies that for the `shell` file, the owner `cry0l1t3` has read, write, and execute permissions. The group `htbteam` has read and execute permissions, and other users have execute permissions.
+
+We can change permissions of a resource with `chmod <change> <resource>`. The following commands are equivalent:
 
 ```Shell
-chmod a+r file     # u = owner, g = group, o = others, a = all users
-chmod 754          # binary equivalent: 111 101 100
-
-chown <user>:<group> <file/directory>     # change owner or
-										 # change group assignments
+chmod a+r <resource>
+chmod 754 <resource>
 ```
 
-Special permissions for files can be set using the Set User ID (SUID) and Set Group ID (SGID) bits. Sticky bits are a type of file permission that can be set on directories. These bits can be used to prevent the deletion and renaming of files within a directory by users other than the owner.
+Notice that `a+r` means that we add read permissions to all users. `u` can be used for the owner, `g` can be used for the group, and `o` can be used for others. The code 754 is used to change permissions for the owner, group, and others all at once. 754 is equivalent to 111 101 100 in binary. This means that the owner has read, write, and execute permissions, the group has read and execute permissions, and other users have read permissions. 
+
+We can also change the owner and group assignments of a file:
+
+```
+chown <user>:<group> <file>
+```
+
+Special permissions for files can be set using the Set User ID (SUID) and Set Group ID (SGID) bits. These bits function like temporary access passes and allow a file to be run with the permissions of the file's owner or group. Special permissions are specified by an `s` in the spot of the usual `x` permission.
+
+Sticky bits are a type of file permission that can be set on directories. These bits can be used to prevent the deletion and renaming of files within a directory by users other than the owner. Sticky bits are specified by an `T` or `t` in the spot of the usual `x` permission.
 
 ## System Management
 
 ### User Management
 
-
-- **sudo**: Execute command as a different user.
-- **su**: The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser). A shell is then executed.
-- **useradd**: Creates a new user or update default new user information.
-- **userdel**: Deletes a user account and related files.
-- **usermod**: Modifies a user account.
-- **addgroup**: Adds a group to the system.
-- **delgroup**: Removes a group from the system.
-- **passwd**: Changes user password.
+User management is fundamental for system administration. The following commands are helpful for managing users:
+- `sudo`: Execute command as a different user.
+- `su`: The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser). A shell is then executed.
+- `useradd`: Creates a new user or update default new user information.
+- `userdel`: Deletes a user account and related files.
+- `usermod`: Modifies a user account.
+- `addgroup`: Adds a group to the system.
+- `delgroup`: Removes a group from the system.
+- `passwd`: Changes user password.
 
 <details>
 
@@ -538,15 +547,18 @@ Most package managers provide the following features:
 - Additional system-related configuration and functionality
 - Quality control
 
-dpkg`: The `dpkg` is a tool to install, build, remove, and manage Debian packages. The primary and more user-friendly front-end for `dpkg` is aptitude.
-`apt`: Apt provides a high-level command-line interface for the package management system.
-`aptitude`: Aptitude is an alternative to apt and is a high-level interface to the package manager.
-`snap`: Install, configure, refresh, and remove snap packages. Snaps enable the secure distribution of the latest apps and utilities for the cloud, servers, desktops, and the internet of things.
-`gem`: Gem is the front-end to RubyGems, the standard package manager for Ruby.
-`pip`: Pip is a Python package installer recommended for installing Python packages that are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation.
-| `git`      | Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
+Here are common package managers in Linux:
+- `dpkg`: The `dpkg` is a tool to install, build, remove, and manage Debian packages. The primary and more user-friendly front-end for `dpkg` is aptitude.
+- `apt`: Apt provides a high-level command-line interface for the package management system.
+- `aptitude`: Aptitude is an alternative to apt and is a high-level interface to the package manager.
+- `snap`: Install, configure, refresh, and remove snap packages. Snaps enable the secure distribution of the latest apps and utilities for the cloud, servers, desktops, and the internet of things.
+- `gem`: Gem is the front-end to RubyGems, the standard package manager for Ruby.
+- `pip`: Pip is a Python package installer recommended for installing Python packages that are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation.
+- `git`: Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
-Debian-based Linux distributions use the `APT` package manager. A package is an archive file containing multiple ".deb" files. The `dpkg` utility is used to install programs from the associated ".deb" file. `APT` packages together all of the dependencies needed to install a program.
+BOOKMARK
+
+Debian-based Linux distributions use the APT package manager. A package is an archive file containing multiple ".deb" files. The `dpkg` utility is used to install programs from the associated ".deb" file. APT packages together all of the dependencies needed to install a program.
 
 See repository characteristics by viewing the `/etc/apt/sources.list` file.
 
@@ -781,20 +793,26 @@ Solaris is a Unix-based operating system known for its robustness, scalability, 
 
 Solaris is propriety and differs from Linux in its filesystem, security, system monitoring, process and package management, and kernel and hardware support. For example, Solaris uses `pkgadd` to install packages instead of `apt-get` like Linux.
 
+END
+
 ## Tips and Tricks
 
 ### Shortcuts
 
-The following keyboard shortcuts will allow us to work more efficiently in command line.
-- `[TAB]`: Initiates auto-complete
+There are many shortcuts that will allow us to work more efficiently in the command line.
+- `[TAB]`: Initiate auto-complete
 - `[CTRL] + A`: Move the cursor to the beginning of the current line
 - `[CTRL] + E`: Move the cursor to the end of the current line
 - `[CTRL] + [←]`/`[→]`: Jump at the beginning of the current/previous word
 - `[ALT] + B`/`F`: Jump backward/forward one word
 - `[CTRL] + U`: Erase everything from the current position of the cursor to the beginning of the line
 - `[CTRL] + K`: Erase everything from the current position of the cursor to the end of the line
-- `[CTRL] + L`: Clears the terminal (equivalent to `clear`)
+- `[CTRL] + W`: Erase the word preceding the cursor position
+- `[CTRL] + C`: Ends the current task/process by sending the SIGINT signal
+- `[CTRL] + L`: Clear the terminal (equivalent to `clear`)
+- `[CTRL] + Z`: Suspend the current process by sending the SIGTSTP signal
 - `[CTRL] + R`: Search through command history for commands we typed previously that match our search patterns
+- `[↑]/[↓]`: Go to the previous and next command in the command history
 
 ***
 

@@ -96,14 +96,13 @@ Use `cd` to navigate to the C drive. Go into the Academy directory (the non-stan
 
 ### File System
 
-Windows has BOOKMARK
+Windows has five types of file systems: FAT12, FAT16, FAT32, NTFS, and exFAT. FAT12 and FAT16 are no longer used.
 
-FAT32 (File Allocation Table) is widely used across many types of storage devices such as USB memory sticks and SD cards but can also be used to format hard drives.
+FAT32 (File Allocation Table) is widely used across many types of storage devices such as USB memory sticks and SD cards but can also be used to format hard drives. It provides device compatibility and operating system cross-compatibility but can only with files less than 4GB and size and lacks built-in data protection, file compression, and file encryption tools.
 
-NTFS (New Technology File System) is the default Windows file system since Windows NT 3.1. In addition to making up for the shortcomings of FAT32, NTFS also has better support for metadata and better performance due to improved data structuring.
+NTFS (New Technology File System) is the default Windows file system since Windows NT 3.1. In addition to making up for the shortcomings of FAT32, NTFS also has better support for metadata and better performance due to improved data structuring. NTFS provides reliability, security, large-sized partitions, and journaling. Most mobile devices and older media devices do not support NTFS.
 
-Here's the information from the table formatted in a markdown bulleted list:
-
+The NTFS file system has the following key permission types: 
 - **Full Control**: Allows reading, writing, changing, deleting of files/folders.
 - **Modify**: Allows reading, writing, and deleting of files/folders.
 - **List Folder Contents**: Allows for viewing and listing folders and subfolders as well as executing files. Folders only inherit this permission.
@@ -111,6 +110,8 @@ Here's the information from the table formatted in a markdown bulleted list:
 - **Write**: Allows for adding files to folders and subfolders and writing to a file.
 - **Read**: Allows for viewing and listing of folders and subfolders and viewing a file's contents.
 - **Traverse Folder**: This allows or denies the ability to move through folders to reach other files or folders, even without permissions to list the directory contents or view the files along the way.
+
+BOOKMARK
 
 The `icacls` can be used to view and set permissions.
 

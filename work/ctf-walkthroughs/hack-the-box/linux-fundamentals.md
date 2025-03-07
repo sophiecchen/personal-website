@@ -374,18 +374,33 @@ We can use `grep <pattern> <file>` to find patterns in a file. By using the `-v`
 
 ```Shell
 usr@htb[/htb]$ cat /etc/passwd | grep -v "false\|nologin"
+``` 
+
+`cut -d"<deliminator>" -f<number> <file>` allows us to take a string and separate it by a deliminator. For example, a possible output of the command `cat /etc/passwd | grep -v "false\|nologin" | cut -d":" -f1` is as follows:
+
+```
+root
+sync
+postgres
+mrb3n
+cry0l1t3
+htb-student
 ```
 
-BOOKMARK
+`tr <replaced> <replacee>` allows us to replace certain characters, while `column -t` allows us to display results in tabular form. For example, a possible output of the command `cat /etc/passwd | grep -v "false\|nologin" | tr ":" " " | column -t` is as follows:
 
-`cut -d"<deliminator>" -f<number>` TODO allows us to cut, while ``. 
-
-```Shell
-cut -d":" -f1             # cuts with the deliminator ":"
-tr ":" " "                # replaces colon with space
-column -t                 # displays results in tabular form
-wc -l                     # counts number of lines in output
 ```
+root         x  0     0      root               /root        		 /bin/bash
+sync         x  4     65534  sync               /bin         		 /bin/sync
+postgres     x  111   117    PostgreSQL         administrator,,,    /var/lib/postgresql		/bin/bash
+mrb3n        x  1000  1000   mrb3n              /home/mrb3n  	     /bin/bash
+cry0l1t3     x  1001  1001   /home/cry0l1t3     /bin/bash
+htb-student  x  1002  1002   /home/htb-student  /bin/bash
+```
+
+We can use `awk '{print $1, $NF}'` to display only the first and last result of the line, and `sed` will allow us to search and replace more complex character patterns.
+
+Knowing how many successful matches result from a command is often helpful. `wc -l` can be used to count the number of lines in an output.
 
 <details>
 
@@ -393,7 +408,7 @@ wc -l                     # counts number of lines in output
 
 7
 
-TODO
+This can be found with the command `netstat -tunl4 | grep "LISTEN" | wc -l`.
 
 </details>
 
@@ -403,7 +418,7 @@ TODO
 
 proftpd
 
-TODO
+This can be found with the command `cat /etc/passwd | grep "proftpd"`.
 
 </details>
 
@@ -413,7 +428,7 @@ TODO
 
 34
 
-TODO
+This can be found with the command `curl https://www.inlanefreight.com > temp`. We can then search the temp file we created for unique paths. 
 
 </details>
 
@@ -422,25 +437,42 @@ TODO
 Regular expressions, or regexes, allow us to search for patterns in text and files. Regexes are commonly used with the `grep` and `sed` commands.
 
 The basic syntax of regexes is as follows:
-- `(a)`:
-- `[a-z]`:
-- `{1, 10}`:
-- |:
-- .*: 
+- `(a)`: Parentheses are used to group parts of a regex.
+- `[a-z]`: Brackets are used to define character classes.
+- `{1, 10}`: Curly braces are used to define a number or range of numbers that indicate the how many repetitions of a previous pattern you are looking for.
+- `|`: The OR operator matches when one of the two expressions matches.
+- `.*`:  This works similarly to the AND operator and only matches when both of the two expressions match. 
 
-For example, the following TODO.
+For example, the following regex finds lines in `<file>` that either contain the string "my" or "false".
 
 ```Shell
+grep -E "(my|false)" <file>
 ```
 
-The following regex TODO.
+The following regex finds lines in `<file>` that contain both the string "my" and "false".
 
 ```Shell
+grep -E "(my.*false)" <file>
 ```
 
 ### Permission Management
 
-Execute permissions for a directory are necessary to traverse a directory. These do not allow a user to modify or execute files within the directory.
+Permissions in Linux are assigned to both users and groups. Linux permissions dictate who can access, modify, and run which resources. There are three permissions in Linux:
+- `(r)`: Read
+- `(w)`: Write
+- `(x)`: Execute
+
+Permissions can be specified for the resource owner, group, and others.
+
+Note that execute permissions for a directory are necessary to traverse a directory. This does not allow a user to modify or execute files within the directory.
+
+We can view the permissions of a file with `ls -l`. Here is an example outupt of `ls -l shell`:
+
+```
+-rwxr-x--x   1 cry0l1t3 htbteam 0 May  4 22:12 shell
+```
+
+BOOKMARK
 
 ```Shell
 chmod a+r file     # u = owner, g = group, o = others, a = all users

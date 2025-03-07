@@ -335,7 +335,7 @@ usr@htb[/htb]$ <command> > 2>/dev/null
 A pipe `|` allows us to redirect output from one program to another. For example, the following command searches for `.conf` files in `/etc`, and of those files, looks for those files which have "systemd" in their name.
 
 ```Shell
-find /etc/ -name *.conf 2>/dev/null | grep systemd
+usr@htb[/htb]$ find /etc/ -name *.conf 2>/dev/null | grep systemd
 ```
 
 <details>
@@ -446,13 +446,13 @@ The basic syntax of regexes is as follows:
 For example, the following regex finds lines in `<file>` that either contain the string "my" or "false".
 
 ```Shell
-grep -E "(my|false)" <file>
+usr@htb[/htb]$ grep -E "(my|false)" <file>
 ```
 
 The following regex finds lines in `<file>` that contain both the string "my" and "false".
 
 ```Shell
-grep -E "(my.*false)" <file>
+usr@htb[/htb]$ grep -E "(my.*false)" <file>
 ```
 
 ### Permission Management
@@ -477,16 +477,16 @@ The above output signifies that for the `shell` file, the owner `cry0l1t3` has r
 We can change permissions of a resource with `chmod <change> <resource>`. The following commands are equivalent:
 
 ```Shell
-chmod a+r <resource>
-chmod 754 <resource>
+usr@htb[/htb]$ chmod a+r <resource>
+usr@htb[/htb]$ chmod 754 <resource>
 ```
 
 Notice that `a+r` means that we add read permissions to all users. `u` can be used for the owner, `g` can be used for the group, and `o` can be used for others. The code 754 is used to change permissions for the owner, group, and others all at once. 754 is equivalent to 111 101 100 in binary. This means that the owner has read, write, and execute permissions, the group has read and execute permissions, and other users have read permissions. 
 
 We can also change the owner and group assignments of a file:
 
-```
-chown <user>:<group> <file>
+```Shell
+usr@htb[/htb]$ chown <user>:<group> <file>
 ```
 
 Special permissions for files can be set using the Set User ID (SUID) and Set Group ID (SGID) bits. These bits function like temporary access passes and allow a file to be run with the permissions of the file's owner or group. Special permissions are specified by an `s` in the spot of the usual `x` permission.
@@ -556,23 +556,47 @@ Here are common package managers in Linux:
 - `pip`: Pip is a Python package installer recommended for installing Python packages that are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation.
 - `git`: Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.
 
-BOOKMARK
+Debian-based Linux distributions use the `apt` package manager. A package is an archive file containing multiple ".deb" files. The `dpkg` utility is used to install programs from the associated ".deb" file. `apt` packages together all of the dependencies needed to install a program.
 
-Debian-based Linux distributions use the APT package manager. A package is an archive file containing multiple ".deb" files. The `dpkg` utility is used to install programs from the associated ".deb" file. APT packages together all of the dependencies needed to install a program.
+We can see repository characteristics by viewing the `/etc/apt/sources.list` file. We can also check the `apt-cache` for information about packages installed on our system offline.
 
-See repository characteristics by viewing the `/etc/apt/sources.list` file.
+We can list all installed packages with `apt`:
+
+```Shell
+usr@htb[/htb]$ apt list --installed
+```
+
+We can install packages as such: 
+
+```Shell
+usr@htb[/htb]$ sudo apt install <package>
+```
+
+We can also download open-source code manually with `git`. `git clone <link>` can be used to clone repositories from Github.
 
 ### Service and Process Management
 
-There are two types of services: internal (ex. system startup services) and services installed by users (ex. server services). Such services, called daemons (identified by the letter d at the end of the program name), run in the background without any user interaction.
+Services, or daemons, run silently in the background of a Linux system without direct user interaction. There are two types of services: internal (ex. system startup services) and services installed by users (ex. server services).
+
+Daemons are often identified by the letter d at the end of the program name. 
+
+Most modern Linux distributions use `systemd` as their initialization system, which is the first process that starts during booting. All processes in a Linux system are assigned a PID and can be viewed under the `/proc/` directory. Processes may also have a Parent Process ID (PPID), indicating that they were started by another parent process.
+
+We can start a service as such:
 
 ```Shell
-systemctl start ssh    # start OpenSSH service
-systemctl status ssh   # check if OpenSSH runs without errors
-systemctl enable ssh   # run OpenSSH after startup
-systelctl list-units --type=service    # list all services
-journalctl -u ssh.service --no-pager   # check for errors in log
+usr@htb[/htb]$ systemctl start <service>
 ```
+
+We can check that the service runs without errors as such: 
+
+```Shell
+usr@htb[/htb]$ systemctl status <service>
+```
+
+We can also use `systemctl` to run a service on startup and list all services. 
+
+if our service is `ssh`, for example, we can view the logs of the service using `journalctl -u ssh.service --no-pager`.
 
 A process can be in the following states:
 - Running
@@ -580,13 +604,9 @@ A process can be in the following states:
 - Stopped
 - Zombie (stopped but still has an entry in the process table).
 
-```Shell
-kill -l          # lists a signals that can be sent to a process
-kill 9 <PID>     # force kill a frozen process
-```
+We can force kill a frozen process with `kill 9 <PID>`. Notice how 9 is the signal sent to the process.
 
-Certainly! Here's the markdown bulleted list based on your table:
-
+These are the most commonly used signals:
 - **1**: `SIGHUP` - This is sent to a process when the terminal that controls it is closed.
 - **2**: `SIGINT` - Sent when a user presses `[Ctrl] + C` in the controlling terminal to interrupt a process.
 - **3**: `SIGQUIT` - Sent when a user presses `[Ctrl] + D` to quit.
@@ -595,12 +615,12 @@ Certainly! Here's the markdown bulleted list based on your table:
 - **19**: `SIGSTOP` - Stop the program. It cannot be handled anymore.
 - **20**: `SIGTSTP` - Sent when a user presses `[Ctrl] + Z` to request for a service to suspend. The user can handle it afterward.
 
-Display background processes with `jobs`.  Use `SIGTSTP` to suspend a process, and then let that process run in the background `bg`. You can also do this automatically by putting `&` at the end of a command. `fg <ID>` will allow you to foreground a process.
+We can background a process with `bg` or by placing `&` at the end of a command. We can then display background processes with `jobs`. `fg <PID>` will allow us to foreground a backgrounded process.
 
-Run several commands:
-- Semicolon (`;`): ignores previous command results and errors
-- Double `ampersand` characters (`&&`): runs only if previous commands succeed
-- Pipes (`|`)
+There are three ways that we can execute several commands:
+- Semicolon (`;`): Runs following commands even if previous commands error
+- Double `ampersand` characters (`&&`): Runs following commands only if previous commands succeed
+- Pipes (`|`): Allow us to pass the results from a previous command to the next command
 
 <details>
 
@@ -614,10 +634,28 @@ Use `systemctl list-units --type=service | grep "Load"` to search for this servi
 
 ### Task Scheduling
 
-Systemd is a service that can be used to set up processes and scripts to run at a specific time or time interval and specify specific events and triggers that will trigger a specific task.
+Task scheduling is a feature of Linux that allows users and administrators to automate tasks by running them at specific times or regular intervals.
+
+Systemd is a service that can be used to set up processes and scripts to run at a specific time or time interval. This service also allows us to specify specific events and triggers that will trigger a specific task.
 1. Create a timer
 2. Create a service
 3. Activate the timer
+
+We can create a timer by first creating a directory for the timer script. Here is an example of a timer script:
+
+```
+[Unit]
+Description=My Timer
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=1hour
+
+[Install]
+WantedBy=timers.target
+```
+
+BOOKMARK
 
 We can also use Cron to schedule and automate processes. We setup a Cron daemon to store the tasks in a file called crontab and then tell the daemon where to run the tasks.
 
@@ -769,12 +807,12 @@ The iptables utility provides a flexible set of rules for filtering network traf
 ### System Logs and Monitoring
 
 System logs on Linux are a set of files that contain information about the system and the activities taking place on it.
-- Kernel Logs: stored in `/var/log/kern.log`
-- System Logs: stored in `var/log/syslog`
-- Authentication Logs: stored in `/var/log/auth.log`
-- Application Logs: stored in logs depending on application
+- Kernel Logs: Stored in `/var/log/kern.log`
+- System Logs: Stored in `var/log/syslog`
+- Authentication Logs: Stored in `/var/log/auth.log`
+- Application Logs: Stored in logs depending on application
 
-Sure, here's how the table would look as a markdown bulleted list:
+
 
 - **Apache**: Access logs are stored in the /var/log/apache2/access.log file (or similar, depending on the distribution).
 - **Nginx**: Access logs are stored in the /var/log/nginx/access.log file (or similar).
@@ -785,15 +823,35 @@ Sure, here's how the table would look as a markdown bulleted list:
 
 - Security Logs: stored in logs such as `/var/log/fail2ban.log` (failed login attempts), `/var/log/ufw.log` (firewall), etc.
 
+END
+
 ## Linux Distributions vs Solaris
 
 ### Solaris
 
 Solaris is a Unix-based operating system known for its robustness, scalability, and support for high-end hardware and software systems. It is widely used in the banking, finance, and government sectors. It is also used in large-scale data centers, cloud computing environments, and virtualization platforms.
 
-Solaris is propriety and differs from Linux in its filesystem, security, system monitoring, process and package management, and kernel and hardware support. For example, Solaris uses `pkgadd` to install packages instead of `apt-get` like Linux.
+Solaris is propriety and differs from Linux in its filesystem, security, system monitoring, process and package management, and kernel and hardware support.
 
-END
+Here are the directories of Solaris:
+- `/`: The root directory contains all other directories and files in the file system.
+- `/bin`: It contains essential system binaries that are required for booting and basic system operations.
+- `/boot`: The boot directory contains boot-related files such as boot loader and kernel images.
+- `/dev`: The dev directory contains device files that represent physical and logical devices attached to the system.
+- `/etc`: The etc directory contains system configuration files, such as system startup scripts and user authentication data.
+- `/home`: Users’ home directories.
+- `/kernel`: This directory contains kernel modules and other kernel-related files.
+- `/lib`: Directory for libraries required by the binaries in `/bin` and `/sbin` directories.
+- `/lost+found`: This directory is used by the file system consistency check and repair tool to store recovered files.
+- `/mnt`: Directory for mounting file systems temporarily.
+- `/opt`: This directory contains optional software packages that are installed on the system.
+- `/proc`: The proc directory provides a view into the system's process and kernel status as files.
+- `/sbin`: This directory contains system binaries required for system administration tasks.
+- `/tmp`: Temporary files created by the system and applications are stored in this directory.
+- `/usr`: The usr directory contains system-wide read-only data and programs, such as documentation, libraries, and executables.
+- `/var`: This directory contains variable data files, such as system logs, mail spools, and printer spools.
+
+Solaris uses the Solaris Package Manager (SPM) and has its own implementation of NFS. Solaris and Linux have a number of differences in the commands used.
 
 ## Tips and Tricks
 

@@ -655,9 +655,40 @@ OnUnitActiveSec=1hour
 WantedBy=timers.target
 ```
 
-BOOKMARK
+We can then create a service:
 
-We can also use Cron to schedule and automate processes. We setup a Cron daemon to store the tasks in a file called crontab and then tell the daemon where to run the tasks.
+```
+[Unit]
+Description=My Service
+
+[Service]
+ExecStart=/full/path/to/my/script.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+To allow this service to run, we reload `systemd` and use `systemctl` to start the system manually or enable autostart.
+
+Alternatively, we can use Cron to schedule and automate processes. We setup a Cron daemon to store the tasks we want to complete in a file called a crontab and then tell the daemon where to run the tasks.
+
+Here is an example of a crontab:
+
+```
+# System Update
+0 */6 * * * /path/to/update_software.sh
+
+# Execute scripts
+0 0 1 * * /path/to/scripts/run_scripts.sh
+
+# Cleanup DB
+0 0 * * 0 /path/to/scripts/clean_database.sh
+
+# Backups
+0 0 * * 7 /path/to/scripts/backup.sh
+```
+
+The numbers that prepend each line with a script indicate when each script should be run.
 
 <details>
 
@@ -671,11 +702,14 @@ See detailed information about a service with the `systemctl show syslog.service
 
 ### Network Services
 
-The most important network services you should be familiar with are SSH, NFS, Apache, and VPN.
-- OpenSSH: a free and open-source implementation of the Secure Shell (SSH) protocol that allows the secure transmission of data and commands over a network
-- Network File System (NFS): a network protocol that allows us to store and manage files on remote systems as if they were stored on the local system
-- Apache is widespread, but Python Web Server is a simple, fast alternative
-- OpenVPN: a popular open-source VPN server available for various operating systems
+BOOKMARK
+
+While there are many network services, these are must-knows:
+- OpenSSH: A free and open-source implementation of the Secure Shell (SSH) protocol that allows the secure transmission of data and commands over a network
+- Network File System (NFS): A network protocol that allows us to store and manage files on remote systems as if they were stored on the local system
+- Apache Web Server:
+- Python Web Server: A simple, fast alternative to Apache WEb Server
+- OpenVPN: A popular open-source VPN server available for various operating systems
 
 ### Working with Web Services
 

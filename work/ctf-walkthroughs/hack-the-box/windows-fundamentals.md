@@ -111,25 +111,25 @@ The NTFS file system has the following key permission types:
 - **Read**: Allows for viewing and listing of folders and subfolders and viewing a file's contents.
 - **Traverse Folder**: This allows or denies the ability to move through folders to reach other files or folders, even without permissions to list the directory contents or view the files along the way.
 
-BOOKMARK
+Files and folders inherit the NTFS permissions of their parent folder. The `icacls` command can be used to view and set permissions.
 
-The `icacls` can be used to view and set permissions.
+These are the possible inheritance settings:
+- `(CI)`: Container inherit
+- `(OI)`: Object inherit
+- `(IO)`: Inherit only
+- `(NP)`: Do not propagate inherit
+- `(I)`: Permission inherited from parent container
 
-Inherit permissions:
-- `(CI)`: container inherit
-- `(OI)`: object inherit
-- `(IO)`: inherit only
-- `(NP)`: do not propagate inherit
-- `(I)`: permission inherited from parent container
+These are the basic access permissions available:
+- `F`: Full access
+- `D`: Delete access
+- `N`: No access
+- `M`: Modify access
+- `RX`: Read and execute access
+- `R`: Read-only access
+- `W`: Write-only access
 
-Access permissions
-- `F` : full access
-- `D` :  delete access
-- `N` :  no access
-- `M` :  modify access
-- `RX` :  read and execute access
-- `R` :  read-only access
-- `W` :  write-only access
+For example, we can use the command `icacls c:\users /grant joe:f` to grant the user joe full control over `c:\users`. Because `(oi)` and `(ci)` are not included in this command, however, the user joe will not have rights over subdirectories and files contained within `c:\users`. We can revoke those permissions using `icacls c:\users /remove joe`.
 
 <details>
 
@@ -137,7 +137,7 @@ Access permissions
 
 bob.smith
 
-TODO
+This can be found by viewing permissions for the directory using `icalcs c:\users`. 
 
 </details>
 
@@ -147,9 +147,9 @@ The `Server Message Block protocol` (`SMB`) is used in Windows to connect shared
 
 ![smb diagram](https://academy.hackthebox.com/storage/modules/49/smb_diagram.png)
 
-NTFS and Share permissions are different. NTFS also includes special permissions. NTFS permissions apply to the system where the folder and files are hosted. Share permissions apply when the folder is being accessed through SMB, typically from a different system over the network. Note that Windows Defender Firewall could potentially block access to the SMB share.
+BOOKMARK
 
-*See HTB Windows Fundamentals for creating, managing, and viewing shares*.
+NTFS and Share permissions are different. NTFS also includes special permissions. NTFS permissions apply to the system where the folder and files are hosted. Share permissions apply when the folder is being accessed through SMB, typically from a different system over the network. Note that Windows Defender Firewall could potentially block access to the SMB share.
 
 <details>
 
@@ -167,7 +167,7 @@ SMB stands for Server Message Block protocol.
 
 Event Viewer
 
-TODO
+Event Viewer lets administrators and users view the event logs.
 
 </details>
 
@@ -190,9 +190,6 @@ Services allow for the creation and management of long-running processes. Window
 Windows has three categories of services: Local Services, Network Services, and System Services. Services can usually only be created, modified, and deleted by users with administrative privileges.
 
 Critical services:
-
-Certainly! Here's the table converted into a markdown bulleted list:
-
 - **smss.exe**: Session Manager SubSystem. Responsible for handling sessions on the system.
 - **csrss.exe**: Client Server Runtime Process. The user-mode portion of the Windows subsystem.
 - **wininit.exe**: Starts the Wininit file .ini file that lists all of the changes to be made to Windows when the computer is restarted after installing a program.
@@ -228,8 +225,6 @@ It is highly recommended to create an individual user account to run critical ne
 
 Most services run with LocalSystem privileges by default which is the highest level of access allowed on an individual Windows OS. Not all applications need Local System account-level permissions, so it is beneficial to perform research on a case-by-case basis when considering installing new applications in a Windows environment.
 
-*See module to learn how to examine service permissions using services.msc, the sc command in Windows command line, and Get-Acl in PowerShell*.
-
 
 ## Interacting with Windows
 
@@ -249,8 +244,6 @@ Here's the table converted into a markdown bulleted list:
 You can use GUI, RDP (remote desktop protocol), Windows command line, or PowerShell.
 
 Execution policies may need to be changed for certain scripts to run:
-
-Sure thing! Here's that table converted into a markdown bulleted list:
 
 - **AllSigned**: All scripts can run, but a trusted publisher must sign scripts and configuration files. This includes both remote and local scripts. We receive a prompt before running scripts signed by publishers that we have not yet listed as either trusted or untrusted.
 - **Bypass**: No scripts or configuration files are blocked, and the user receives no warnings or prompts.
@@ -283,8 +276,6 @@ TODO
 ### Windows Management Instrumentation (WMI)
 
 WMI is a subsystem of PowerShell that provides system administrators with powerful tools for system monitoring. WMI can be used through PowerShell.
-
-Here's the provided table converted into a markdown bulleted list:
 
 - **WMI service**: The Windows Management Instrumentation process, which runs automatically at boot and acts as an intermediary between WMI providers, the WMI repository, and managing applications.
 - **Managed objects**: Any logical or physical components that can be managed by WMI.
@@ -332,8 +323,6 @@ Each SID has a pattern:
 
 (SID)-(revision level)-(identifier-authority)-(subauthority1)-(subauthority2)-(etc)
 
-Certainly! Here's the information from the table in a markdown bulleted list format:
-
 - **S**: SID - Identifies the string as a SID.
 - **1**: Revision Level - To date, this has never changed and has always been `1`.
 - **5**: Identifier-authority - A 48-bit string that identifies the authority (the computer or network) that created the SID.
@@ -342,8 +331,6 @@ Certainly! Here's the information from the table in a markdown bulleted list for
 - **1002**: Subauthority3 - The RID that distinguishes one account from another. Tells us whether this user is a normal user, a guest, an administrator, or part of some other group.
 
 The Registry is a hierarchical database in Windows critical for the operating system. It stores low-level settings for the Windows operating system and applications that choose to use it. It is divided into computer-specific and user-specific data. We can open the Registry Editor by typing `regedit` from the command line or Windows search bar.
-
-*See the module for details on Security Accounts Manager (SAM), Access Control Entries (ACE), User Account Control (UAC), registry keys, whitelisting applications, AppLocker, Local Group Policy, and Windows Defender Antivirus.*
 
 <details>
 
@@ -366,6 +353,24 @@ TODO
 </details>
 
 ### Skills Assessment - Windows Fundamentals
+
+Before answering the questions below, complete the following steps:
+1. Create a shared folder called called Company Data
+2. Create a subfolder called HR inside of the Company Data folder
+3. Create a user called Jim
+    - Uncheck: User must change password at logon
+4. Create a security group called HR
+5. Add Jim to the HR security group
+6. Add the HR security group to the shared Company Data folder and NTFS permissions list
+    - Remove the default group that is present
+    - Share Permissions: Allow Change & Read
+    - Disable Inheritance before issuing specific NTFS permissions
+    - NTFS permissions: Modify, Read & Execute, List folder contents, Read, Write
+7.
+    - Remove the default group that is present
+    - Disable Inheritance before issuing specific NTFS permissions
+    - NTFS permissions: Modify, Read & Execute, List folder contents, Read, and Write
+8. Use PowerShell to list details about a service
 
 <details>
 

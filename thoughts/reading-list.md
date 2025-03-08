@@ -18,7 +18,7 @@ layout:
 
 ## Current Reading List
 
-These are the readings that I am either currently reading or hoping to read soon.
+These are the literature that I am either currently reading or hoping to read soon.
 
 - [End-To-End Arguments in System Design](https://dl.acm.org/doi/pdf/10.1145/357401.357402) by J. H. Saltzer, D. P. Reed, D. D. Clark (1984)
 - [File System Forensic Analysis](https://www.amazon.com/System-Forensic-Analysis-Brian-Carrier/dp/0321268172) by Brian Carrier (2005)

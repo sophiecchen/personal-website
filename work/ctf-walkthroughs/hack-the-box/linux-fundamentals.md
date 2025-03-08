@@ -702,20 +702,41 @@ See detailed information about a service with the `systemctl show syslog.service
 
 ### Network Services
 
-BOOKMARK
-
 While there are many network services, these are must-knows:
-- OpenSSH: A free and open-source implementation of the Secure Shell (SSH) protocol that allows the secure transmission of data and commands over a network
-- Network File System (NFS): A network protocol that allows us to store and manage files on remote systems as if they were stored on the local system
-- Apache Web Server:
-- Python Web Server: A simple, fast alternative to Apache WEb Server
-- OpenVPN: A popular open-source VPN server available for various operating systems
+- OpenSSH
+- Network File System (NFS)
+- Apache Web Server
+- Python Web Server
+- OpenVPN
+
+Shell (SSH) is a protocol that allows the secure transmission of data and commands over a network. OpenSSH is a free and open-source implementation of SSH. We can SSH into a system using `ssh <user>@<ip>`.
+
+Network File System (NFS) is a network protocol that allows us to store and manage files on remote systems as if they were stored on the local system. NFS directories, transfer speed, encryption, and permissions can be configured in `/etc/exports`.
+
+These are the available permissions of NFS:
+- `rw`: Gives users and systems read and write permissions to the shared directory.
+- `ro`: Gives users and systems read-only access to the shared directory.
+- `no_root_squash`: Prevents the root user on the client from being restricted to the rights of a normal user.
+- `root_squash`: Restricts the rights of the root user on the client to the rights of a normal user.
+- `sync`: Synchronizes the transfer of data to ensure that changes are only transferred after they have been saved on the file system.
+- `async`: Transfers data asynchronously, which makes the transfer faster, but may cause inconsistencies in the file system if changes have not been fully committed.
+
+A web server is software that delivers data, documents, applications, and various functions over the Internet. Apache web server is a widely used web server on Linux and is broadly compatible with various operating systems. Python is a simple alternative to the Apache web server. We can start a web server in our current directory using `python3 -m http.server <port>`.
+
+A Virtual Private Network (VPN) functions like a secure, invisible tunnel that connects us to another network. OpenVPN popular open-source VPN server available for various operating systems. We can connect to an OpenVPN by saving the `.ovpn` file we received from the OpenVPN server and then running `sudo openvpn --config <file>.ovpn`.
 
 ### Working with Web Services
 
-One of the most widespread web servers is Apache. Apache offers the possibility to create web pages dynamically using server-side scripting languages like PHP, Perl, or Ruby.
+As stated in the previous section, one of the most widespread web servers is Apache Apache's true strength lies in its modularity—it can be customized and extended with various modules to perform specific tasks. Apache can handle static web pages and dynamic web pages created from server-side scripting languages like PHP, Perl, or Ruby. We can start an Apache web server using `sudo systemctl start apache2`. 
 
-`curl` allows us to transfer files from the shell over protocols like HTTP, HTTPS, and FTP. `wget` is an alternative.
+`curl` allows us to transfer files from the shell over protocols like HTTP, HTTPS, and FTP. `wget` is an alternative. As shown below, using `curl` and `wget` is similar: 
+
+```Shell
+usr@htb[/htb]$ curl <url>
+usr@htb[/htb]$ wget <url>
+```
+
+As stated in the previous section, Python is an alternative to Apache. We can start a web server in our current directory using `python3 -m http.server <port>`.
 
 <details>
 
@@ -742,9 +763,37 @@ When backing up data on an Ubuntu system, we can utilize tools such as:
 
 Rsync is an open-source tool that is particularly useful for transferring large amounts of data over the network. Combined with cron, rsync can be used to automatically backup files to a different server over SSH.
 
+The following command copies an entire directory to a remote host:
+
+```Shell
+usr@htb[/htb]$ rsync -av <path_to_local> <user>@<backup_server>:<path_to_backup>
+```
+
+If we want to restore, our backup, we can use the following command:
+
+```Shell
+usr@htb[/htb]$ rsync -av <user>@<remote_host>:/<path_to_backup> <path_to_local>
+```
+
+To use `rsync` with encryption, we can transfer our backup over SSH:
+
+```Shell
+usr@htb[/htb]$ rsync -avz -e ssh <path_to_local> <user>@<backup_server>:<path_to_backup>
+```
+
+Duplicity builds on Rsync and adds encryption features to protect the backups.
+
+Deja Dup is a simpler, user-friendly option that offers a graphic interface. Like Duplicity, Deja Dup builds on Rsync and supports encrypted backups.
+
 ### File System Management
 
-The Linux file system is a hierarchical structure that is composed of various components. At the top of this structure is the inode table. The inode table is a table of information associated with each file and directory on a Linux system. Files can be stored as files or directories.
+Linux supports many file systems, including ext2, ext3, ext4, XFS, Btrfs, and NTFS.
+
+BOOKMARK
+
+The Linux file system architecture is a hierarchical structure that is composed of various components, including inodes. Inodes are data structures that store metadata about each file and directory, including permissions, ownership, size, and timestamps.
+
+At the top of this hierarchical structure is the inode table. The inode table is a table of information associated with each file and directory on a Linux system. Files can be stored as files or directories.
 
 The main tool for disk management on Linux is the `fdisk`, which allows us to create, delete, and manage partitions on a drive.
 
@@ -768,6 +817,10 @@ Use `sudo fdisk -l` to see all of the partitions.
 ### Containerization
 
 Containerization is a process of packaging and running applications in isolated environments, such as a container, virtual machine, or serverless environment. Containers, simulating a system or network, are useful for safely testing exploits or malware in a controlled environment.
+
+Docker is an open-source platform for automating the deployment of applications as self-contained units called containers. The Docker engine and specific Docker images are needed to run a container. These can be obtained from the Docker Hub, a repository of pre-made images, or created by the user. 
+
+Creating a Docker image is done by creating a Dockerfile, which contains all the instructions the Docker engine needs to create the container. Once the Docker image has been created, it can be executed through the Docker engine, making it a very efficient and easy way to run a container
 
 ## Linux Networking
 

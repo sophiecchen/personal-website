@@ -145,7 +145,7 @@ This can be found by viewing permissions for the directory using `icalcs c:\user
 
 The `Server Message Block protocol` (`SMB`) is used in Windows to connect shared resources like files and printers.
 
-![smb diagram](https://academy.hackthebox.com/storage/modules/49/smb_diagram.png)
+<figure><img src="https://academy.hackthebox.com/storage/modules/49/smb_diagram.png" alt=""><figcaption><p>SMB uses requests nad responses to allow for the sharing of resources.</p></figcaption></figure>
 
 NTFS and Share permissions are similar but not identical.
 
@@ -214,16 +214,16 @@ PS C:\htb> Get-Service | ? {$_.Status -eq "Running"} | select -First 2 |fl
 Windows has three categories of services: Local Services, Network Services, and System Services. Services can usually only be created, modified, and deleted by users with administrative privileges.
 
 These are critical Windows services that cannot be stopped and restarted without a system restart:
-- **smss.exe**: Session Manager SubSystem. Responsible for handling sessions on the system.
-- **csrss.exe**: Client Server Runtime Process. The user-mode portion of the Windows subsystem.
-- **wininit.exe**: Starts the Wininit file .ini file that lists all of the changes to be made to Windows when the computer is restarted after installing a program.
-- **logonui.exe**: Used for facilitating user login into a PC.
-- **lsass.exe**: The Local Security Authentication Server verifies the validity of user logons to a PC or server. It generates the process responsible for authenticating users for the Winlogon service.
-- **services.exe**: Manages the operation of starting and stopping services.
-- **winlogon.exe**: Responsible for handling the secure attention sequence, loading a user profile on logon, and locking the computer when a screensaver is running.
-- **System**: A background system process that runs the Windows kernel.
-- **svchost.exe with RPCSS**: Manages system services that run from dynamic-link libraries (files with the extension .dll) such as "Automatic Updates," "Windows Firewall," and "Plug and Play." Uses the Remote Procedure Call (RPC) Service (RPCSS).
-- **svchost.exe with Dcom/PnP**: Manages system services that run from dynamic-link libraries (files with the extension .dll) such as "Automatic Updates," "Windows Firewall," and "Plug and Play." Uses the Distributed Component Object Model (DCOM) and Plug and Play (PnP) services.
+- `smss.exe`: Session Manager SubSystem. Responsible for handling sessions on the system.
+- `csrss.exe`: Client Server Runtime Process. The user-mode portion of the Windows subsystem.
+- `wininit.exe`: Starts the Wininit file .ini file that lists all of the changes to be made to Windows when the computer is restarted after installing a program.
+- `logonui.exe`: Used for facilitating user login into a PC.
+- `lsass.exe`: The Local Security Authentication Server verifies the validity of user logons to a PC or server. It generates the process responsible for authenticating users for the Winlogon service.
+- `services.exe`: Manages the operation of starting and stopping services.
+- `winlogon.exe`: Responsible for handling the secure attention sequence, loading a user profile on logon, and locking the computer when a screensaver is running.
+- `System`: A background system process that runs the Windows kernel.
+- `svchost.exe with RPCSS`: Manages system services that run from dynamic-link libraries (files with the extension .dll) such as "Automatic Updates," "Windows Firewall," and "Plug and Play." Uses the Remote Procedure Call (RPC) Service (RPCSS).
+- `svchost.exe with Dcom/PnP`: Manages system services that run from dynamic-link libraries (files with the extension .dll) such as "Automatic Updates," "Windows Firewall," and "Plug and Play." Uses the Distributed Component Object Model (DCOM) and Plug and Play (PnP) services.
 
 Critical processes include Windows Logon Application, System, System Idle Process, Windows Start-Up Application, Client Server Runtime, Windows Session Manager, Service Host, and Local Security Authority Subsystem Service (LSASS) process.
 
@@ -247,32 +247,67 @@ I looked through the Task Manger's Services tab to find the name of the service.
 
 ### Service Permissions
 
-BOOKMARK
-
-It is highly recommended to create an individual user account to run critical network services. These are referred to as service accounts.
+Service permissions and the permissions of the directories they execute from can be used by attackers to hide and execute malicious code. Thus, individual user accounts should be created to run critical network services. These are referred to as service accounts.
 
 Most services run with LocalSystem privileges by default which is the highest level of access allowed on an individual Windows OS. Not all applications need Local System account-level permissions, so it is beneficial to perform research on a case-by-case basis when considering installing new applications in a Windows environment.
 
+There are many ways to examine and manage services, including `services.msc`, `sc`, and `Get-Acl`. 
+
+The following command queries a service:
+
+```Shell
+C:\htb> sc qc <service_name>
+```
+
+We can stop a service as such. Note that this action cannot be performed in a non-administrative context.
+
+```Shell
+C:\htb> sc stop <service_name>
+```
+
+We can examine service permissions as such:
+
+```Shell
+C:\htb> sc sdshow <service_name>
+```
+
+The output of the `sdshow` command may look something like `D:(A;;CCLCSWRPLORC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)S:(AU;FA;CCDCLCSWRPWPDTLOSDRCWDWO;;;WD)`. 
+
+We can break this output into a few different parts:
+- `D: (A;;CCLCSWRPLORC;;;AU)`: This portion is the security descriptor
+    - `D:`: The proceeding characters are DACL permissions
+    - `AU:`: Defines the security principal Authenticated Users
+    - `A;;`: Access is allowed
+    - `CC`: SERVICE_QUERY_CONFIG is the full name, and it is a query to the service control manager (SCM) for the service configuration
+    - `LC`: SERVICE_QUERY_STATUS is the full name, and it is a query to the service control manager (SCM) for the current status of the service
+    - `SW`: SERVICE_ENUMERATE_DEPENDENTS is the full name, and it will enumerate a list of dependent services
+    - `RP`: SERVICE_START is the full name, and it will start the service
+    - `LO`: SERVICE_INTERROGATE is the full name, and it will query the service for its current status
+    - `RC`: READ_CONTROL is the full name, and it will query the security descriptor of the service
+- `;;CCLCSWRPLORC;;;`: Each set of 2 characters in between the semi-colons represents actions allowed to be performed by a specific user or group
+- `;;;AU`: These characters specify the security principal (User and/or Group) that is permitted to perform those actions
+- `A;;`: The character immediately after the opening parentheses and before the first set of semi-colons defines whether the actions are Allowed or Denied.
 
 ## Interacting with Windows
 
 ### Windows Sessions
 
 There are two types of sessions.
-- Interactive (local logon): initiated by a user authenticating to a local or domain system by entering their credentials
-- Non-interactive: initiated by three non-interactive accounts (listed below) by the Windows operating system to automatically start services and applications without requiring user interaction
+- Interactive (local logon): Initiated by a user authenticating to a local or domain system by entering their credentials
+- Non-interactive: Initiated by three non-interactive accounts (listed below) by the Windows operating system to automatically start services and applications without requiring user interaction
 
-Here's the table converted into a markdown bulleted list:
-
+There are three types of non-interactive accounts:
 - **Local System Account**: Also known as the `NT AUTHORITY\SYSTEM` account, this is the most powerful account in Windows systems. It is used for a variety of OS-related tasks, such as starting Windows services. This account is more powerful than accounts in the local administrators group.
 - **Local Service Account**: Known as the `NT AUTHORITY\LocalService` account, this is a less privileged version of the SYSTEM account and has similar privileges to a local user account. It is granted limited functionality and can start some services.
 - **Network Service Account**: This is known as the `NT AUTHORITY\NetworkService` account and is similar to a standard domain user account. It has similar privileges to the Local Service Account on the local machine. It can establish authenticated sessions for certain network services.
+
 ### Interacting with the Windows Operating System
 
-You can use GUI, RDP (remote desktop protocol), Windows command line, or PowerShell.
+You can use a graphical user interface (GUI), the Remote Desktop Protocol (RDP), the command line, or PowerShell to interact with Windows.
 
-Execution policies may need to be changed for certain scripts to run:
+PowerShell uses cmdlets, which are small single-function built-in tools. Many cmdlets, in addition to their regular name, also have aliases. We can use the `Get-Alias` cmdlet to get the aliases of different cmdlets.
 
+Which scripts we can run on a system depends on the execution policy. Execution policies may need to be changed for certain scripts to run:
 - **AllSigned**: All scripts can run, but a trusted publisher must sign scripts and configuration files. This includes both remote and local scripts. We receive a prompt before running scripts signed by publishers that we have not yet listed as either trusted or untrusted.
 - **Bypass**: No scripts or configuration files are blocked, and the user receives no warnings or prompts.
 - **Default**: This sets the default execution policy, `Restricted` for Windows desktop machines and `RemoteSigned` for Windows servers.
@@ -281,13 +316,14 @@ Execution policies may need to be changed for certain scripts to run:
 - **Undefined**: No execution policy is set for the current scope. If the execution policy for ALL scopes is set to undefined, then the default execution policy of `Restricted` will be used.
 - **Unrestricted**: This is the default execution policy for non-Windows computers, and it cannot be changed. This policy allows for unsigned scripts to be run but warns the user before running scripts that are not from the local intranet zone.
 
+The execution policy is not meant to be a security control that restricts user actions since users can easily bypass the policy.
 <details>
 
 <summary>What is the alias set for the ipconfig.exe command?</summary>
 
 ifconfig
 
-TODO
+The command `Get-Alias | findstr ipconfig` can be used to find aliases for ipconfig.exe.
 
 </details>
 
@@ -297,14 +333,13 @@ TODO
 
 Unrestricted
 
-TODO
+The Execution Policy can be found with the command `Get-ExecutionPolicy -List`.
 
 </details>
 
 ### Windows Management Instrumentation (WMI)
 
 WMI is a subsystem of PowerShell that provides system administrators with powerful tools for system monitoring. WMI can be used through PowerShell.
-
 - **WMI service**: The Windows Management Instrumentation process, which runs automatically at boot and acts as an intermediary between WMI providers, the WMI repository, and managing applications.
 - **Managed objects**: Any logical or physical components that can be managed by WMI.
 - **WMI providers**: Objects that monitor events/data related to a specific object.
@@ -314,6 +349,14 @@ WMI is a subsystem of PowerShell that provides system administrators with powerf
 - **CIM Object Manager**: The system that requests data from WMI providers and returns it to the application requesting it.
 - **WMI API**: Enables applications to access the WMI infrastructure.
 - **WMI Consumer**: Sends queries to objects via the CIM Object Manager.
+
+WMI can be used to view the status information of local and remote systems, configure security settings and system properties, and more.
+
+We can use WMI through PowerShell or the WMI Command-Line Interface (WMIC). For example, the following command gets information about the OS:
+
+```Powershell
+PS C:\htb> Get-WmiObject -Class Win32_OperatingSystem | select SystemDirectory,BuildNumber,SerialNumber,Version | ft
+```
 
 <details>
 
@@ -335,7 +378,7 @@ Type `mmc` in the Start Menu. Browse to `File -> Add` or Remove Snap-ins, and ad
 
 ### Windows Subsystem for Linux (WSL)
 
-Windows Subsystem for Linux (WSL) allows Linux binaries to run on Windows. After enabling WSL and installing a Linux distro, we gain access to a Linux shell with the standard Linux directory structure. We can also access Windows files through the `/mnt` directory in WSL.
+Windows Subsystem for Linux (WSL) allows Linux binaries to run on Windows. After enabling WSL and installing a Linux distro, we gain access to a Bash shell with the standard Linux directory structure. We can also access Windows files through the `/mnt` directory in WSL.
 
 ## Diving Deeper & Close Out
 
@@ -345,20 +388,47 @@ Windows Server Core is minimalistic server environment that only contains key se
 
 ### Windows Security
 
-Each of the security principals on the system has a unique security identifier (SID). The system automatically generates SIDs
+Each of the security principals on Windows systems has a unique security identifier (SID). The system automatically generates SIDs.
 
-Each SID has a pattern:
+Each SID has a pattern of the following form: `(SID)-(revision level)-(identifier-authority)-(subauthority1)-(subauthority2)-(etc)`
+- `S`: SID - Identifies the string as a SID.
+- `1`: Revision Level - To date, this has never changed and has always been `1`.
+- `5`: Identifier-authority - A 48-bit string that identifies the authority (the computer or network) that created the SID.
+- `21`: Subauthority1 - This is a variable number that identifies the user's relation or group described by the SID to the authority that created it. It tells us in what order this authority created the user's account.
+- `674899381-4069889467-2080702030`: Subauthority2 - Tells us which computer (or domain) created the number.
+- `1002`: Subauthority3 - The RID that distinguishes one account from another. Tells us whether this user is a normal user, a guest, an administrator, or part of some other group.
 
-(SID)-(revision level)-(identifier-authority)-(subauthority1)-(subauthority2)-(etc)
+The Security Accounts Manager (SAM) grants rights to a network to execute speciic processes. The access rights themselves are managed by Access Control Entries (ACE) in Access Control Lists (ACL).
 
-- **S**: SID - Identifies the string as a SID.
-- **1**: Revision Level - To date, this has never changed and has always been `1`.
-- **5**: Identifier-authority - A 48-bit string that identifies the authority (the computer or network) that created the SID.
-- **21**: Subauthority1 - This is a variable number that identifies the user's relation or group described by the SID to the authority that created it. It tells us in what order this authority created the user's account.
-- **674899381-4069889467-2080702030**: Subauthority2 - Tells us which computer (or domain) created the number.
-- **1002**: Subauthority3 - The RID that distinguishes one account from another. Tells us whether this user is a normal user, a guest, an administrator, or part of some other group.
+User Account Control (UAC) prevents malware from running or manipulating processes that could damage the computer or its contents.
+
+This diagram shows how UAC works:
+
+<figure><img src="https://academy.hackthebox.com/storage/modules/49/uacarchitecture1.png" alt=""><figcaption><p>UAC makes decisions based on a series of checks.</p></figcaption></figure>
 
 The Registry is a hierarchical database in Windows critical for the operating system. It stores low-level settings for the Windows operating system and applications that choose to use it. It is divided into computer-specific and user-specific data. We can open the Registry Editor by typing `regedit` from the command line or Windows search bar.
+
+This database consists of main folders (root keys) in which subfolders (subkeys) with their entries/files (values) are located. A root key starts with `HKEY`. These are the possible subkey values:
+- `REG_BINARY`: Binary data in any form.
+- `REG_DWORD`: A 32-bit number.
+- `REG_DWORD_LITTLE_ENDIAN`: A 32-bit number in little-endian format. Windows is designed to run on little-endian computer architectures. Therefore, this value is defined as `REG_DWORD` in the Windows header files.
+- `REG_DWORD_BIG_ENDIAN`: A 32-bit number in big-endian format. Some UNIX systems support big-endian architectures.
+- `REG_EXPAND_SZ`: A null-terminated string that contains unexpanded references to environment variables (for example, "%PATH%"). It will be a Unicode or ANSI string depending on whether you use the Unicode or ANSI functions. To expand the environment variable references, use the `ExpandEnvironmentStrings` function.
+- `REG_LINK`: A null-terminated Unicode string containing the target path of a symbolic link created by calling the `RegCreateKeyEx` function with `REG_OPTION_CREATE_LINK`.
+- `REG_MULTI_SZ`: A sequence of null-terminated strings, terminated by an empty string (\0). The following is an example: String1\0String2\0String3\0LastString\0\0 The first \0 terminates the first string, the second to the last \0 terminates the last string, and the final \0 terminates the sequence. Note that the final terminator must be factored into the length of the string.
+- `REG_NONE`: No defined value type.
+- `REG_QWORD`: A 64-bit number.
+- `REG_QWORD_LITTLE_ENDIAN`: A 64-bit number in little-endian format. Windows is designed to run on little-endian computer architectures. Therefore, this value is defined as `REG_QWORD` in the Windows header files.
+- `REG_SZ`: A null-terminated string. This will be either a Unicode or an ANSI string, depending on whether you use the Unicode or ANSI functions.
+
+Registry hives contain a logical group of keys, subkeys, and values to support software and files loaded into memory when the OS is started or a user logs in. These hives are useful for maintaining access to the system.
+
+Other Windows features include AppLocker, Group Policy, and Windows Defender Antivirus.
+- AppLocker is an application whitelisting solution.
+- Group Policy allows administrators to set, configure, and adjust a variety of settings.
+    - Group Policy can be accessed with `gpedit.msc`
+- Windows Defender Antivirus is a built-in antivirus that ships for free with Windows operating systems.
+    - Defender features include real-time protection and cloud-delivered protection, which works in conjunction with automatic sample submission to upload suspicious files for analysis.
 
 <details>
 
@@ -376,7 +446,7 @@ Use the `get-localuser | Select name,sid` command.
 
 NordVPN
 
-TODO
+Applications disabled at startup can be viewed in the Startup tab of Task Manager.
 
 </details>
 
@@ -406,7 +476,7 @@ Before answering the questions below, complete the following steps:
 
 Everyone
 
-TODO
+Everyone is the default share permission for this folder.
 
 </details>
 

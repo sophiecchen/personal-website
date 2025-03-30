@@ -787,22 +787,24 @@ Deja Dup is a simpler, user-friendly option that offers a graphic interface. Lik
 
 ### File System Management
 
-Linux supports many file systems, including ext2, ext3, ext4, XFS, Btrfs, and NTFS.
-
-BOOKMARK
+Linux supports many file systems, including ext2, ext3, ext4, XFS, Btrfs, and NTFS. Each of these file systems has different features, and the best choice depends on the needs of the computer system.
 
 The Linux file system architecture is a hierarchical structure that is composed of various components, including inodes. Inodes are data structures that store metadata about each file and directory, including permissions, ownership, size, and timestamps.
 
-At the top of this hierarchical structure is the inode table. The inode table is a table of information associated with each file and directory on a Linux system. Files can be stored as files or directories.
+At the top of this hierarchical structure is the inode table. The inode table is a table of information associated with each file and directory on a Linux system. Files can be stored as files, directories, or symbolic links (`symlinks`).
 
-The main tool for disk management on Linux is the `fdisk`, which allows us to create, delete, and manage partitions on a drive.
+Linux disk management can be used to mange physical storage devices. The main tool for disk management on Linux is the `fdisk`, which allows us to create, delete, and manage partitions on a drive. Common partitioning tools in Linux include `fdisk`, `gpart`, and `GParted`.
 
-Each logical partition or drive needs to be assigned to a specific directory on Linux. This process is called mounting. Mounting involves attaching a drive to a specific directory, making it accessible to the file system hierarchy.
-- The `mount` tool is used to mount file systems on Linux
+Mounting is the process in which each logical partition or drive is assigned to a specific directory on Linux. Mounting involves attaching a drive to a specific directory, making it accessible to the file system hierarchy.
+- The `mount` tool is used to mount file systems on Linux.
 - The `/etc/fstab` file is used to define the default file systems that are mounted at boot time
 - We can unmount with `unmount` but we must first make sure that file system is not being used by any processes
 
 When the system runs out of physical memory, the kernel transfers inactive pages of memory to the swap space, freeing up physical memory for use by active processes. This process is known as swapping.
+- `mkswap`: Creates a Linux swap area
+- `swapon`: Actives the swap space for system use
+
+Swap space is also used for hibernation, a power-saving feature that saves the system's state to the swap space so that when a system is turned on after being powered off, it can resume where it left off.
 
 <details>
 
@@ -820,7 +822,31 @@ Containerization is a process of packaging and running applications in isolated 
 
 Docker is an open-source platform for automating the deployment of applications as self-contained units called containers. The Docker engine and specific Docker images are needed to run a container. These can be obtained from the Docker Hub, a repository of pre-made images, or created by the user. 
 
-Creating a Docker image is done by creating a Dockerfile, which contains all the instructions the Docker engine needs to create the container. Once the Docker image has been created, it can be executed through the Docker engine, making it a very efficient and easy way to run a container
+Creating a Docker image is done by creating a Dockerfile, which contains all the instructions the Docker engine needs to create the container. Once the Docker image has been created, it can be executed through the Docker engine easily and efficiently.
+
+These are common commands for managing Docker containers:
+- `docker ps`: List all running containers
+- `docker stop`: Stop running a container
+- `docker start`: Start a stopped container
+- `docker restart`: Restart a running container
+- `docker rm`: Remove a container
+- `docker rmi`: Remove a Docker image
+- `docker logs`: View a container's logs
+
+An alternative to Docker is Linux Containers (LXC). LXC allows multiple isolated Linux systems to run on a single host. LXC is more systems-focused than Docker: while powerful, LXC has a steeper learning curve.
+
+These are common commands for managing LXC containers:
+- `lxc-ls`: List all existing containers
+- `lxc-stop -n <container>`: Stop a running container.
+- `lxc-start -n <container>`: Start a stopped container.
+- `lxc-restart -n <container>`: Restart a running container.
+- `lxc-config -n <container name> -s storage`: Manage container storage
+- `lxc-config -n <container name> -s network`: Manage container network settings
+- `lxc-config -n <container name> -s security`: Manage container security settings
+- `lxc-attach -n <container>`: Connect to a container.
+- `lxc-attach -n <container> -f /path/to/share`: Connect to a container and share a specific directory or file.
+
+LXC containers should be secured by restricting unneeded access to them. LXC uses namespaces and individual root file systems to enforce isolation between containers. 
 
 ## Linux Networking
 
@@ -828,20 +854,30 @@ Creating a Docker image is done by creating a Dockerfile, which contains all the
 
 Managing and configuring networks can be done with tools like `ipconfig` or `ip`. We can also set the default gateway, edit DNS settings, and edit interfaces.
 
+BOOKMARK 
+
+```Shell
+```
+
 Network access control (NAC) is a security system that ensures that only authorized and compliant devices are granted access to the network.
-- Discretionary access control (DAC): grants resource owners the responsibility of controlling access permissions to their resources
-- Mandatory access control (MAC): determines resource access based on the resource's security level and the user's security level or process requesting access
-- Role-based access control (RBAC): assigns permissions to users based on their roles within an organization
+- **Discretionary access control (DAC)**: Grants resource owners the responsibility of controlling access permissions to their resources
+- **Mandatory access control (MAC)**: Determines resource access based on the resource's security level and the user's security level or process requesting access
+- **Role-based access control (RBAC)**: Assigns permissions to users based on their roles within an organization
+
+In addition to NAC, tools such as syslog, rsyslog, ss, lsof, and the ELK stack can be used to monitor and analyze network traffic.
 
 The most common network troubleshooting tools:
-1. Ping
-2. Traceroute
-3. Netstat
-4. Tcpdump
-5. Wireshark
-6. Nmap
+1. Ping: 
+2. Traceroute: 
+3. Netstat: 
+4. Tcpdump: 
+5. Wireshark:
+6. Nmap:
 
-Hardening is commonly done with SELinux, AppArmor, and TCP wrappers.
+Network hardening is commonly done with the following tools:
+- **SELinux**:
+- **AppArmor**:
+- **TCP wrappers**:
 
 ### Remote Desktop Protocols in Linux
 

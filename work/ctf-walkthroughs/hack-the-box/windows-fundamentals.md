@@ -464,7 +464,7 @@ Before answering the questions below, complete the following steps:
     - Share Permissions: Allow Change & Read
     - Disable Inheritance before issuing specific NTFS permissions
     - NTFS permissions: Modify, Read & Execute, List folder contents, Read, Write
-7.
+7. Adding the HR security group to the NTFS permissions list of the HR subfolder
     - Remove the default group that is present
     - Disable Inheritance before issuing specific NTFS permissions
     - NTFS permissions: Modify, Read & Execute, List folder contents, Read, and Write

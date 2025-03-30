@@ -50,6 +50,7 @@ Podcasts are a useful for integrating cybersecurity into your daily routine.
 * [Cyberwire Daily](https://thecyberwire.com/podcasts/daily-podcast) provides daily cybersecurity news and analysis geared at professionals.
 * [CyberWork](https://www.infosecinstitute.com/podcast/) invites industry leaders to discuss cybersecurity careers and skills needed to join the field.
 * [Digital Forensics Now](https://digitalforensicsnow.buzzsprout.com/) discusses the latest news in digital forensics from a law enforcement perspective.
+- [SecurityNow](https://twit.tv/shows/security-now) discuss the latest developments across the security field.
 
 ## Free Tools
 

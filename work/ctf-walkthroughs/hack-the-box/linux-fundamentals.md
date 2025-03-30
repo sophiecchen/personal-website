@@ -854,9 +854,36 @@ LXC containers should be secured by restricting unneeded access to them. LXC use
 
 Managing and configuring networks can be done with tools like `ipconfig` or `ip`. We can also set the default gateway, edit DNS settings, and edit interfaces.
 
-BOOKMARK 
+We can view our network settings with either of the following commands:
 
 ```Shell
+usr@htb[/htb]$ ipconfig
+usr@htb[/htb]$ ip addr
+```
+
+Activate a network interface with either of the following commands:
+
+```Shell
+usr@htb[/htb]$ sudo ifconfig <interface> up
+usr@htb[/htb]$ sudo ip link set <interface> up
+```
+
+Assign an IP address to an interface with:
+
+```Shell
+usr@htb[/htb]$ sudo ifconfig <interface> <address>
+```
+
+Assign a netmask to an interface with:
+
+```Shell
+usr@htb[/htb]$ sudo ifconfig <interface> netmask <mask>
+```
+
+Assign the route to an interface with:
+
+```Shell
+usr@htb[/htb]$ sudo route add default gw <address> <interface>
 ```
 
 Network access control (NAC) is a security system that ensures that only authorized and compliant devices are granted access to the network.
@@ -867,19 +894,21 @@ Network access control (NAC) is a security system that ensures that only authori
 In addition to NAC, tools such as syslog, rsyslog, ss, lsof, and the ELK stack can be used to monitor and analyze network traffic.
 
 The most common network troubleshooting tools:
-1. Ping: 
-2. Traceroute: 
-3. Netstat: 
-4. Tcpdump: 
-5. Wireshark:
-6. Nmap:
+1. **Ping**: Used to test connectivity between two devices
+2. **Traceroute**: Used to see what hops a packet takes from one device to another
+3. **Netstat**: Used to display active network connections and their associated ports
+4. **Tcpdump**: Used to display TCP/IP packets being sent and received in a network
+5. **Wireshark**: Used to capture packets being sent and received in a network
+6. **Nmap**: Used to discover hosts and services on a computer network
 
 Network hardening is commonly done with the following tools:
-- **SELinux**:
-- **AppArmor**:
-- **TCP wrappers**:
+- **SELinux**: A MAC system integrated into the Linux kernel
+- **AppArmor**: A user-friendly MAC system and alternative to SELinux
+- **TCP wrappers**: A tool that restricts access to network services based on the IP address of incoming connections
 
 ### Remote Desktop Protocols in Linux
+
+Remote desktop protocols are used in many OSes to provide graphical remote access to a system. `X11`, `XDMCP`, and `VNC` are examples of Linux remote desktop protocols.
 
 The XServer is the user-side part of the `X Window System network protocol` (`X11` / `X`). The `X11` is a fixed system that consists of a collection of protocols and applications that allow us to call application windows on displays in a graphical user interface. `X11` is predominant on Unix systems and is completely unencrypted.
 
@@ -891,15 +920,7 @@ The `X Display Manager Control Protocol` (`XDMCP`) protocol used to manage remot
 
 ### Linux Security
 
-Security is a processes, not a product.
-
-Some kernel versions have to be updated manually. Also, keep your packages up to date:
-
-```Shell
-apt update && apt dist-upgrade
-```
-
-Setup firewall rules and disallow password login and root user login via SSH. Do audits and follow some of these best practices:
+Security is a processes, not a product. The following actions are just some actions that can be taken to increase a Linux system's security:
 - Removing or disabling all unnecessary services and software
 - Removing all services that rely on unencrypted authentication mechanisms
 - Ensure NTP is enabled and Syslog is running
@@ -909,44 +930,76 @@ Setup firewall rules and disallow password login and root user login via SSH. Do
 - Locking user accounts after login failures
 - Disable all unwanted SUID/SGID binaries
 
-TCP wrappers restrict access to certain services based on the hostname or IP address of the user requesting access. TCP wrappers use the following configuration files:
-- /etc/hosts.allow
-- /etc/hosts.deny
+Updating and patching is especially important in security. Some kernel versions have to be updated manually. Keeping packages up to date can be accomplished as follows:
 
-These files can be configured by adding specific rules to the files.
+```Shell
+apt update && apt dist-upgrade
+```
+
+We should also setup firewall rules and disallow password login and root user login via SSH. TCP wrappers are a security tool in Linux that restrict access to certain services based on the hostname or IP address of the user requesting access. TCP wrappers use `/etc/hosts.allow` and `/etc/hosts.deny` to determine which services are granted access, and these files can be configured by a system administrator.
 
 ### Firewall Setup
 
 Firewalls provide a security mechanism for controlling and monitoring network traffic between different network segments, such as internal and external networks or different network zones.
 
-The iptables utility provides a flexible set of rules for filtering network traffic based on various criteria such as source and destination IP addresses, port numbers, protocols, and more.
-
+The iptables utility provides a flexible set of rules for filtering network traffic based on various criteria such as source and destination IP addresses, port numbers, protocols, and more. These are the main components of iptables:
 - **Tables**: Tables are used to organize and categorize firewall rules.
 - **Chains**: Chains are used to group a set of firewall rules applied to a specific type of network traffic.
 - **Rules**: Rules define the criteria for filtering network traffic and the actions to take for packets that match the criteria.
 - **Matches**: Matches are used to match specific criteria for filtering network traffic, such as source or destination IP addresses, ports, protocols, and more.
 - **Targets**: Targets specify the action for packets that match a specific rule. For example, targets can be used to accept, drop, or reject packets or modify the packets in another way.
 
+There are three built-in tables in iptables:
+- `filter`: Used to filter network traffic based on IP addresses, ports, and protocols
+- `nat`: Used to modify the source or destination IP addresses of network packets
+- `mangle`: Used to modify the header fields of network packets
+
+Each of these tables has built-in chains, which organize rules that define how network traffic should be filtered or modified. Users can also define their own chains.
+
+We can add rules to chains using the `-A` options. Rules include a set of criteria or matches and a target specifying the action for packets that match the criteria. 
+
+These are common targets:
+- **ACCEPT**: Allows the packet to pass through the firewall and continue to its destination
+- **DROP**: Drops the packet, effectively blocking it from passing through the firewall
+- **REJECT**: Drops the packet and sends an error message back to the source address, notifying them that the packet was blocked
+- **LOG**: Logs the packet information to the system log
+- **SNAT**: Modifies the source IP address of the packet, typically used for Network Address Translation (NAT) to translate private IP addresses to public IP addresses
+- **DNAT**: Modifies the destination IP address of the packet, typically used for NAT to forward traffic from one IP address to another
+- **MASQUERADE**: Similar to SNAT but used when the source IP address is not fixed, such as in a dynamic IP address scenario
+- **REDIRECT**: Redirects packets to another port or IP address
+- **MARK**: Adds or modifies the Netfilter mark value of the packet, which can be used for advanced routing or other purposes
+
+These are common matching options:
+- `-p` or `--protocol`: Specifies the protocol to match (e.g. tcp, udp, icmp)
+- `--dport`: Specifies the destination port to match
+- `--sport`: Specifies the source port to match
+- `-s` or `--source`: Specifies the source IP address to match
+- `-d` or `--destination`: Specifies the destination IP address to match
+- `-m state`: Matches the state of a connection (e.g. NEW, ESTABLISHED, RELATED)
+- `-m multiport`: Matches multiple ports or port ranges
+- `-m tcp`: Matches TCP packets and includes additional TCP-specific options
+- `-m udp`: Matches UDP packets and includes additional UDP-specific options
+- `-m string`: Matches packets that contain a specific string
+- `-m limit`: Matches packets at a specified rate limit
+- `-m conntrack`: Matches packets based on their connection tracking information
+- `-m mark`: Matches packets based on their Netfilter mark value
+- `-m mac`: Matches packets based on their MAC address
+- `-m iprange`: Matches packets based on a range of IP addresses
+
 ### System Logs and Monitoring
 
-System logs on Linux are a set of files that contain information about the system and the activities taking place on it.
-- Kernel Logs: Stored in `/var/log/kern.log`
-- System Logs: Stored in `var/log/syslog`
-- Authentication Logs: Stored in `/var/log/auth.log`
-- Application Logs: Stored in logs depending on application
-
-
-
-- **Apache**: Access logs are stored in the /var/log/apache2/access.log file (or similar, depending on the distribution).
-- **Nginx**: Access logs are stored in the /var/log/nginx/access.log file (or similar).
-- **OpenSSH**: Access logs are stored in the /var/log/auth.log file on Ubuntu and in /var/log/secure on CentOS/RHEL.
-- **MySQL**: Access logs are stored in the /var/log/mysql/mysql.log file.
-- **PostgreSQL**: Access logs are stored in the /var/log/postgresql/postgresql-version-main.log file.
-- **Systemd**: Access logs are stored in the /var/log/journal/ directory.
-
-- Security Logs: stored in logs such as `/var/log/fail2ban.log` (failed login attempts), `/var/log/ufw.log` (firewall), etc.
-
-END
+System logs are a set of files that contain information about the Linux system and the activities taking place on it.
+- **Kernel Logs**: Stored in `/var/log/kern.log`
+- **System Logs**: Stored in `var/log/syslog`
+- **Authentication Logs**: Stored in `/var/log/auth.log`
+- **Application Logs**: Stored in logs depending on application
+    - **Apache**: Access logs are stored in the `/var/log/apache2/access.log` file (or a file with a similar name)
+    - **Nginx**: Access logs are stored in the `/var/log/nginx/access.log` file (or a file with a similar name)
+    - **OpenSSH**: Access logs are stored in the `/var/log/auth.log` file on Ubuntu and in `/var/log/secure` on CentOS/RHEL
+    - **MySQL**: Access logs are stored in the `/var/log/mysql/mysql.log` file
+    - **PostgreSQL**: Access logs are stored in the `/var/log/postgresql/postgresql-version-main.log` file
+    - **Systemd**: Access logs are stored in the `/var/log/journal/` directory
+- **Security Logs**: Stored in logs such as `/var/log/fail2ban.log` (failed login attempts), `/var/log/ufw.log` (firewall), etc.
 
 ## Linux Distributions vs Solaris
 

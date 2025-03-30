@@ -25,7 +25,7 @@ Windows is an operating system developed and managed by Microsoft. There are man
 We can find out information about our operating system in PowerShell using the `Get-WmiObject` cmdlet. The following command, for example, allows us to view the version and build number of our operating system.
 
 ```PowerShell
-Get-WmiObject -Class win32_OperatingSystem | select Version,BuildNumber
+PS C:\htb> Get-WmiObject -Class win32_OperatingSystem | select Version,BuildNumber
 ```
 
 We can also view processes with the `win32_Process` class to get a process listing, view services with `win32_Service` and view input-output information with `win32_Bios`.
@@ -81,7 +81,7 @@ The directory structure of the root directory is as follows:
 The Windows equivalent of `cd <directory>` is `dir <directory>`. As with Linux, we can use the `tree` utility to see the directory structure of a path or disk.
 
 ```PowerShell
-tree c:\ /f | more
+PS C:\htb> tree c:\ /f | more
 ```
 
 <details>
@@ -147,9 +147,27 @@ The `Server Message Block protocol` (`SMB`) is used in Windows to connect shared
 
 ![smb diagram](https://academy.hackthebox.com/storage/modules/49/smb_diagram.png)
 
-BOOKMARK
+NTFS and Share permissions are similar but not identical.
 
-NTFS and Share permissions are different. NTFS also includes special permissions. NTFS permissions apply to the system where the folder and files are hosted. Share permissions apply when the folder is being accessed through SMB, typically from a different system over the network. Note that Windows Defender Firewall could potentially block access to the SMB share.
+These are Share permissions:
+- **Full Control**: Users are permitted to perform all actions given by Change and Read permissions as well as change permissions for NTFS files and subfolders
+- **Change**: Users are permitted to read, edit, delete, and add files and subfolders
+- **Read**: Users are allowed to view file & subfolder contents
+
+These are NTFS basic permissions. NTFS also has additional special permissions.
+- **Full Control**: Users are permitted to add, edit, move, delete files & folders as well as change NTFS permissions that apply to all allowed folders
+- **Modify**: Users are permitted or denied permissions to view and modify files and folders. This includes adding or deleting files
+- **Read & Execute**: Users are permitted or denied permissions to read the contents of files and execute programs
+- **List folder contents**: Users are permitted or denied permissions to view a listing of files and subfolders
+- **Read**: Users are permitted or denied permissions to read the contents of files
+- **Write**: Users are permitted or denied permissions to write changes to a file and add new files to a folder
+- **Special Permissions**: A variety of advanced permissions options
+
+NTFS permissions apply to the system where the folder and files are hosted. Share permissions apply when the folder is being accessed through SMB, typically from a different system over the network.
+
+Keep in mind that Windows Defender Firewall could potentially block access to the SMB share. To test whether this is occurring, completely deactivate each firewall profile in Windows or enable specific predefined inbound firewall rules in the Windows Defender Firewall advanced security settings. However, do not keep the firewall deactivated, as that can leave your system open to compromise.
+
+*The Windows Fundamental module walks users through how to create and configure a network share in this section. I recommend that you access the module and follow along.*
 
 <details>
 
@@ -177,7 +195,7 @@ Event Viewer lets administrators and users view the event logs.
 
 C:\Users\htb-student\Desktop\Company Data
 
-TODO
+The command `net share` can be used to view which shares we have created.
 
 </details>
 
@@ -187,9 +205,15 @@ TODO
 
 Services allow for the creation and management of long-running processes. Windows services are managed via the Service Control Manager (SCM) system, accessible via the `services.msc` MMC add-in.
 
+The following command can be used to view services:
+
+```Powershell
+PS C:\htb> Get-Service | ? {$_.Status -eq "Running"} | select -First 2 |fl
+```
+
 Windows has three categories of services: Local Services, Network Services, and System Services. Services can usually only be created, modified, and deleted by users with administrative privileges.
 
-Critical services:
+These are critical Windows services that cannot be stopped and restarted without a system restart:
 - **smss.exe**: Session Manager SubSystem. Responsible for handling sessions on the system.
 - **csrss.exe**: Client Server Runtime Process. The user-mode portion of the Windows subsystem.
 - **wininit.exe**: Starts the Wininit file .ini file that lists all of the changes to be made to Windows when the computer is restarted after installing a program.
@@ -201,13 +225,15 @@ Critical services:
 - **svchost.exe with RPCSS**: Manages system services that run from dynamic-link libraries (files with the extension .dll) such as "Automatic Updates," "Windows Firewall," and "Plug and Play." Uses the Remote Procedure Call (RPC) Service (RPCSS).
 - **svchost.exe with Dcom/PnP**: Manages system services that run from dynamic-link libraries (files with the extension .dll) such as "Automatic Updates," "Windows Firewall," and "Plug and Play." Uses the Distributed Component Object Model (DCOM) and Plug and Play (PnP) services.
 
-These are critical processes: Windows Logon Application, System, System Idle Process, Windows Start-Up Application, Client Server Runtime, Windows Session Manager, Service Host, and Local Security Authority Subsystem Service (LSASS) process.
+Critical processes include Windows Logon Application, System, System Idle Process, Windows Start-Up Application, Client Server Runtime, Windows Session Manager, Service Host, and Local Security Authority Subsystem Service (LSASS) process.
 
 `lsass.exe` is the process that is responsible for enforcing the security policy on Windows systems and is thus a high value target.
 
 The SysInternals Tools suite is a set of portable Windows applications that can be used to administer Windows systems (for the most part without requiring installation). Processes Explorer, in particular, can show which handles and DLL processes are loaded when a program runs. 
 
 Task Manager provides information about running processes, system performance, running services, startup programs, logged-in users/logged in user processes, and services.
+
+Process Explorer can show which handles and DLL processes are loaded when a program runs. This tool can also be used to analyze and troubleshoot parent-child process relationships.
 
 <details>
 
@@ -220,6 +246,8 @@ I looked through the Task Manger's Services tab to find the name of the service.
 </details>
 
 ### Service Permissions
+
+BOOKMARK
 
 It is highly recommended to create an individual user account to run critical network services. These are referred to as service accounts.
 
@@ -388,7 +416,7 @@ TODO
 
 Security
 
-TODO
+NTFS permissions can be configured in the Security tab.
 
 </details>
 
@@ -398,7 +426,7 @@ TODO
 
 wuauserv
 
-TODO
+wuauserv, or the Windows Update Service, manages the downloading and installation of updates for the OS.
 
 </details>
 

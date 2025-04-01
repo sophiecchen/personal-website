@@ -12,7 +12,7 @@ layout:
     visible: false
 ---
 
-# Security and DFIR Resources
+# Security and Digital Forensics Resources
 
 ***
 
@@ -24,9 +24,9 @@ Building a basic understanding of how computers work as well and learning common
 * [Hack The Box](https://hackthebox.com/) provides CTF-style machines for all levels to hack into.
 * [TryHackMe](https://tryhackme.com/) allows users to practice skills in a CTF-style room.
 
-## DFIR Courses and Labs
+## Digital Forensics Courses and Labs
 
-Once you have a basic understanding of cybersecurity, I recommend looking into a subfield that you find interesting. I personally am interested in DFIR, and these courses and labs are helpful for getting hands-on experience.
+Once you have a basic understanding of cybersecurity, I recommend looking into a subfield that you find interesting. I personally am interested in digital forensics, and these courses and labs are helpful for getting hands-on experience.
 
 * [Digital Forensics Lab](https://github.com/frankwxu/digital-forensics-lab) teaches users the fundamentals of digital forensics through labs and case studies.
 * [Hexordia](https://learn.hexordia.com/) teaches multiple courses on digital forensics, with a focus on mobile forensics.
@@ -50,11 +50,12 @@ Podcasts are a useful for integrating cybersecurity into your daily routine.
 * [Cyberwire Daily](https://thecyberwire.com/podcasts/daily-podcast) provides daily cybersecurity news and analysis geared at professionals.
 * [CyberWork](https://www.infosecinstitute.com/podcast/) invites industry leaders to discuss cybersecurity careers and skills needed to join the field.
 * [Digital Forensics Now](https://digitalforensicsnow.buzzsprout.com/) discusses the latest news in digital forensics from a law enforcement perspective.
-- [SecurityNow](https://twit.tv/shows/security-now) discuss the latest developments across the security field.
+* [Forensic Focus](https://www.forensicfocus.com/podcast/) interviews leaders in the digital forensics field and discusses their experiences.
+* [Security Now](https://twit.tv/shows/security-now) discuss the latest developments across the security field.
 
 ## Free Tools
 
-These DFIR tools are free to use and commonly used in the field.
+These tools are free to use and commonly used in the field.
 
 * [Eric Zimmerman's Tools](https://ericzimmerman.github.io/#!index.md) include multiple tools useful for a variety of tasks relevant to digital forensics.
 * [LEAPP Projects](https://github.com/abrignoni?tab=repositories) include parsers for many types of artifacts and logs.

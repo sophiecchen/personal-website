@@ -22,7 +22,7 @@ layout:
 
 ## Thoughts
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h2>Reading List</h2></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>My current reading list and favorite technical literature</p></td><td><a href="https://sophiecchen.gitbook.io/sophie-chen/thoughts/reading-list">Reading List</a></td></tr><tr><td><h2>Security and Digital Forensics Resources</h2></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A list of my favorite labs, study materials, podcasts, and more for security and DFIR</p></td><td><a href="https://sophiecchen.gitbook.io/sophie-chen/thoughts/security-and-digital-forensics-resources">Security and Digital Forensics Resources</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h2>Reading List</h2></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>My current reading list and favorite technical literature</p></td><td><a href="https://sophiecchen.gitbook.io/sophie-chen/thoughts/reading-list">Reading List</a></td></tr><tr><td><h2>Security and Digital Forensics Resources</h2></td><td><p>⋅ ⋅ ⋅ ⋅ ⋅</p><p>A list of my favorite labs, study materials, podcasts, and more for security and digital forensics</p></td><td><a href="https://sophiecchen.gitbook.io/sophie-chen/thoughts/security-and-digital-forensics-resources">Security and Digital Forensics Resources</a></td></tr></tbody></table>
 
 ***
 

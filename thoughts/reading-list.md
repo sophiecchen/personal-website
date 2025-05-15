@@ -29,19 +29,19 @@ This list is a compilation of classic papers, my personal favorite readings, and
 
 ## Computer Science
 
+- [Go To Statement Considered Harmful](https://dl.acm.org/doi/10.1145/362929.362947) by Edsger Dijkstra (1968)
 - [The Unix Time-Sharing System](https://dl.acm.org/doi/10.1145/361011.361061) by Dennis Ritchie and Kenneth Thompson (1974)*
 - [Time, Clocks, and the Ordering of Events in a Distributed System](https://dl.acm.org/doi/10.1145/359545.359563) by Leslie Lamport (1978)*
 - [The Byzantine Generals Problem](https://dl.acm.org/doi/10.1145/357172.357176) by Leslie Lamport, Robert Shostak, and Marshall Pease (1982)*
-- [End-To-End Arguments in System Design](https://dl.acm.org/doi/10.1145/357401.357402) by Jerry Saltzer, David Reed, and David Clark (1984)*
+- [End-To-End Arguments in System Design](https://dl.acm.org/doi/10.1145/357401.357402) by Jerry Saltzer, David Reed, and David Clark (1984)
 - [Practical Byzantine Fault Tolerance](https://dl.acm.org/doi/10.5555/296806.296824) by Miguel Castro and Barbara Liskov (1999)*
 
 ## Cybersecurity
 
-- [Go To Statement Considered Harmful](https://dl.acm.org/doi/10.1145/362929.362947) by Edsger Dijkstra (1968)*
 - [How to Share a Secret](https://dl.acm.org/doi/10.1145/359168.359176) by Adi Shamir (1979)*
 - [Security without Identification: Transaction Systems to Make Big Brother Obsolete](https://dl.acm.org/doi/abs/10.1145/4372.4373) by David Chaum (1981)
 - [Reflections on trusting trust](https://dl.acm.org/doi/10.1145/358198.358210) by Ken Thompson (1984)
-- [An Intrusion-Detection Model](https://www.utc.edu/sites/default/files/2021-04/DenningModel.pdf) by Dorothy Denning (1987)*
+- [An Intrusion-Detection Model](https://www.utc.edu/sites/default/files/2021-04/DenningModel.pdf) by Dorothy Denning (1987)
 - [The Internet Worm Program: An Analysis](https://dl.acm.org/doi/10.1145/66093.66095) by Eugene Spafford (1989)*
 - [A logic of authentication](https://dl.acm.org/doi/10.1145/77648.77649) by Michael Burrows, Martin Abadi, and Roger Needham (1990)*
 - [Why Cryptosystems Fail](https://dl.acm.org/doi/10.1145/168588.168615) by Ross Anderson (1994)*

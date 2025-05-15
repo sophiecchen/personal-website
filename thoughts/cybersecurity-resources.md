@@ -16,9 +16,9 @@ layout:
 
 ***
 
-## Courses and Training
+These resources are my personal favorite trainings, labs, and podcasts for learning cybersecurity.
 
-These are free and affordable courses for learning cybersecurity, with a focus on operations.
+## Courses and Training
 
 * [13Cubed](https://training.13cubed.com/) teaches a broad range of digital forensics courses, from Windows forensics to malware analysis.
 * [Cyber5W](https://cyber5w.com/) teaches multiple courses on digital forensics fundamentals, with labs included.
@@ -28,8 +28,6 @@ These are free and affordable courses for learning cybersecurity, with a focus o
 
 ## CTFs and Labs
 
-These exercises will help you learn to put theory into practice.
-
 * [Frank Xu's Digital Forensics Lab](https://github.com/frankwxu/digital-forensics-lab) teaches users the fundamentals of digital forensics through labs and case studies.
 * [Hack The Box](https://hackthebox.com/) provides CTF-style machines for all levels to hack into.
 * [Sofia Santos's OSINT Exercises](https://gralhix.com/list-of-osint-exercises/) contains OSINT exercises to practice with.
@@ -37,16 +35,12 @@ These exercises will help you learn to put theory into practice.
 
 ## Podcasts
 
-Podcasts are a useful for integrating cybersecurity into your daily routine: these are the podcasts that I listen to regularly.
-
 * [CyberWork](https://www.infosecinstitute.com/podcast/) invites industry leaders to discuss cybersecurity careers and skills needed to join the field.
 * [Digital Forensics Now](https://digitalforensicsnow.buzzsprout.com/) discusses the latest news in digital forensics from a law enforcement perspective.
 * [Forensic Focus](https://www.forensicfocus.com/podcast/) interviews leaders in the digital forensics field and discusses their experiences.
 * [Security Now](https://twit.tv/shows/security-now) discuss the latest developments across the security field.
 
 ## Other Resources
-
-These are other resources that I personally find helpful.
 
 * [Digital Forensics Images](https://cfreds.nist.gov/all) includes many device images that you can download and practice on.
 * [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/) contains common certifications for different points of your career in different security subfields.

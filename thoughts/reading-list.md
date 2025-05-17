@@ -38,17 +38,15 @@ This list is a compilation of classic papers, my personal favorite readings, and
 
 ## Cybersecurity
 
-- [How to Share a Secret](https://dl.acm.org/doi/10.1145/359168.359176) by Adi Shamir (1979)*
+- [How to Share a Secret](https://dl.acm.org/doi/10.1145/359168.359176) by Adi Shamir (1979)
 - [Security without Identification: Transaction Systems to Make Big Brother Obsolete](https://dl.acm.org/doi/abs/10.1145/4372.4373) by David Chaum (1981)
 - [Reflections on trusting trust](https://dl.acm.org/doi/10.1145/358198.358210) by Ken Thompson (1984)
 - [An Intrusion-Detection Model](https://www.utc.edu/sites/default/files/2021-04/DenningModel.pdf) by Dorothy Denning (1987)
 - [The Internet Worm Program: An Analysis](https://dl.acm.org/doi/10.1145/66093.66095) by Eugene Spafford (1989)*
 - [A logic of authentication](https://dl.acm.org/doi/10.1145/77648.77649) by Michael Burrows, Martin Abadi, and Roger Needham (1990)*
 - [Why Cryptosystems Fail](https://dl.acm.org/doi/10.1145/168588.168615) by Ross Anderson (1994)*
-- [Proactive Secret Sharing Or: How to Cope with Perpetual Leakage](https://www.cs.cornell.edu/courses/cs754/2001fa/339.PDF) by Amir Herzberg, Stanislaw Jarecki, Hugo Krawczyk, and Moti Yung (1995)*
 - [Prudent Engineering Practice for Cryptographic Protocols](https://www.cs.utexas.edu/~shmat/courses/cs380s/prudent.pdf) by Martin Abadi and Roger Needham (1996)*
 - [Smashing The Stack For Fun And Profit](https://www.eecs.umich.edu/courses/eecs588/static/stack_smashing.pdf) by Aleph One (1996)*
-- [Bro: A System for Detecting Network Intruders in Real-Time, Computer Networks](https://www.icir.org/vern/papers/bro-CN99.pdf) by Vern Paxson (1999)*
 - [Programming Satan's Computer](https://www.cl.cam.ac.uk/archive/rja14/Papers/satan.pdf) by Ross Anderson and Roger Needham (2005)*
 - [Sources of error in digital forensics](https://www.sciencedirect.com/science/article/pii/S2666281724000027) by Graeme Horsman (2024)
 

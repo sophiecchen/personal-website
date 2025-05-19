@@ -28,6 +28,7 @@ These resources are my personal favorite trainings, labs, and podcasts for learn
 
 ## CTFs and Labs
 
+* [CyberDefenders](https://cyberdefenders.org/) offers blue team labs focused on SOC analyst and DFIR skills.
 * [Frank Xu's Digital Forensics Lab](https://github.com/frankwxu/digital-forensics-lab) teaches users the fundamentals of digital forensics through labs and case studies.
 * [Hack The Box](https://hackthebox.com/) provides CTF-style machines for all levels to hack into.
 * [Sofia Santos's OSINT Exercises](https://gralhix.com/list-of-osint-exercises/) contains OSINT exercises to practice with.

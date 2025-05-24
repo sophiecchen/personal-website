@@ -18,7 +18,7 @@ This network file server, implement in C++, is crash-consistent and supports mul
 
 The server supports functionality for reading a block of data (specified by pathname and offset), writing a block of data (specified by pathname and offset), creating a new file or directory "pathname", and deleting an existing file or directory "pathname".
 
-*This project was completed for my operating systems class and is stored in a private GitHub. If you would like to see the code for this project, please contact me.*
+*This project was completed for my operating systems class and is stored in a private GitHub, as per my university's honor code. If you are a involved in recruitment or hiring and would like to see the code for this project, please contact me.*
 
 ***
 

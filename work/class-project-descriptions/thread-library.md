@@ -33,7 +33,7 @@ My partner and I were responsible for implementing the following functionality f
   * `void signal()`: wakes up one thread associated with the condition variable
   * `void broadcast()`: akes up all threads associated with the condition variable
 
-*This project was completed for my operating systems class and is stored in a private GitHub. If you would like to see the code for this project, please contact me.*
+*This project was completed for my operating systems class and is stored in a private GitHub as per my university's honor code. If you are a involved in recruitment or hiring and would like to see the code for this project, please contact me.*
 
 ***
 

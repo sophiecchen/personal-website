@@ -20,7 +20,6 @@ This list is a compilation of classic papers, my personal favorite readings, and
 
 ## Current Reading List
 
-- [Smashing The Stack For Fun And Profit](https://www.eecs.umich.edu/courses/eecs588/static/stack_smashing.pdf) by Aleph One (1996)
 - [File System Forensic Analysis](https://www.amazon.com/System-Forensic-Analysis-Brian-Carrier/dp/0321268172) by Brian Carrier (2005)
 - [Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software](https://www.amazon.com/Practical-Malware-Analysis-Hands-Dissecting/dp/1593272901) by Michael Sikorski and Andrew Honig (2012)
 - [The Art of Memory Forensics: Detecting Malware and Threats in Windows, Linux, and Mac Memory](http://smile.amazon.com/Art-Memory-Forensics-Detecting-Malware/dp/1118825098) by Michael Hale Ligh, Andrew Case, Jamie Levy, and AAron Walters (2014)
@@ -40,6 +39,7 @@ This list is a compilation of classic papers, my personal favorite readings, and
 - [An Intrusion-Detection Model](https://www.utc.edu/sites/default/files/2021-04/DenningModel.pdf) by Dorothy Denning (1987)
 - [Why Cryptosystems Fail](https://dl.acm.org/doi/10.1145/168588.168615) by Ross Anderson (1994)
 - [Prudent Engineering Practice for Cryptographic Protocols](https://www.cs.utexas.edu/~shmat/courses/cs380s/prudent.pdf) by Martin Abadi and Roger Needham (1996)
+- [Smashing The Stack For Fun And Profit](https://www.eecs.umich.edu/courses/eecs588/static/stack_smashing.pdf) by Aleph One (1996)
 - [Programming Satan's Computer](https://www.cl.cam.ac.uk/archive/rja14/Papers/satan.pdf) by Ross Anderson and Roger Needham (2005)
 - [Intelligence-Driven Incident Response: Outwitting the Adversary](https://www.amazon.com/Intelligence-Driven-Incident-Response-Outwitting-Adversary/dp/1491934948) by Scott J. Roberts and Rebekah Brown (2017)
 - [Digital Evidence Preservation](https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8387.pdf) by Barbara Guttman and Douglas White (2022)
